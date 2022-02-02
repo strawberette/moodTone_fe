@@ -1,6 +1,7 @@
 import Logo from "../utility/logo.jpg";
 import "../style/LandingPage.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import MoodTone from "./moodTone";
 function LandingPage() {
   const [song, setSong] = useState({});
@@ -130,9 +131,11 @@ function LandingPage() {
         alt="black and white logo mood flow"
       ></img>
       <div className="enterApp>">
-        {/* on click will link to login page here  */}
-        <button className="enter">ENTER</button>
-        {/* on click will link to login page here  */}
+        <Link to="/home">
+          <button type="button" class="enter">
+            ENTER
+          </button>
+        </Link>
       </div>
     </div>
   );

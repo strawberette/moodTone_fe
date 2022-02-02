@@ -1,8 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
 import LandingPage from "./components/LandingPage";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NavPage from "./components/NavPage";
+import EmotionsPage from "./components/EmotionsPage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 function App() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
@@ -24,12 +29,32 @@ function App() {
     }
   };
 
-  return <LandingPage></LandingPage>;
-  <Router>
-    <Link to="/landingPage" class="link">
-      Home
-    </Link>
-  </Router>;
+  return (
+    <Router>
+      <Logout user={user} setUser={setUser} />
+      <Switch>
+        <Route exact path="/">
+          <LandingPage></LandingPage>
+        </Route>
+        <Route exact path="/home">
+          <Register user={user} />
+          <Login user={user} setUser={setUser} />
+        </Route>
+        <Route exact path="/navpage">
+          <p>Navigation Page</p>
+        </Route>
+        <Route exact path="/musisphere">
+          <p>Musisphere page</p>
+        </Route>
+        <Route exact path="/profile">
+          <p>Profile</p>
+        </Route>
+        <Route exact path="/emotions">
+          <p>Emotions</p>
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;

@@ -75,7 +75,7 @@ ol {
 .none {
   visibility: hidden;
 }
-.text {
+.button {
   position: absolute;
   left: -100%;
   width: 200%;
