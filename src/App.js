@@ -1,10 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
-
+import LandingPage from "./components/LandingPage";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function App() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
+  const [user, setUser] = useState(null);
 
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
@@ -22,18 +24,12 @@ function App() {
     }
   };
 
-  return (
-    <div className="App">
-      <h1>🎵 Moodplayer 🎶</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="mood">What mood are you?</label>
-        <input type="text" name="mood" value={mood} onChange={handleMood} />
-        <input type="submit" value="Submit" />
-      </form>
-      <br />
-      <audio src={song.audio} autoPlay controls></audio>
-    </div>
-  );
+  return <LandingPage></LandingPage>;
+  <Router>
+    <Link to="/landingPage" class="link">
+      Home
+    </Link>
+  </Router>;
 }
 
 export default App;
