@@ -37,8 +37,10 @@ function App() {
 
         <Route exact path="/home">
           <Register user={user} />
-
           <Login user={user} setUser={setUser} />
+        </Route>
+        <Route exact path="/navigationPage">
+          <p>Navigation Page</p>
         </Route>
         <Route exact path="/musisphere">
           <p>Musisphere page</p>
