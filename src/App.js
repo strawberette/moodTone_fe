@@ -41,7 +41,7 @@ function App() {
           <Login user={user} setUser={setUser} />
         </Route>
         <Route exact path="/navigationPage">
-          <p>Navigation Page</p>
+          <NavigationPage></NavigationPage>
         </Route>
         <Route exact path="/musisphere">
           <p>Musisphere page</p>
