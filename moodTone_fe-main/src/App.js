@@ -1,4 +1,5 @@
 import "./App.css";
+<<<<<<< HEAD
 import { useState } from "react";
 import {
   ThemeProvider,
@@ -7,18 +8,38 @@ import {
   CSSReset,
 } from "@chakra-ui/core";
 import Toggle from "./Toggle";
+=======
+import { useState, useEffect } from "react";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import LandingPage from "./components/LandingPage";
+import NavigationPage from "./components/NavigationPage";
+import EmotionsPage from "./components/EmotionsPage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+>>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
 
 function App() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
+<<<<<<< HEAD
+=======
+  const [user, setUser] = useState(null);
+>>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
 
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
 
+<<<<<<< HEAD
   // const handleMood = (e) => setMood(e.target.value);
   const handleSubmit = async (e) => {
     // e.preventDefault();
+=======
+  const handleMood = (e) => setMood(e.target.value);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+>>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
     try {
       const response = await fetch(baseURL);
       const songList = await response.json();
@@ -27,6 +48,7 @@ function App() {
       console.log(err);
     }
   };
+<<<<<<< HEAD
   const redClick = () => {
     setMood("Angry");
     handleSubmit();
@@ -110,6 +132,34 @@ function App() {
       <audio src={song.audio} autoPlay controls></audio>
     </div>
     </>
+=======
+
+  return (
+    <Router>
+      <Logout user={user} setUser={setUser} />
+      <Switch>
+        <Route exact path="/">
+          <LandingPage></LandingPage>
+        </Route>
+        <Route exact path="/home">
+          <Register user={user} />
+          <Login user={user} setUser={setUser} />
+        </Route>
+        <Route exact path="/navigationPage">
+          <NavigationPage></NavigationPage>
+        </Route>
+        <Route exact path="/musisphere">
+          <p>Musisphere page</p>
+        </Route>
+        <Route exact path="/profile">
+          <p>Profile</p>
+        </Route>
+        <Route exact path="/emotions">
+          <p>Emotions</p>
+        </Route>
+      </Switch>
+    </Router>
+>>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
   );
 }
 
