@@ -33,7 +33,12 @@ function App() {
 
   return (
     <>
-    <Toggle />
+    <ThemeProvider theme={theme}>
+        <ColorModeProvider>
+          <CSSReset />
+          <Toggle />
+        </ColorModeProvider>
+      </ThemeProvider>
     <Router>
       <Logout user={user} setUser={setUser} />
       <Switch>
