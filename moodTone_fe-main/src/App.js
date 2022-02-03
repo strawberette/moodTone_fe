@@ -7,6 +7,8 @@ import LandingPage from "./components/LandingPage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Toggle from "./Toggle";
+
 
 function App() {
   const [song, setSong] = useState({});
@@ -30,6 +32,8 @@ function App() {
   };
 
   return (
+    <>
+    <Toggle />
     <Router>
       <Logout user={user} setUser={setUser} />
       <Switch>
@@ -54,6 +58,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </>
   );
 }
 
