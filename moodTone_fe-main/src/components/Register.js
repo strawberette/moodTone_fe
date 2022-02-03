@@ -1,9 +1,5 @@
 import { useState } from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import { Link, Redirect } from "react-router-dom";
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
 
 function Register(props) {
   const [user, setUser] = useState("");
@@ -59,28 +55,14 @@ function Register(props) {
   }
 
   if (response.status === 201) {
-<<<<<<< HEAD
-    return (
-      <div className="App">
-        <p>User {user} successfully registered!</p>
-        <br />
-        <Link to="/">Home</Link>
-      </div>
-    );
-=======
     return <Redirect to="/navigationPage" />;
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
   }
 
   return (
     <div className="register">
       <h1>Register</h1>
       <form onSubmit={submitForm}>
-<<<<<<< HEAD
-        <label htmlFor="user">User:</label>
-=======
         <label htmlFor="user">Email:</label>
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
         <input
           type="text"
           name="user"

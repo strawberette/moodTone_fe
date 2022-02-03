@@ -1,9 +1,5 @@
 import { useState } from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import { Link, Route, Redirect } from "react-router-dom";
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
 
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
@@ -46,11 +42,7 @@ function Login({ user, setUser }) {
     <>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-<<<<<<< HEAD
-        <label htmlFor="user">User:</label>
-=======
         <label htmlFor="user">Email:</label>
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
         <input
           type="text"
           name="user"
@@ -58,29 +50,17 @@ function Login({ user, setUser }) {
           onChange={handleUserName}
         />
 
-<<<<<<< HEAD
-        <label htmlFor="password">User:</label>
-=======
         <label htmlFor="password">Password:</label>
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
         <input
           type="password"
           name="password"
           value={password}
           onChange={handlePassword}
         />
-<<<<<<< HEAD
-
-        <input type="submit" value="Submit" />
-      </form>
-
-      <Link to="/">Home</Link>
-=======
         <Link to="/navigationPage">
           <button type="button"> Submit </button>
         </Link>
       </form>
->>>>>>> ad95beb41894c8a884883c22408e9bc2ff28a819
     </>
   );
 }
