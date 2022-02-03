@@ -26,16 +26,9 @@ function Login({ user, setUser }) {
     });
     const data = await res.json();
     setUser({ username: data.user.name, id: data.user.id, jwt: data.token });
-    console.log(data.user.name);
   };
   if (user) {
-    return (
-      <div className="App">
-        <p>You are already logged in!</p>
-        <br />
-        <Link to="/">Home</Link>
-      </div>
-    );
+    return <Redirect to="/navigationPage" />;
   }
 
   return (
@@ -57,9 +50,8 @@ function Login({ user, setUser }) {
           value={password}
           onChange={handlePassword}
         />
-        <Link to="/navigationPage">
-          <button type="button"> Submit </button>
-        </Link>
+
+          <button type="submit"> Submit </button>
       </form>
     </>
   );
