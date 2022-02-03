@@ -4,6 +4,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import LandingPage from "./components/LandingPage";
+import MusispherePage from "./components/musispherePage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -53,7 +54,7 @@ function App() {
           <NavigationPage></NavigationPage>
         </Route>
         <Route exact path="/musisphere">
-          <p>Musisphere page</p>
+          <MusispherePage></MusispherePage>
         </Route>
         <Route exact path="/profile">
           <p>Profile</p>

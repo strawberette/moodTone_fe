@@ -1,7 +1,7 @@
 import "./wheelStyling.css";
 import { useState } from "react";
 
-function Wheel() {
+function MusispherePage() {
     const [song, setSong] = useState({});
     const [mood, setMood] = useState("");
   
@@ -100,4 +100,4 @@ function Wheel() {
     );
   }
   
-  export default Wheel;
+  export default MusispherePage;
