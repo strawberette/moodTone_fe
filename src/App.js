@@ -1,5 +1,12 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import {
+  ThemeProvider,
+  theme,
+  ColorModeProvider,
+  CSSReset,
+} from "@chakra-ui/core";
+import Toggle from "./Toggle";
 
 function App() {
   const [song, setSong] = useState({});
@@ -9,9 +16,9 @@ function App() {
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
 
-  const handleMood = (e) => setMood(e.target.value);
+  // const handleMood = (e) => setMood(e.target.value);
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     try {
       const response = await fetch(baseURL);
       const songList = await response.json();
@@ -20,41 +27,83 @@ function App() {
       console.log(err);
     }
   };
-
+  const redClick = () => {
+    setMood("Angry");
+    handleSubmit();
+  };
+  const orangeClick = () => {
+    setMood("Energetic");
+    handleSubmit();
+  };
+  const yellowClick = () => {
+    setMood("Happy");
+    handleSubmit();
+  };
+  const greenClick = () => {
+    setMood("Serene");
+    handleSubmit();
+  };
+  const darkblueClick = () => {
+    setMood("Melancholic");
+    handleSubmit();
+  };
+  const pinkClick = () => {
+    setMood("Love");
+    handleSubmit();
+  };
+  const purpleClick = () => {
+    setMood("Spiritual");
+    handleSubmit();
+  };
+  const blueClick = () => {
+    setMood("Calm");
+    handleSubmit();
+  };
+  const whiteClick = () => {
+    setMood("Peaceful");
+    handleSubmit();
+  };
+  const beigeClick = () => {
+    setMood("Soft");
+    handleSubmit();
+  };
+  const grayClick = () => {
+    setMood("Sad");
+    handleSubmit();
+  };
+  const blackClick = () => {
+    setMood("Powerful");
+    handleSubmit();
+  };
   return (
     <>
     <div>
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        <CSSReset />
+        <Toggle />
+      </ColorModeProvider>
+    </ThemeProvider>
       <ul className="circleLogo">
-        <li className="segment red" />
-        <li className="segment redViolet" />
-        <li className="segment violet" />
-        <li className="segment blueViolet" />
-        <li className="segment blue" />
-        <li className="segment blueGreen" />
-        <li className="segment green" />
-        <li className="segment yellowGreen" />
-        <li className="segment yellow" />
-        <li className="segment yellowOrange" />
-        <li className="segment orange" />
-        <li className="segment redOrange" />
-        {/* <div className="redViolet segment" />
-        <div className="violet segment" />
-        <div className="blueViolet segment" />
-        <div className="blue segment" />
-        <div className="blueGreen segment" />
-        <div className="green segment" />
-        <div className="yellowGreen segment" />
-        <div className="yellow segment" />
-        <div className="yellowOrange segment" />
-        <div className="orange segment" />
-        <div className="redOrange segment" /> */}
+        <li className="segment red" onClick={()=>redClick()}><p>Angry</p></li>
+        <li className="segment orange" onClick={()=>orangeClick()}><p>Energetic</p></li>
+        <li className="segment yellow" onClick={()=>yellowClick()}><p>Happy</p></li>
+        <li className="segment green" onClick={()=>greenClick()}><p>Serene</p></li>
+        <li className="segment darkBlue" onClick={()=>darkblueClick()}><p>Melancholic</p></li>
+        <li className="segment pink" onClick={()=>pinkClick()}><p>Love</p></li>
+        <li className="segment purple" onClick={()=>purpleClick()}><p>Spiritual</p></li>
+        <li className="segment blue" onClick={()=>blueClick()}><p>Calm</p></li>
+        <li className="segment white" onClick={()=>whiteClick()}><p>Peaceful</p></li>
+        <li className="segment beige" onClick={()=>beigeClick()}><p>Cosy</p></li>
+        <li className="segment gray" onClick={()=>grayClick()}><p>Sad</p></li>
+        <li className="segment black" onClick={()=>blackClick()}><p>Powerful</p></li>
       </ul>
     </div>
-    <div className="App">
+    <div className="mediaPlayer">
       <h1>🎵 Moodplayer 🎶</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="mood">What mood are you?</label>
-        <input type="text" name="mood" value={mood} onChange={handleMood} />
+        <input type="text" name="mood" value={mood} />
         <input type="submit" value="Submit" />
       </form>
       <br />
