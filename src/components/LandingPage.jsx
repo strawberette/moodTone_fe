@@ -1,9 +1,15 @@
-import React from "react";
 import Logo from "../utility/logo.jpg";
 import "../App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import {
+  ThemeProvider,
+  theme,
+  ColorModeProvider,
+  CSSReset,
+} from "@chakra-ui/core";
+import Toggle from "./darkModeToggle";
+// import MoodTone from "./moodTone";
 function LandingPage() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
@@ -12,9 +18,9 @@ function LandingPage() {
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
 
-  // const handleMood = (e) => setMood(e.target.value);
+  const handleMood = (e) => setMood(e.target.value);
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     try {
       const response = await fetch(baseURL);
       const songList = await response.json();
@@ -23,58 +29,29 @@ function LandingPage() {
       console.log(err);
     }
   };
-  const redClick = () => {
-    setMood("angry");
-    handleSubmit();
-  };
-  const orangeClick = () => {
-    setMood("energetic");
-    handleSubmit();
-  };
-  const yellowClick = () => {
-    setMood("happy");
-    handleSubmit();
-  };
-  const greenClick = () => {
-    setMood("serene");
-    handleSubmit();
-  };
-  const darkblueClick = () => {
-    setMood("melancholic");
-    handleSubmit();
-  };
-  const pinkClick = () => {
-    setMood("romantic");
-    handleSubmit();
-  };
+
   return (
     <div className="App">
+      {/* <ThemeProvider theme={theme}>
+        <ColorModeProvider>
+          <CSSReset />
+          <Toggle />
+        </ColorModeProvider>
+      </ThemeProvider> */}
       <div className="wrapper">
         <ul className="circle">
-          <li>
-            <div className="text" onClick={() => greenClick()}></div>
-          </li>
-          <li>
-            <div className="text" onClick={() => darkblueClick()}></div>
-          </li>
-          <li>
-            <div className="text" onClick={() => pinkClick()}></div>
-          </li>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <li>
-            <div className="text" onClick={() => redClick()}></div>
-          </li>
-          <li>
-            <div className="text" onClick={() => orangeClick()}></div>
-          </li>
-          <li>
-            <div className="text" onClick={() => yellowClick()}></div>
-          </li>
+          <li className="segment green" />
+          <li className="segment blue" />
+          <li className="segment pink" />
+          <li className="segment darkBlue hidden" />
+          <li className="segment purple hidden" />
+          <li className="segment white hidden" />
+          <li className="segment beige hidden" />
+          <li className="segment gray hidden" />
+          <li className="segment black hidden" />
+          <li className="segment red" />
+          <li className="segment orange" />
+          <li className="segment yellow" />
         </ul>
         <img
           src={Logo}
@@ -82,15 +59,13 @@ function LandingPage() {
           alt="black and white logo mood flow"
         ></img>
         <div className="enterApp>">
-          <Link to="/home" style={{ textDecoration: "none" }}>
-            <button type="button" className="enter">
+          <Link to="/home">
+            <button type="button" class="enter">
               ENTER
             </button>
           </Link>
         </div>
       </div>
-
-      {/* <audio src={song.audio} autoPlay controls></audio> */}
     </div>
   );
 }
