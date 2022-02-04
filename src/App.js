@@ -45,13 +45,13 @@ function App() {
           <Login user={user} setUser={setUser} />
         </Route>
         <Route exact path="/navigationPage">
-          <NavigationPage></NavigationPage>
+          <NavigationPage />
         </Route>
         <Route exact path="/musisphere">
           <p>Musisphere page</p>
         </Route>
         <Route exact path="/profile">
-          <Profile/>
+          <Profile user={user} key={document.location.href} />
         </Route>
         <Route exact path="/emotions">
           <p>Emotions</p>
