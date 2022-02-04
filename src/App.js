@@ -3,6 +3,7 @@ import { useState } from "react";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
+import Profile from "./components/Profile";
 import LandingPage from "./components/LandingPage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
@@ -44,13 +45,13 @@ function App() {
           <Login user={user} setUser={setUser} />
         </Route>
         <Route exact path="/navigationPage">
-          <NavigationPage></NavigationPage>
+          <NavigationPage />
         </Route>
         <Route exact path="/musisphere">
           <p>Musisphere page</p>
         </Route>
         <Route exact path="/profile">
-          <Profile/>
+          <Profile user={user} key={document.location.href} />
         </Route>
         <Route exact path="/emotions">
           <p>Emotions</p>

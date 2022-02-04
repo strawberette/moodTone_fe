@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Redirect } from "react-router-dom";
 
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
@@ -26,23 +26,16 @@ function Login({ user, setUser }) {
     });
     const data = await res.json();
     setUser({ username: data.user.name, id: data.user.id, jwt: data.token });
-    console.log(data.user.name);
   };
   if (user) {
-    return (
-      <div className="App">
-        <p>You are already logged in!</p>
-        <br />
-        <Link to="/">Home</Link>
-      </div>
-    );
+    return <Redirect to="/navigationPage" />;
   }
 
   return (
     <>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="user">User:</label>
+        <label htmlFor="user">Email:</label>
         <input
           type="text"
           name="user"
@@ -50,7 +43,7 @@ function Login({ user, setUser }) {
           onChange={handleUserName}
         />
 
-        <label htmlFor="password">User:</label>
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
           name="password"
@@ -58,10 +51,8 @@ function Login({ user, setUser }) {
           onChange={handlePassword}
         />
 
-        <input type="submit" value="Submit" />
+          <button type="submit"> Submit </button>
       </form>
-
-      <Link to="/">Home</Link>
     </>
   );
 }
