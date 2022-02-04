@@ -1,13 +1,13 @@
 import React from 'react'; 
 import { useState } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPlay, faPause} from '@fortawesome/free-solid-svg-icons' 
-import {faheart} from '@fortawesome/react-fontawesome'
+import {faPlay, faPause,faheart} from '@fortawesome/free-solid-svg-icons' 
+import {faheart} from '@fortawesome/react-fontawesome/free-regular-svg-icons'
 
 function PlayControrls() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState(""); 
-  const [favSong,setFav] = useState([]);
+  const [favoriteTrack,setFav] = useState([]);
 
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
@@ -35,9 +35,9 @@ function PlayControrls() {
         <FontAwesomeIcon icon={faPlay}/><FontAwesomeIcon icon={faPause}/>
       </button> 
 
-      <button className='fav-song' onClick={()=>{setFav}}>
+      <button className='fav-track' onClick={(favoriteTrack)=>{setFav}}>
       favorite song
-        <FontAwesomeIcon icon="faheart" />
+        <FontAwesomeIcon icon="faheart" /> 
       </button>
 
   </div>; 
