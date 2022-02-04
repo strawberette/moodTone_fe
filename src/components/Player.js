@@ -1,13 +1,10 @@
 import React from 'react';
 import PlayControrls from './PlayControrls';
-import PlayerDetailis from './PlayerDetailis';
 
 export default function Player() {
   return (
       <>
-      <PlayControrls/> 
-      <PlayerDetailis/>
-  
+      <PlayControrls/>  
       </>
   )
       
@@ -15,4 +12,4 @@ export default function Player() {
 
 
 
-export default Player
+// export default Player
