@@ -9,7 +9,7 @@ import {
   CSSReset,
 } from "@chakra-ui/core";
 import Toggle from "./darkModeToggle";
-// import MoodTone from "./moodTone";
+import MoodTone from "./moodTone";
 function LandingPage() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
@@ -59,8 +59,8 @@ function LandingPage() {
           alt="black and white logo mood flow"
         ></img>
         <div className="enterApp>">
-          <Link to="/home">
-            <button type="button" class="enter">
+          <Link to="/home" style={{ textDecoration: "none" }}>
+            <button type="button" className="enter">
               ENTER
             </button>
           </Link>

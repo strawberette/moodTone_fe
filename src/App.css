@@ -55,6 +55,7 @@
 .enter:hover {
   opacity: 1;
 }
+
 li {
   overflow: hidden;
   position: absolute;
@@ -73,9 +74,7 @@ ol {
   height: 0%;
   transform-origin: 0% 100%;
 }
-.none {
-  visibility: hidden;
-}
+
 .button {
   position: absolute;
   left: -100%;
