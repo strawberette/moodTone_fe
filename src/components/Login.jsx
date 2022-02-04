@@ -15,7 +15,7 @@ function Login({ user, setUser }) {
       email: userName,
       password: password,
     });
-
+   
     const res = await fetch(baseURL, {
       method: "POST",
       mode: "cors",
@@ -24,6 +24,7 @@ function Login({ user, setUser }) {
       },
       body: payload,
     });
+    console.log(res);
     const data = await res.json();
     setUser({ username: data.user.name, id: data.user.id, jwt: data.token });
   };

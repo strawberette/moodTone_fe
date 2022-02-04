@@ -25,11 +25,11 @@ function LandingPage() {
 
   return (
     <div className="App">
-      <div class="wrapper">
-        <ul class="circle">
+      <div className="wrapper">
+        <ul className="circle">
           <li>
             <div
-              class="text"
+              className="text"
               onClick={handleSubmit}
               type="text"
               name="mood"
@@ -44,7 +44,7 @@ function LandingPage() {
           </li>
           <li>
             <div
-              class="text"
+              className="text"
               onClick={handleSubmit}
               type="text"
               name="mood"
@@ -59,7 +59,7 @@ function LandingPage() {
           </li>
           <li>
             <div
-              class="text"
+              className="text"
               onClick={handleSubmit}
               type="text"
               name="mood"
@@ -80,7 +80,7 @@ function LandingPage() {
           <ol></ol>
           <li>
             <div
-              class="text"
+              className="text"
               onClick={handleSubmit}
               type="text"
               name="mood"
@@ -95,7 +95,7 @@ function LandingPage() {
           </li>
           <li>
             <div
-              class="text"
+              className="text"
               onClick={handleSubmit}
               type="text"
               name="mood"
@@ -110,7 +110,7 @@ function LandingPage() {
           </li>
           <li>
             <div
-              class="text"
+              className="text"
               onClick={handleSubmit}
               type="text"
               name="mood"
