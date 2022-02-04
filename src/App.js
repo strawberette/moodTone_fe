@@ -42,7 +42,7 @@ function App() {
           <Login user={user} setUser={setUser} />
         </Route>
         <Route exact path="/navpage">
-          <p>Navigation Page</p>
+          <NavigationPage />
         </Route>
         <Route exact path="/musisphere">
           <p>Musisphere page</p>
@@ -51,7 +51,7 @@ function App() {
           <p>Profile</p>
         </Route>
         <Route exact path="/emotions">
-          <EmotionsPage></EmotionsPage>
+          <EmotionsPage />
         </Route>
       </Switch>
     </Router>
