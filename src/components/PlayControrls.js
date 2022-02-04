@@ -38,11 +38,14 @@ function PlayControrls() {
   return <div>PlayControrls
       <audio src='baseURL'></audio>
       <button className='paly-btn' onClick={(isPlaying)=>setSong(!audioPlaying)}>
-        <FaPlay/><FontAwesomeIcon icon={FaPause}/>
+        <FaPlay/><FaPause/>
       </button> 
+        
+      
 
       <button className='fav-track' onClick={(favoriteTrack)=>{setFav}}>
       favorite song
+      <FiHeart/><BsHeartFill/>
       </button>
 
   </div>; 
