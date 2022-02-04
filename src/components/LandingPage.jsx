@@ -1,7 +1,9 @@
 import Logo from "../utility/logo.jpg";
-import "../style/LandingPage.css";
+import "../App.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {ThemeProvider, theme, ColorModeProvider, CSSReset } from "@chakra-ui/core";
+import Toggle from "./darkModeToggle";
 // import MoodTone from "./moodTone";
 function LandingPage() {
   const [song, setSong] = useState({});
@@ -25,107 +27,28 @@ function LandingPage() {
 
   return (
     <div className="App">
-      <div class="wrapper">
-        <ul class="circle">
-          <li>
-            <div
-              class="text"
-              onClick={handleSubmit}
-              type="text"
-              name="mood"
-              value={mood}
-              onChange={handleMood}
-              audio
-              id="calm"
-              src={song.audio}
-              autoPlay
-              controls
-            />
-          </li>
-          <li>
-            <div
-              class="text"
-              onClick={handleSubmit}
-              type="text"
-              name="mood"
-              value={mood}
-              onChange={handleMood}
-              audio
-              id="melancholy"
-              src={song.audio}
-              autoPlay
-              controls
-            />
-          </li>
-          <li>
-            <div
-              class="text"
-              onClick={handleSubmit}
-              type="text"
-              name="mood"
-              value={mood}
-              onChange={handleMood}
-              audio
-              id="romantic"
-              src={song.audio}
-              autoPlay
-              controls
-            />
-          </li>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <ol></ol>
-          <li>
-            <div
-              class="text"
-              onClick={handleSubmit}
-              type="text"
-              name="mood"
-              value={mood}
-              onChange={handleMood}
-              audio
-              id="anger"
-              src={song.audio}
-              autoPlay
-              controls
-            />
-          </li>
-          <li>
-            <div
-              class="text"
-              onClick={handleSubmit}
-              type="text"
-              name="mood"
-              value={mood}
-              onChange={handleMood}
-              audio
-              id="energy"
-              src={song.audio}
-              autoPlay
-              controls
-            />
-          </li>
-          <li>
-            <div
-              class="text"
-              onClick={handleSubmit}
-              type="text"
-              name="mood"
-              value={mood}
-              onChange={handleMood}
-              audio
-              id="happy"
-              src={song.audio}
-              autoPlay
-              controls
-            />
-          </li>
+      <ThemeProvider theme={theme}>
+        <ColorModeProvider>
+          <CSSReset />
+          <Toggle />
+        </ColorModeProvider>
+      </ThemeProvider>
+      <div className="wrapper">
+        <ul className="circle">
+          <li className="segment green" />
+          <li className="segment blue" />
+          <li className="segment pink" />
+          <li className="segment darkBlue hidden" />
+          <li className="segment purple hidden" />
+          <li className="segment white hidden" />
+          <li className="segment beige hidden" />
+          <li className="segment gray hidden" />
+          <li className="segment black hidden" />
+          <li className="segment red" />
+          <li className="segment orange" />
+          <li className="segment yellow" />
         </ul>
-      </div>
-      <img
+        <img
         src={Logo}
         className="logo"
         alt="black and white logo mood flow"
@@ -137,6 +60,8 @@ function LandingPage() {
           </button>
         </Link>
       </div>
+      </div>
+      
     </div>
   );
 }
