@@ -1,3 +1,5 @@
+import React from 'react'; 
+import { useState } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPlay} from '@fortawesome/free-solid-svg-icons' 
 
@@ -21,12 +23,20 @@ function PlayControrls() {
     }
   };
 
+  const audioPlaying =()=>[isPlaying, useState(false)]
+
+
  
   return <div>PlayControrls
-      <audio src='LandingPage'></audio>
-      <button className='paly-btn'>
+      <audio src='baseURL'></audio>
+      <button className='paly-btn' onClick={()=>setSong(!audioPlaying)}>
         <FontAwesomeIcon icon={faPlay}/>
+      </button> 
+
+      <button className='fav-song'>
+        fave song
       </button>
+
   </div>; 
  
 }
