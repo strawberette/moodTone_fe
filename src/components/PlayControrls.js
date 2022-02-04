@@ -8,15 +8,13 @@ function PlayControrls() {
   const [mood, setMood] = useState(""); 
   const [favoriteTrack,setFav] = useState([]);
   
-  const [isPlaying,setIsPlaying]=useState(false);
+  const audoplayer=()=>{
+    const [isPlaying,setIsPlaying]=useState(false);
+  }
   
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
-
-  const playSong =()=>{
-    
-  }
 
   // const audioPlaying =()=>[isPlaying, useState(false)]
 
