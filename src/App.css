@@ -187,7 +187,7 @@ ol {
   display: none;
 }
 
-/* Musisphere Page */
+/*=================== Musisphere Page =====================*/
 
 .musispherePage {
   height: 100vh;
@@ -351,4 +351,31 @@ ol {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* ======================= NavBar styling =====================*/
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 12px;
+  padding-left: 50px;
+  border-bottom: solid 1px gray;
+  box-sizing: border-box;
+}
+
+.navBar Link:hover {
+  cursor: pointer;
+}
+
+.darkModeToggle {
+  position: relative;
+  bottom: 13px;
+  right: 190px;
 }

@@ -1,10 +1,12 @@
 import "../App.css";
+import NavigationPage from "./NavigationPage";
 
 function MusispherePage() {
 
     return (
         <>
             <div className="musispherePage">
+                <NavigationPage />
                 <div className="colorKey" id="left-colors">
                     <li className="keyColors">
                         <div>
