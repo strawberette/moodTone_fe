@@ -5,10 +5,12 @@ import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import LandingPage from "./components/LandingPage";
+import Musisphere from "./components/MusispherePage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import {ThemeProvider, theme, ColorModeProvider, CSSReset } from "@chakra-ui/core";
+import Toggle from "./components/darkModeToggle";
 
 function App() {
   const [song, setSong] = useState({});
@@ -34,6 +36,13 @@ function App() {
   
 
   return (
+    <>
+    <ThemeProvider theme={theme}>
+        <ColorModeProvider>
+          <CSSReset />
+          <Toggle />
+        </ColorModeProvider>
+      </ThemeProvider>
     <Router>
       <Logout user={user} setUser={setUser} />
       <Switch>
@@ -48,7 +57,7 @@ function App() {
           <NavigationPage />
         </Route>
         <Route exact path="/musisphere">
-          <p>Musisphere page</p>
+        <Musisphere></Musisphere>
         </Route>
         <Route exact path="/profile">
           <Profile user={user} key={document.location.href} />
@@ -58,6 +67,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </>
   );
 }
 
