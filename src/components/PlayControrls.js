@@ -8,16 +8,21 @@ function PlayControrls() {
   const [mood, setMood] = useState(""); 
   const [favoriteTrack,setFav] = useState([]);
   
-  const audoplayer=()=>{
+  const audioPlaying=()=>{
     const [isPlaying,setIsPlaying]=useState(false);
   }
+
+  const togglePlayPause =()=>{
+    setIsPlaying(isPlaying)
+  }
   
+  const favoriteTrack=()=>{
+    setFav(favoriteTrack)
+  }
+
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
-
-  // const audioPlaying =()=>[isPlaying, useState(false)]
-
 
   const handleMood = (e) => setMood(e.target.value);
   const handleSubmit = async (e) => {
@@ -39,7 +44,7 @@ function PlayControrls() {
       </button>
       
       <audio src='baseURL'></audio>
-      <button className='paly-btn' onClick={(toggleplaypause)=>setSong(!audioPlaying)}>
+      <button className='paly-btn' onClick={(togglePlayPause)=>setSong(!audioPlaying)}>
         {isPlaying}
         <FaPlay/><FaPause/>
       </button > 
