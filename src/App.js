@@ -1,10 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import LandingPage from "./components/LandingPage";
+import NavigationPage from "./components/NavigationPage";
+import EmotionsPage from "./components/EmotionsPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
+  const [user, setUser] = useState(null);
 
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
@@ -23,16 +31,30 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>🎵 Moodplayer 🎶</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="mood">What mood are you?</label>
-        <input type="text" name="mood" value={mood} onChange={handleMood} />
-        <input type="submit" value="Submit" />
-      </form>
-      <br />
-      <audio src={song.audio} autoPlay controls></audio>
-    </div>
+    <Router>
+      <Logout user={user} setUser={setUser} />
+      <Switch>
+        <Route exact path="/">
+          <LandingPage></LandingPage>
+        </Route>
+        <Route exact path="/home">
+          <Register user={user} />
+          <Login user={user} setUser={setUser} />
+        </Route>
+        <Route exact path="/navpage">
+          <p>Navigation Page</p>
+        </Route>
+        <Route exact path="/musisphere">
+          <p>Musisphere page</p>
+        </Route>
+        <Route exact path="/profile">
+          <p>Profile</p>
+        </Route>
+        <Route exact path="/emotions">
+          <EmotionsPage></EmotionsPage>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
