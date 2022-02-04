@@ -27,12 +27,12 @@ function LandingPage() {
 
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
+      {/* <ThemeProvider theme={theme}>
         <ColorModeProvider>
           <CSSReset />
           <Toggle />
         </ColorModeProvider>
-      </ThemeProvider>
+      </ThemeProvider> */}
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
