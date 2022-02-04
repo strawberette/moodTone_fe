@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
+
 
 const Profile = (props) => {
   const [data, setData] = useState([])
@@ -74,9 +74,10 @@ const Profile = (props) => {
 
       <div className="mediaPlayer">
         <h1>🎵 Moodplayer 🎶</h1>
-          <audio src={audio} autoPlay controls></audio>
+           <audio src={audio} autoPlay controls></audio>
       </div>
     </div>
   )
 }
 export default Profile;
+

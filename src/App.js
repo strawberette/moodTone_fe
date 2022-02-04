@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
@@ -7,7 +7,8 @@ import Profile from "./components/Profile";
 import LandingPage from "./components/LandingPage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
   const [song, setSong] = useState({});
@@ -29,6 +30,8 @@ function App() {
       console.log(err);
     }
   };
+
+  
 
   return (
     <Router>
