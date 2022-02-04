@@ -1,12 +1,12 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import LandingPage from "./components/LandingPage";
-import NavPage from "./components/NavPage";
 import EmotionsPage from "./components/EmotionsPage";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   const [song, setSong] = useState({});
@@ -37,8 +37,7 @@ function App() {
           <LandingPage></LandingPage>
         </Route>
         <Route exact path="/home">
-          <Register user={user} />
-          <Login user={user} setUser={setUser} />
+          <Home></Home>
         </Route>
         <Route exact path="/navpage">
           <p>Navigation Page</p>
@@ -50,7 +49,7 @@ function App() {
           <p>Profile</p>
         </Route>
         <Route exact path="/emotions">
-          <p>Emotions</p>
+          <EmotionsPage></EmotionsPage>
         </Route>
       </Switch>
     </Router>

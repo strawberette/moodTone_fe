@@ -1,6 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../App.css";
+import Smoke from "../utility/smoke.jpg";
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +42,7 @@ function Login({ user, setUser }) {
 
   return (
     <>
-      <h1>Login</h1>
+      <h1>LOGIN</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="user">User:</label>
         <input

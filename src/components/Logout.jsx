@@ -1,3 +1,6 @@
+import React from "react";
+import "../App.css";
+
 function Login({ user, setUser }) {
   const handleClick = () => {
     setUser(null);
