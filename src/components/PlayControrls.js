@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { useState } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPlay} from '@fortawesome/free-solid-svg-icons' 
+import {faPlay, faPause} from '@fortawesome/free-solid-svg-icons' 
 
 function PlayControrls() {
   const [song, setSong] = useState({});
@@ -29,8 +29,8 @@ function PlayControrls() {
  
   return <div>PlayControrls
       <audio src='baseURL'></audio>
-      <button className='paly-btn' onClick={()=>setSong(!audioPlaying)}>
-        <FontAwesomeIcon icon={faPlay}/>
+      <button className='paly-btn' onClick={(isPlaying)=>setSong(!audioPlaying)}>
+        <FontAwesomeIcon icon={faPlay}/><FontAwesomeIcon icon={faPause}/>
       </button> 
 
       <button className='fav-song'>
