@@ -1,9 +1,7 @@
 import React from 'react'; 
 import { useState } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { FaPlay,FaPause, FiHeart,BsHeartFill} from "react-icons/ai";
-
-
+import { FaPlay,FaPause, FaBackward,FaForward, FiHeart,BsHeartFill} from "react-icons/ai";
 
 
 function PlayControrls() {
