@@ -36,12 +36,19 @@ function PlayControrls() {
 
  
   return <div>PlayControrls
+      
+      <button className='backward-btn' >
+      <FaBackward/> 
+      </button>
+      
       <audio src='baseURL'></audio>
       <button className='paly-btn' onClick={(isPlaying)=>setSong(!audioPlaying)}>
         <FaPlay/><FaPause/>
-      </button> 
-        
+      </button > 
       
+      <button className='forward-btn' >
+      <FaForward/> 
+      </button>
 
       <button className='fav-track' onClick={(favoriteTrack)=>{setFav}}>
       favorite song
