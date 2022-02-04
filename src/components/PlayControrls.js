@@ -35,7 +35,7 @@ function PlayControrls() {
         <FontAwesomeIcon icon={faPlay}/><FontAwesomeIcon icon={faPause}/>
       </button> 
 
-      <button className='fav-song' onClick={(favSong)=>setSong(fav)}>
+      <button className='fav-song' onClick={()=>{setFav}}>
       favorite song
         <FontAwesomeIcon icon="faheart" />
       </button>
