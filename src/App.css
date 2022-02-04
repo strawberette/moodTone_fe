@@ -177,7 +177,17 @@ li:nth-child(12):hover {
   }
 }
 
-/* ----------------------------------EMOTIONS PAGE CSS STYLE----------------------------------- */
+/* ------------------------------------HOME PAGE CSS STYLE----------------------------- */
+
+.homePage {
+  /* background-image: url(./utility/smoke.jpg); */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* -----------------------------EMOTIONS PAGE CSS STYLE-------------------------------- */
 
 .emotionsPage {
   display: flex;

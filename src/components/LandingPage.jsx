@@ -9,7 +9,7 @@ import {
   CSSReset,
 } from "@chakra-ui/core";
 import Toggle from "./darkModeToggle";
-import MoodTone from "./moodTone";
+// import MoodTone from "./moodTone";
 function LandingPage() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
