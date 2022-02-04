@@ -1,6 +1,5 @@
 import React from 'react'; 
 import { useState } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { FaPlay,FaPause, FaBackward,FaForward, FiHeart,BsHeartFill} from "react-icons/ai";
 
 
@@ -42,7 +41,8 @@ function PlayControrls() {
       </button>
       
       <audio src='baseURL'></audio>
-      <button className='paly-btn' onClick={(isPlaying)=>setSong(!audioPlaying)}>
+      <button className='paly-btn' onClick={(toggleplaypause)=>setSong(!audioPlaying)}>
+        {isPlaying}
         <FaPlay/><FaPause/>
       </button > 
       
