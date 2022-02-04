@@ -4,6 +4,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import LandingPage from "./components/LandingPage";
+import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
