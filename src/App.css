@@ -66,8 +66,8 @@ li {
   transform-origin: 0% 100%;
 }
 ol {
-  /* overflow: hidden; */
-  /* position: absolute; */
+  overflow: hidden;
+  position: absolute;
   top: 0;
   right: 0;
   width: 0%;

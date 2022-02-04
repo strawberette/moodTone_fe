@@ -38,7 +38,8 @@ function App() {
           <LandingPage></LandingPage>
         </Route>
         <Route exact path="/home">
-          <Home></Home>
+          <Register user={user} />
+          <Login user={user} setUser={setUser} />
         </Route>
         <Route exact path="/navpage">
           <p>Navigation Page</p>
