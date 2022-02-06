@@ -15,10 +15,10 @@ const RouteModalAnger = () => {
           alt="anger Icon in red"
           style={{ width: "100px", cursor: "pointer" }}
         />
-        <Modal open={open} onClose={() => setOpen(false)}>
-          <EmotionModalAnger />
-        </Modal>
       </div>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <EmotionModalAnger />
+      </Modal>
     </>
   );
 };

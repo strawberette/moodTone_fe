@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import { Modal } from "react-responsive-modal";
-
 import AngerIcon from "../utility/anger.png";
 function EmotionModalAnger() {
   return (

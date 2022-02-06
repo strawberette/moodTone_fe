@@ -68,7 +68,6 @@ function App() {
           <Route exact path="/emotions">
             <EmotionsPage />
           </Route>
-          <Route></Route>
         </Switch>
       </Router>
     </>

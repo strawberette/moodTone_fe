@@ -15,72 +15,66 @@ import RouteModalSad from "../modalRoutes/RouteModalSad";
 import RouteModalPowerful from "../modalRoutes/RouteModalPowerful";
 import "../App.css";
 const EmotionsPage = () => {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="body">
-      <div className="fullBox diagonalBox">
-        <div className="RoutesPage">
-          <div className="iconsWrapper">
-            <div className="emoticon">
-              <RouteModalAnger />
-            </div>
-            <div className="emoticon">
-              <RouteModalEnergy />
-            </div>
-            <div className="emoticon">
-              <RouteModalHappy />
-            </div>
-            <div className="emoticon">
-              <RouteModalSerene />
-            </div>
-            <div className="emoticon">
-              <RouteModalMelancholic />
-            </div>
-            <div className="emoticon">
-              <RouteModalRomantic />
-            </div>
-            <div className="emoticon">
-              <RouteModalSpiritual />
-            </div>
-            <div className="emoticon">
-              <RouteModalCalm />
-            </div>
-            <div className="emoticon">
-              <RouteModalPeaceful />
-            </div>
-            <div className="emoticon">
-              <RouteModalSoft />
-            </div>
-            <div className="emoticon">
-              <RouteModalSad />
-            </div>
-            <div className="emoticon">
-              <RouteModalPowerful />
-            </div>
-
-            <div className="logoWrapper">
-              <img
-                src={MoodToneLogo}
-                className="logo2"
-                alt="moodTone rainbow logo "
-              ></img>
-            </div>
-            <div className="Info">
-              <h2>Welcome to moodTone</h2>
-              <br />
-              <br />
-
-              <p>
-                Here you can find out about the different colours we chose for
-                this new App! Warm colors like red, yellow and orange evoke
-                higher arousal Routes, such as love, passion, happiness, and
-                anger. Cool colors, like blue, green and purple are linked to
-                calmness, sadness and indifference. Colors can trigger these
-                arousal states and Routes. Much like music does!
-              </p>
-            </div>
-          </div>
+    <div className="emotionsPage">
+      <div className="logoWrapper">
+        <img
+          src={MoodToneLogo}
+          className="logo2"
+          alt="moodTone rainbow logo "
+        ></img>
+      </div>
+      <div className="iconsWrapper">
+        <div className="emoticon">
+          <RouteModalAnger />
         </div>
+        <div className="emoticon">
+          <RouteModalEnergy />
+        </div>
+        <div className="emoticon">
+          <RouteModalHappy />
+        </div>
+        <div className="emoticon">
+          <RouteModalSerene />
+        </div>
+        <div className="emoticon">
+          <RouteModalMelancholic />
+        </div>
+        <div className="emoticon">
+          <RouteModalRomantic />
+        </div>
+        <div className="emoticon">
+          <RouteModalSpiritual />
+        </div>
+        <div className="emoticon">
+          <RouteModalCalm />
+        </div>
+        <div className="emoticon">
+          <RouteModalPeaceful />
+        </div>
+        <div className="emoticon">
+          <RouteModalSoft />
+        </div>
+        <div className="emoticon">
+          <RouteModalSad />
+        </div>
+        <div className="emoticon">
+          <RouteModalPowerful />
+        </div>
+      </div>
+
+      <div className="InfoHeader">
+        <h1>Welcome to moodTone</h1>
+      </div>
+      <div className="infoBody">
+        <p>
+          Here you can find out about the different colours we chose for this
+          new App! Warm colors like red, yellow and orange evoke higher arousal
+          Routes, such as love, passion, happiness, and anger. Cool colors, like
+          blue, green and purple are linked to calmness, sadness and
+          indifference. Colors can trigger these arousal states and Routes. Much
+          like music does!
+        </p>
       </div>
     </div>
   );
