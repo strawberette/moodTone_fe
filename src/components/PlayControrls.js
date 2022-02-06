@@ -25,7 +25,7 @@ function PlayControrls() {
   } 
 
   const backwardSong=()=>{
-    backwardSong=(curentSong -1)
+    backwardSong=(curentSong-1)
   }
 
 
@@ -43,11 +43,16 @@ function PlayControrls() {
     } catch (err) {
       console.log(err);
     }
-  }; 
+  };  
+
 
  
   return <div>PlayControrls
       
+
+    <image src="http[s]://api.jamendo.com/v3.0/artists/albums/?"></image>
+    <p></p>
+
       <button className='backward-btn' >
       <FaBackward/> 
       </button>
