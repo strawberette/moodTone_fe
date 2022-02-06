@@ -20,6 +20,15 @@ function PlayControrls() {
     setFav(favoriteTrack)
   }
 
+  const forwardSong=()=>{
+    fowardSong(curentSong+1)
+  } 
+
+  const backwardSong=()=>{
+    backwardSong=(curentSong -1)
+  }
+
+
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
@@ -49,7 +58,7 @@ function PlayControrls() {
         <FaPlay/><FaPause/>
       </button > 
       
-      <button className='forward-btn' >
+      <button className='forward-btn' onClick={(fowardSong)} >
       <FaForward/> 
       </button>
 
