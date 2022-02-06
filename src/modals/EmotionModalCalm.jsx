@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import AngerIcon from "../utility/anger.png";
-function EmotionModalAnger() {
+import CalmIcon from "../utility/calm.png";
+function EmotionModalCalm() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrapper-calm">
       <img
-        className="anger"
-        src={AngerIcon}
-        alt="anger Icon in red"
+        className="calm"
+        src={CalmIcon}
+        alt="calm Icon in light blue"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +16,7 @@ function EmotionModalAnger() {
           cursor: "pointer",
         }}
       />
-      <h2>ANGER</h2>
+      <h2>Calm</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +29,4 @@ function EmotionModalAnger() {
     </div>
   );
 }
-export default EmotionModalAnger;
+export default EmotionModalCalm;

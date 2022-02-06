@@ -1,7 +1,5 @@
-import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import "../App.css";
+import { Link, Redirect } from "react-router-dom";
 function Register(props) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -55,20 +53,14 @@ function Register(props) {
   }
 
   if (response.status === 201) {
-    return (
-      <div className="App">
-        <p>User {user} successfully registered!</p>
-        <br />
-        <Link to="/">Home</Link>
-      </div>
-    );
+    return <Redirect to="/navigationPage" />;
   }
 
   return (
     <div className="register">
       <h1>Register</h1>
       <form onSubmit={submitForm}>
-        <label htmlFor="user">User:</label>
+        <label htmlFor="user">Email:</label>
         <input
           type="text"
           name="user"

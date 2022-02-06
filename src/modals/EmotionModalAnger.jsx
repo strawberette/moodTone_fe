@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import SereneIcon from "../utility/serene.png";
-function EmotionModalSerene() {
+import { Modal } from "react-responsive-modal";
+
+import AngerIcon from "../utility/anger.png";
+function EmotionModalAnger() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrapper-anger">
       <img
-        className="serene"
-        src={SereneIcon}
-        alt="Serene Icon in green"
+        className="anger"
+        src={AngerIcon}
+        alt="anger Icon in red"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +18,7 @@ function EmotionModalSerene() {
           cursor: "pointer",
         }}
       />
-      <h2>SERENE</h2>
+      <h2>ANGER</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +31,4 @@ function EmotionModalSerene() {
     </div>
   );
 }
-export default EmotionModalSerene;
+export default EmotionModalAnger;

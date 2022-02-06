@@ -41,9 +41,9 @@ function LandingPage() {
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
-          <li className="segment blue" />
+          <li className="segment darkBlue " />
           <li className="segment pink" />
-          <li className="segment darkBlue hidden" />
+          <li className="segment blue hidden" />
           <li className="segment purple hidden" />
           <li className="segment white hidden" />
           <li className="segment beige hidden" />

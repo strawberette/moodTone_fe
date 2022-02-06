@@ -1,52 +1,63 @@
 import React from "react";
 import { useState } from "react";
 import MoodToneLogo from "../utility/moodTone.jpg";
-import EmotionModal from "./EmotionModal";
+import RouteModalAnger from "../modalRoutes/RouteModalAnger";
+import RouteModalEnergy from "../modalRoutes/RouteModalEnergy";
+import RouteModalHappy from "../modalRoutes/RouteModalHappy";
+import RouteModalSerene from "../modalRoutes/RouteModalSerene";
+import RouteModalMelancholic from "../modalRoutes/RouteModalMelancholic";
+import RouteModalRomantic from "../modalRoutes/RouteModalRomantic";
+import RouteModalSpiritual from "../modalRoutes/RouteModalSpiritual";
+import RouteModalCalm from "../modalRoutes/RouteModalCalm";
+import RouteModalPeaceful from "../modalRoutes/RouteModalPeaceful";
+import RouteModalSoft from "../modalRoutes/RouteModalSoft";
+import RouteModalSad from "../modalRoutes/RouteModalSad";
+import RouteModalPowerful from "../modalRoutes/RouteModalPowerful";
 import "../App.css";
-// import EmotionModalAnger from "./EmotionModalAnger";
 const EmotionsPage = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="body">
       <div className="fullBox diagonalBox">
-        <div className="emotionsPage">
+        <div className="RoutesPage">
           <div className="iconsWrapper">
             <div className="emoticon">
-              <EmotionModal />
+              <RouteModalAnger />
             </div>
             <div className="emoticon">
-              <EmotionModal />
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
-              <div className="emoticon">
-                <EmotionModal />
-              </div>
+              <RouteModalEnergy />
             </div>
+            <div className="emoticon">
+              <RouteModalHappy />
+            </div>
+            <div className="emoticon">
+              <RouteModalSerene />
+            </div>
+            <div className="emoticon">
+              <RouteModalMelancholic />
+            </div>
+            <div className="emoticon">
+              <RouteModalRomantic />
+            </div>
+            <div className="emoticon">
+              <RouteModalSpiritual />
+            </div>
+            <div className="emoticon">
+              <RouteModalCalm />
+            </div>
+            <div className="emoticon">
+              <RouteModalPeaceful />
+            </div>
+            <div className="emoticon">
+              <RouteModalSoft />
+            </div>
+            <div className="emoticon">
+              <RouteModalSad />
+            </div>
+            <div className="emoticon">
+              <RouteModalPowerful />
+            </div>
+
             <div className="logoWrapper">
               <img
                 src={MoodToneLogo}
@@ -62,10 +73,10 @@ const EmotionsPage = () => {
               <p>
                 Here you can find out about the different colours we chose for
                 this new App! Warm colors like red, yellow and orange evoke
-                higher arousal emotions, such as love, passion, happiness, and
+                higher arousal Routes, such as love, passion, happiness, and
                 anger. Cool colors, like blue, green and purple are linked to
                 calmness, sadness and indifference. Colors can trigger these
-                arousal states and emotions. Much like music does!
+                arousal states and Routes. Much like music does!
               </p>
             </div>
           </div>

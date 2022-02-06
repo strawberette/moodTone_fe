@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import SoftIcon from "../utility/soft.png";
-function EmotionModalSoft() {
+import SpiritualIcon from "../utility/spiritual.png";
+function EmotionModalSpiritual() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrapper-spiritual">
       <img
-        className="Soft"
-        src={SoftIcon}
-        alt="Soft Icon in beige"
+        className="spiritual"
+        src={SpiritualIcon}
+        alt="spiritual Icon in  black"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +16,7 @@ function EmotionModalSoft() {
           cursor: "pointer",
         }}
       />
-      <h2>SOFT</h2>
+      <h2>SPIRITUAL</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +29,4 @@ function EmotionModalSoft() {
     </div>
   );
 }
-export default EmotionModalSoft;
+export default EmotionModalSpiritual;

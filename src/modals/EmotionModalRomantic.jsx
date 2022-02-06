@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import SpiritualIcon from "../utility/spiritual.png";
-function EmotionModalSpiritual() {
+import RomanticIcon from "../utility/romantic.png";
+function EmotionModalRomantic() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrapper-romantic">
       <img
-        className="spiritual"
-        src={SpiritualIcon}
-        alt="spiritual Icon in  black"
+        className="romantic"
+        src={RomanticIcon}
+        alt="Romantic Icon in pink"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +16,7 @@ function EmotionModalSpiritual() {
           cursor: "pointer",
         }}
       />
-      <h2>SPIRITUAL</h2>
+      <h2>ROMANTIC</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +29,4 @@ function EmotionModalSpiritual() {
     </div>
   );
 }
-export default EmotionModalSpiritual;
+export default EmotionModalRomantic;

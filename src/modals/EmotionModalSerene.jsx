@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import PowerfulIcon from "../utility/powerful.png";
-function EmotionModalPowerful() {
+import SereneIcon from "../utility/serene.png";
+function EmotionModalSerene() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrapper-serene">
       <img
-        className="powerful"
-        src={PowerfulIcon}
-        alt="powerful Icon in red"
+        className="serene"
+        src={SereneIcon}
+        alt="Serene Icon in green"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +16,7 @@ function EmotionModalPowerful() {
           cursor: "pointer",
         }}
       />
-      <h2>POWERFUL</h2>
+      <h2>SERENE</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +29,4 @@ function EmotionModalPowerful() {
     </div>
   );
 }
-export default EmotionModalPowerful;
+export default EmotionModalSerene;

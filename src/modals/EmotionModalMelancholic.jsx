@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import EnergyIcon from "../utility/energy.png";
-function EmotionModalEnergy() {
+import MeloncholicIcon from "../utility/melancholic.png";
+function EmotionModalMelancholic() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrapper-melancholic">
       <img
-        className="energy"
-        src={EnergyIcon}
-        alt="energy Icon in orange"
+        className="melancholic"
+        src={MeloncholicIcon}
+        alt="Melancholic Icon in dark blue"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +16,7 @@ function EmotionModalEnergy() {
           cursor: "pointer",
         }}
       />
-      <h2>ENERGY</h2>
+      <h2>MELANCHOLIC</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +29,4 @@ function EmotionModalEnergy() {
     </div>
   );
 }
-export default EmotionModalEnergy;
+export default EmotionModalMelancholic;

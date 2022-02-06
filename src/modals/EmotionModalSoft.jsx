@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css";
-import SadIcon from "../utility/sad.png";
-function EmotionModalSad() {
+import SoftIcon from "../utility/soft.png";
+function EmotionModalSoft() {
   return (
-    <div className="modal-wrapper">
+    <div className="modal-wrappe-soft">
       <img
-        className="Sad"
-        src={SadIcon}
-        alt="Sad Icon in grey"
+        className="Soft"
+        src={SoftIcon}
+        alt="Soft Icon in beige"
         style={{
           position: "relative",
           left: "200px",
@@ -16,7 +16,7 @@ function EmotionModalSad() {
           cursor: "pointer",
         }}
       />
-      <h2>SAD</h2>
+      <h2>SOFT</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
         eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
@@ -29,4 +29,4 @@ function EmotionModalSad() {
     </div>
   );
 }
-export default EmotionModalSad;
+export default EmotionModalSoft;
