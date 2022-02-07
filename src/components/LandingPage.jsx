@@ -2,7 +2,12 @@ import Logo from "../utility/logo.jpg";
 import "../App.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {ThemeProvider, theme, ColorModeProvider, CSSReset } from "@chakra-ui/core";
+import {
+  ThemeProvider,
+  theme,
+  ColorModeProvider,
+  CSSReset,
+} from "@chakra-ui/core";
 import Toggle from "./darkModeToggle";
 // import MoodTone from "./moodTone";
 function LandingPage() {
@@ -36,9 +41,9 @@ function LandingPage() {
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
-          <li className="segment blue" />
+          <li className="segment darkBlue " />
           <li className="segment pink" />
-          <li className="segment darkBlue hidden" />
+          <li className="segment blue hidden" />
           <li className="segment purple hidden" />
           <li className="segment white hidden" />
           <li className="segment beige hidden" />
@@ -49,20 +54,21 @@ function LandingPage() {
           <li className="segment yellow" />
         </ul>
         <img
-        src={Logo}
-        className="logo"
-        alt="black and white logo mood flow"
-      ></img>
-      <div className="enterApp>">
-        <Link to="/home">
-          <button type="button" class="enter">
-            ENTER
-          </button>
-        </Link>
+          src={Logo}
+          className="logo"
+          alt="black and white logo mood flow"
+        ></img>
+        <div className="enterApp>">
+          <Link to="/home" style={{ textDecoration: "none" }}>
+            <button type="button" className="enter">
+              ENTER
+            </button>
+          </Link>
+        </div>
       </div>
       </div>
       
-    </div>
+  
   );
 }
 export default LandingPage;

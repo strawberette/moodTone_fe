@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
-
 function Register(props) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState({});
   const baseURL = `${process.env.REACT_APP_BASE_URL}/user/registeruser`;
-
   const handleUserChange = (e) => setUser(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
 

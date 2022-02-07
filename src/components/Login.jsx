@@ -51,7 +51,7 @@ function Login({ user, setUser }) {
           onChange={handlePassword}
         />
 
-          <button type="submit"> Submit </button>
+        <button type="submit"> Submit </button>
       </form>
     </>
   );
