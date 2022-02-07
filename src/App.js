@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Register from "./components/Register";
-import Login from "./components/Login";
+import Login from "./components/Login.jsx";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import LandingPage from "./components/LandingPage";
@@ -9,7 +9,12 @@ import Musisphere from "./components/MusispherePage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {ThemeProvider, theme, ColorModeProvider, CSSReset } from "@chakra-ui/core";
+import {
+  ThemeProvider,
+  theme,
+  ColorModeProvider,
+  CSSReset,
+} from "@chakra-ui/core";
 import Toggle from "./components/darkModeToggle";
 
 function App() {
@@ -37,36 +42,36 @@ function App() {
 
   return (
     <>
-    <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <ColorModeProvider>
           <CSSReset />
           <Toggle />
         </ColorModeProvider>
       </ThemeProvider>
-    <Router>
-      <Logout user={user} setUser={setUser} />
-      <Switch>
-        <Route exact path="/">
-          <LandingPage></LandingPage>
-        </Route>
-        <Route exact path="/home">
-          <Register user={user} />
-          <Login user={user} setUser={setUser} />
-        </Route>
-        <Route exact path="/navigationPage">
-          <NavigationPage />
-        </Route>
-        <Route exact path="/musisphere">
-        <Musisphere></Musisphere>
-        </Route>
-        <Route exact path="/profile">
-          <Profile user={user} key={document.location.href} />
-        </Route>
-        <Route exact path="/emotions">
-          <p>Emotions</p>
-        </Route>
-      </Switch>
-    </Router>
+      <Router>
+        <Logout user={user} setUser={setUser} />
+        <Switch>
+          <Route exact path="/">
+            <LandingPage></LandingPage>
+          </Route>
+          <Route exact path="/home">
+            <Register user={user} />
+            <Login user={user} setUser={setUser} />
+          </Route>
+          <Route exact path="/navigationPage">
+            <NavigationPage />
+          </Route>
+          <Route exact path="/musisphere">
+            <Musisphere></Musisphere>
+          </Route>
+          <Route exact path="/profile">
+            <Profile user={user} key={document.location.href} />
+          </Route>
+          <Route exact path="/emotions">
+            <EmotionsPage />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }
