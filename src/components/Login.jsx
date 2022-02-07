@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, Route, Redirect } from "react-router-dom";
 
 function Login({ user, setUser }) {
@@ -51,7 +51,7 @@ function Login({ user, setUser }) {
           onChange={handlePassword}
         />
 
-          <button type="submit"> Submit </button>
+        <button type="submit"> Submit </button>
       </form>
     </>
   );

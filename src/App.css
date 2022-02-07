@@ -1,61 +1,4 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-}
-body {
-  margin: 0;
-}
-.link {
-  color: var(--light);
-}
-
-nav a {
-  color: var(--light);
-  text-decoration: none;
-}
-
-nav {
-  margin: 20px;
-  justify-content: center;
-}
-
-nav div {
-  display: flex;
-  justify-content: center;
-}
-
-nav span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  list-style-type: none;
-  color: white;
-  padding: 0rem;
-  margin: 0 4rem;
-}
-
-.link {
-  position: relative;
-}
-
-.link:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  background-color: var(--secondary);
-  visibility: hidden;
-  transition: all 0.1s ease-in-out;
-}
-
-.link:hover:before {
-  visibility: visible;
-} */
-
+/* ----------------------------------WHOLE APP STYLE----------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 * {
@@ -66,44 +9,42 @@ nav span {
 body {
   margin: 0;
   height: 100vh;
-  width: 100;
+  width: 100vw;
   overflow: hidden;
 }
 
+/* -----------------------------------LANDING PAGE STYLE---------------------------------------  */
 .wrapper {
   height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 3px solid black; */
 }
 .circle {
   transform: scale(1.5);
-  position: relative;
   padding: 0;
   width: 20em;
   height: 20em;
   border-radius: 50% 50% 0 0;
-  list-style: none;
+  /* list-style: none; */
   overflow: hidden;
 }
 .logo {
-  transform: scale(0.98);
+  scale: (0.98);
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   bottom: 161px;
   left: -1px;
 }
 .enter {
+  position: relative;
+  bottom: 100px;
   font-size: 1.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  bottom: 120px;
   width: 10rem;
   height: 3rem;
   border-radius: 250px;
@@ -112,31 +53,14 @@ body {
   -webkit-box-shadow: 0px 0px 10px 2px black;
   box-shadow: 0px 0px 15px 2px black;
   cursor: pointer;
-}
-.enter:hover {
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
   opacity: 0.8;
 }
-/* li {
-  /* overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  transform-origin: 0% 100%; */
-/* } */ */
-ol {
-  /* overflow: hidden; */
-  /* position: absolute; */
-  top: 0;
-  right: 0;
-  width: 0%;
-  height: 0%;
-  transform-origin: 0% 100%;
+.enter:hover {
+  opacity: 1;
 }
-/* .none {
-  visibility: hidden;
-} */
+
 .button {
   position: absolute;
   left: -100%;
@@ -149,15 +73,16 @@ ol {
 .green {
   transform: rotate(0deg) skewY(-60deg);
 }
-.blue {
+.darkBlue {
   transform: rotate(30deg) skewY(-60deg);
 }
 .pink {
   transform: rotate(60deg) skewY(-60deg);
 }
-.darkBlue {
+.blue {
   transform: rotate(90deg) skewY(-60deg);
 }
+
 .purple {
   transform: rotate(120deg) skewY(-60deg);
 }
@@ -182,12 +107,26 @@ ol {
 .yellow {
   transform: rotate(330deg) skewY(-60deg);
 }
-
 .hidden {
   display: none;
 }
 
-/*=================== Musisphere Page =====================*/
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+/* ---------------------------------------Musisphere Page------------------------------------ */
 
 .musispherePage {
   height: 100vh;
@@ -215,58 +154,27 @@ ol {
   justify-content: space-between;
   align-content: center;
   width: 100%;
-  height: 18%;
+  height: 19%;
   padding-right: 5%;
   border-bottom: 1px solid gray;
-  box-shadow: inset 2px 2px 0px 1px rgba(70,70,70,0.2), inset -2px -2px 0px 1px rgba(0,0,0,0.3);
+  box-shadow: inset 2px 2px 0px 1px rgba(70, 70, 70, 0.2),
+    inset -2px -2px 0px 1px rgba(0, 0, 0, 0.3);
 }
 .keyColors:hover {
   cursor: pointer;
-  background-color: rgba(100,100,100,0.2);
+  background-color: rgba(100, 100, 100, 0.2);
+}
+.keyColors p {
+  padding-top: 10px;
+}
+.keyModal {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  margin-left: 10px;
+  box-sizing: border-box;
 }
 
-.colorBox {
-  height: 15px;
-  width: 15px;
-  border: 1px black solid;
-  margin: 20px;
-}
-#yellowBox {
-  background-color: #ee9b00;
-}
-#orangeBox {
-  background-color: #bb3e03;;
-}
-#redBox {
-  background-color: #ae2012;
-}
-#blackBox {
-  background-color: #050505;
-}
-#grayBox {
-  background-color: #696773;
-}
-#beigeBox {
-  background-color: #f3dfc1;
-}
-#greenBox {
-  background-color: #5da271;
-}
-#darkBlueBox {
-  background-color: #005f73;;
-}
-#pinkBox {
-  background-color: #d87cac;
-}
-#purpleBox {
-  background-color: #745c97;
-}
-#blueBox {
-  background-color: #31afd4;
-}
-#whiteBox {
-  background-color: #f7f0f0;
-}
 .musisphere {
   transform: scale(1.5);
   top: 100px;
@@ -278,7 +186,7 @@ ol {
   height: 30em;
   border-radius: 50%;
   list-style: none;
-  box-shadow: inset 0px 0px 0px 20px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 0px 20px rgba(0, 0, 0, 0.75);
   animation: spinningWheel linear 60s infinite;
 }
 .segment {
@@ -297,7 +205,7 @@ ol {
 
 .red {
   background-color: #ae2012;
-  transform : rotateZ(30deg) skewY(-60);
+  transform: rotateZ(30deg) skewY(-60);
 }
 .orange {
   background-color: #bb3e03;
@@ -327,6 +235,7 @@ ol {
   background-color: #31afd4;
   transform: rotateZ(240deg) skewY(-60);
 }
+
 .white {
   background-color: #f7f0f0;
   transform: rotateZ(270deg) skewY(-60);
@@ -353,38 +262,196 @@ ol {
   }
 }
 
-/* ======================= NavBar styling =====================*/
+/* ------------------------------------NAV BAR STYLING------------------------------- */
+
+#logOutInfo {
+  width: 10%;
+}
+
+.navPage {
+  height: 50px;
+  width: 100vw;
+}
 
 .navBar {
+  width: 100vw;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 50px;
-  width: 100vw;
-  position: fixed;
   top: 0;
   left: 0;
-  padding-top: 12px;
-  border-bottom: solid 1px gray;
+  position: fixed;
+  padding-right: 5%;
   box-sizing: border-box;
 }
 
 .navBar li {
-  width: 25%;
   list-style: none;
   text-align: center;
+  width: 25%;
+  padding-top: 10px;
 }
 
-.navBar li a:hover {
-  cursor: pointer;
+.navBar li:first-of-type {
+  padding-top: 0;
 }
 
-.navBar li a {
-  width: 100%;
-  height: 100%;
+/* ------------------------------------HOME PAGE CSS STYLE----------------------------- */
+
+.homePage {
+  background-image: url(./utility/smoke.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.darkModeToggle {
+/* -----------------------------EMOTIONS PAGE CSS STYLE-------------------------------- */
+
+.emotionsPage {
+  background-image: url(./utility/smoke3.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100vh;
+  /* border: solid black; */
+  /* margin: 0px; */
+  align-items: center;
+  padding: 50px 0px 100px 50px;
+}
+
+.iconsWrapper {
   position: relative;
-  bottom: 13px;
+  top: 80px;
+  height: 100vh;
+  left: -300px;
+  /* border: solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 150px;
+  padding-bottom: 190px;
+}
+
+.logo2 {
+  /* border: solid black; */
+  max-width: 200px;
+}
+.InfoHeader {
+  position: relative;
+  left: -50px;
+  margin-top: 100px;
+  font-size: 30px;
+}
+.InfoHeader h1 {
+  font-size: 2.5rem;
+}
+.infoBody {
+  text-align: right;
+  font-size: 1.25rem;
+  width: 500px;
+  height: 500px;
+  /* border: solid black; */
+  position: fixed;
+  right: 300px;
+  padding: 30px 50px 0 0;
+  top: 250px;
+}
+.logoWrapper {
+  position: relative;
+  /* border: black solid; */
+  height: 200px;
+  bottom: 0px;
+  left: 200px;
+}
+.logoWrapper .circle {
+  transform: scale(0.5);
+}
+.emoticon {
+  /* border: solid black; */
+  width: 40px;
+  flex: 1 1 33.333%;
+  /* margin: -100; */
+  opacity: 0.8;
+}
+.emoticon:hover {
+  margin: -10px 0 0 0;
+  opacity: 1;
+}
+
+/* ------------------------------------/modal css/-------------------------------------------- */
+
+.react-responsive-modal-modal {
+  /* opacity: 0.9; */
+  border-radius: 5px;
+  height: 700px;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+}
+.modal-wrapper-anger {
+  background-color: #f9c6c2;
+  height: 690px;
+  border: 5px solid #f5aaa3;
+}
+.modal-wrapper-energy {
+  background-color: #fec8ae;
+  height: 690px;
+  border: 5px solid #feac86;
+}
+.modal-wrapper-happy {
+  background-color: #ffeac2;
+  height: 690px;
+  border: 5px solid #ffd485;
+}
+.modal-wrapper-serene {
+  background-color: #d8e9dd;
+  height: 690px;
+  border: 5px solid #b1d3bb;
+}
+.modal-wrapper-melancholic {
+  background-color: #c2f5ff;
+  height: 690px;
+  border: 5px solid #5ce4ff;
+}
+.modal-wrapper-romantic {
+  background-color: #f1d0e1;
+  height: 690px;
+  width: 500px;
+  border: 5px solid #de91b9;
+}
+.modal-wrapper-spiritual {
+  background-color: #dfd9e8;
+  height: 690px;
+  border: 5px solid #9f8cba;
+}
+.modal-wrapper-calm {
+  background-color: #cdebf4;
+  height: 690px;
+  border: 5px solid #58bcda;
+}
+.modal-wrapper-peaceful {
+  background-color: #f7f0f0;
+  height: 690px;
+  border: 5px solid #cda2a2;
+}
+.modal-wrapper-soft {
+  background-color: #efd3a9;
+  height: 690px;
+  border: 5px solid #d99530;
+}
+.modal-wrapper-sad {
+  background-color: #dfdfe2;
+  height: 690px;
+  border: 5px solid #9f9fa8;
+}
+.modal-wrapper-powerful {
+  background-color: #525252;
+  height: 690px;
+  border: 5px solid #333333;
 }

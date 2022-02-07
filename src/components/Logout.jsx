@@ -1,3 +1,5 @@
+import React from "react";
+
 const Logout = ({ user, setUser }) => {
   const handleClick = () => {
     setUser(null);
@@ -8,7 +10,7 @@ const Logout = ({ user, setUser }) => {
 
   return (
     <div>
-      <p>
+      <p id="logOutInfo">
         Logged in as <b>{user.username}</b>
       </p>
       <button onClick={handleClick}>Log out</button>

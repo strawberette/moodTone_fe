@@ -1,7 +1,7 @@
 import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import Register from "./components/Register";
-import Login from "./components/Login";
+import Login from "./components/Login.jsx";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import LandingPage from "./components/LandingPage";
@@ -9,7 +9,11 @@ import Musisphere from "./components/MusispherePage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import {
+  ChakraProvider,
+  ColorModeProvider,
+} from "@chakra-ui/react";
+import Toggle from "./components/darkModeToggle";
 
 function App() {
   const [song, setSong] = useState({});
@@ -31,8 +35,6 @@ function App() {
       console.log(err);
     }
   };
-
-  
 
   return (
     <>
