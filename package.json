@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.3.1",
-    "@emotion/styled": "^10.3.0",
+    "@chakra-ui/react": "^1.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
@@ -17,6 +17,7 @@
     "dom-converter": "^0.2.0",
     "emotion-theming": "^10.3.0",
     "env": "^0.0.2",
+    "framer-motion": "^6.2.4",
     "link": "^0.1.5",
     "lru-cache": "^6.0.0",
     "p-limit": "^4.0.0",
@@ -27,6 +28,7 @@
     "react-scripts": "^5.0.0",
     "switch": "^0.0.0",
     "use-history": "^1.4.1",
+    "value-equal": "^1.0.1",
     "web-vitals": "^2.1.4",
     "webkit": "^0.0.0"
   },

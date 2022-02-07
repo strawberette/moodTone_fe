@@ -2,14 +2,10 @@ import Logo from "../utility/logo.jpg";
 import "../App.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  ThemeProvider,
-  theme,
-  ColorModeProvider,
-  CSSReset,
-} from "@chakra-ui/core";
+import {ChakraProvider} from "@chakra-ui/react"
 import Toggle from "./darkModeToggle";
 // import MoodTone from "./moodTone";
+
 function LandingPage() {
   const [song, setSong] = useState({});
   const [mood, setMood] = useState("");
@@ -29,15 +25,12 @@ function LandingPage() {
       console.log(err);
     }
   };
-
+    
   return (
     <div className="App">
-      {/* <ThemeProvider theme={theme}>
-        <ColorModeProvider>
-          <CSSReset />
+      <ChakraProvider>
           <Toggle />
-        </ColorModeProvider>
-      </ThemeProvider> */}
+      </ChakraProvider>
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
