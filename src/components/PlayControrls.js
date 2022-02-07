@@ -51,7 +51,10 @@ function PlayControrls() {
       
 
     <image src="http[s]://api.jamendo.com/v3.0/artists/albums/?"></image>
-    <p></p>
+    <h4>title</h4> 
+    <h4>aritist</h4> 
+    <h4>albume</h4> 
+    <h4>mood</h4>
 
       <button className='backward-btn' >
       <FaBackward/> 
