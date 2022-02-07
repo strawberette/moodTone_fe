@@ -66,7 +66,7 @@ const Profile = (props) => {
                   </a>
                 </td>
                 <td>
-                  <img src={d.album_image} width="50px" />
+                  <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
               </tr>
             );

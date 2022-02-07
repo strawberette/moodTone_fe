@@ -1,6 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import MoodToneLogo from "../utility/moodTone2.jpg.jp2";
+// import { useState } from "react";
+// import MoodToneLogo from "../utility/moodTone2.jpg.jp2";
 import RouteModalAnger from "../modalRoutes/RouteModalAnger";
 import RouteModalEnergy from "../modalRoutes/RouteModalEnergy";
 import RouteModalHappy from "../modalRoutes/RouteModalHappy";
