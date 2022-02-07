@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
+import NavigationPage from "./NavigationPage";
 
 
 const Profile = (props) => {
@@ -40,7 +41,7 @@ const Profile = (props) => {
 
   return (
     <div>
-      
+      <NavigationPage />
       <table>
         <thead>
           <tr>

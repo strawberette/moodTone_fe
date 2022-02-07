@@ -1,4 +1,4 @@
-function Login({ user, setUser }) {
+const Logout = ({ user, setUser }) => {
   const handleClick = () => {
     setUser(null);
   };
@@ -16,4 +16,4 @@ function Login({ user, setUser }) {
   );
 }
 
-export default Login;
+export default Logout;
