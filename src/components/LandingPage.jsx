@@ -2,12 +2,7 @@ import Logo from "../utility/logo.jpg";
 import "../App.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  ThemeProvider,
-  theme,
-  ColorModeProvider,
-  CSSReset,
-} from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 import Toggle from "./darkModeToggle";
 // import MoodTone from "./moodTone";
 function LandingPage() {
@@ -32,12 +27,6 @@ function LandingPage() {
 
   return (
     <div className="App">
-      {/* <ThemeProvider theme={theme}>
-        <ColorModeProvider>
-          <CSSReset />
-          <Toggle />
-        </ColorModeProvider>
-      </ThemeProvider> */}
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
@@ -66,9 +55,7 @@ function LandingPage() {
           </Link>
         </div>
       </div>
-      </div>
-      
-  
+    </div>
   );
 }
 export default LandingPage;
