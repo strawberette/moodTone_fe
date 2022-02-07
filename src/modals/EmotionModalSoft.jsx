@@ -4,7 +4,7 @@ import "../App.css";
 import SoftIcon from "../utility/soft.png";
 function EmotionModalSoft() {
   return (
-    <div className="modal-wrappe-soft">
+    <div className="modal-wrapper-soft">
       <img
         className="Soft"
         src={SoftIcon}

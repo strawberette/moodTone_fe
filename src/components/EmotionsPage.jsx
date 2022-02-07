@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import MoodToneLogo from "../utility/moodTone.jpg";
+import MoodToneLogo from "../utility/moodTone2.jpg.jp2";
 import RouteModalAnger from "../modalRoutes/RouteModalAnger";
 import RouteModalEnergy from "../modalRoutes/RouteModalEnergy";
 import RouteModalHappy from "../modalRoutes/RouteModalHappy";
@@ -18,11 +18,20 @@ const EmotionsPage = () => {
   return (
     <div className="emotionsPage">
       <div className="logoWrapper">
-        <img
-          src={MoodToneLogo}
-          className="logo2"
-          alt="moodTone rainbow logo "
-        ></img>
+        <ul className="circle">
+          <li className="segment green" />
+          <li className="segment darkBlue " />
+          <li className="segment pink" />
+          <li className="segment blue hidden" />
+          <li className="segment purple hidden" />
+          <li className="segment white hidden" />
+          <li className="segment beige hidden" />
+          <li className="segment gray hidden" />
+          <li className="segment black hidden" />
+          <li className="segment red" />
+          <li className="segment orange" />
+          <li className="segment yellow" />
+        </ul>
       </div>
       <div className="iconsWrapper">
         <div className="emoticon">

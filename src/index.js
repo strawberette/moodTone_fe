@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import "./App.css";
 import reportWebVitals from "./reportWebVitals";
-
+import "./utility/logo.jpg";
 ReactDOM.render(
   <React.StrictMode>
     <App />

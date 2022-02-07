@@ -56,10 +56,9 @@ function MusispherePage() {
         </div>
         <div className="musisphere">
           <li className="segment green" />
-          <li className="segment darkBlue" />
-
-          <li className="segment pink" />
           <li className="segment blue" />
+          <li className="segment pink" />
+          <li className="segment darkBlue" />
           <li className="segment purple" />
           <li className="segment white" />
           <li className="segment beige" />
