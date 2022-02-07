@@ -50,7 +50,7 @@ function PlayControrls() {
   return <div>PlayControrls
       
 
-    <image src="http[s]://api.jamendo.com/v3.0/artists/albums/?"></image>
+    <image src="https://api.jamendo.com/v3.0/artists/albums/?"></image>
     <h4>title</h4> 
     <h4>aritist</h4> 
     <h4>albume</h4> 
