@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import NavigationPage from "./NavigationPage";
 import HappyIcon from "../utility/happy.png";
@@ -16,9 +16,23 @@ import PowerfulIcon from "../utility/powerful.png";
 
 import ReactAudioPlayer from "react-audio-player";
 
-function MusispherePage() {
+function MusispherePage(props) {
   const [song, setSong] = useState("");
   const [mood, setMood] = useState("");
+  const [moodList, setMoodList] = useState([])
+
+  useEffect(() => {
+    const getMoods = async () => {
+      const baseURL = process.env.REACT_APP_BASE_URL;
+      const response = await fetch(
+        `${baseURL}/mood?secret_token=${props.user.jwt}`
+        
+      );
+      const moodsJSON = await response.json();
+      setMoodList(moodsJSON)
+    }
+    getMoods() 
+  }, [])
 
   const limit = 10;
   const random = Math.floor(Math.random() * limit + 1);
@@ -35,6 +49,7 @@ function MusispherePage() {
       console.log(error);
     }
   };
+
   const redClick = () => {
     setMood("Angry");
     handleSubmit();
@@ -115,7 +130,13 @@ function MusispherePage() {
             </li>
           </div>
           <div className="musisphere">
-            <li className="segment green" onClick={() => greenClick()} />
+            {moodList.map((m,i) => {
+              return (
+                <li className={`segment ${m.moodColour}`}  onClick={() => { setMood({moodName: m.moodName, moodId: m.moodId});
+                handleSubmit()}} />
+              )
+            })}
+            {/* <li colorName="green" className="segment green" onClick={() => greenClick()} />
             <li className="segment blue" onClick={() => blueClick()} />
             <li className="segment pink" onClick={() => pinkClick()} />
             <li className="segment darkBlue" onClick={() => darkBlueClick()} />
@@ -126,7 +147,7 @@ function MusispherePage() {
             <li className="segment black" onClick={() => blackClick()} />
             <li className="segment red" onClick={() => redClick()} />
             <li className="segment orange" onClick={() => orangeClick()} />
-            <li className="segment yellow" onClick={() => yellowClick()} />
+            <li className="segment yellow" onClick={() => yellowClick()} /> */}
           </div>
           <div className="colorKey" id="right-colors">
             <li className="keyColors" onClick={() => greenClick()}>
@@ -161,17 +182,16 @@ function MusispherePage() {
             <div>
               <form onSubmit={handleSubmit}>
                 <label htmlFor="mood">What mood are you in? </label>
-                <input type="text" name="mood" value={mood} className="musisphereInputBox"/>
+                <input type="text" name="mood" value={mood.moodName} className="musisphereInputBox"/>
                 <input type="submit" value="Submit" className="hidden" />
               </form>
             </div>
             <div>
-              <ReactAudioPlayer src={song.audio} autoPlay="true" controls className="audioPlayer" />
+              <ReactAudioPlayer src={song.audio} autoPlay={true} controls className="audioPlayer" />
             </div>
           </div>
         </div>
       </div>
-      <PlayControls user={props.user} song={song} mood={mood} />
     </>
   );
 }
