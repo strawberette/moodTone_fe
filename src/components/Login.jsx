@@ -28,7 +28,7 @@ function Login({ user, setUser }) {
     setUser({ username: data.user.name, id: data.user.id, jwt: data.token });
   };
   if (user) {
-    return <Redirect to="/navigationPage" />;
+    return <Redirect to="/emotions" />;
   }
 
   return (

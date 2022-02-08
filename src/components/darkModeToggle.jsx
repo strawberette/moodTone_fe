@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Flex, useColorMode } from "@chakra-ui/react";
+import { Button, Flex, useColorMode } from "@chakra-ui/core";
 
 const Toggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -19,7 +19,7 @@ const Toggle = () => {
           {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
         </Button>
       </Flex>
-      </div>
+    </div>
   );
 };
 
