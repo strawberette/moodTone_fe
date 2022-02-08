@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Flex, useColorMode } from "@chakra-ui/core";
-
+import { Button, Flex, useColorMode } from "@chakra-ui/react";
+//comment
 const Toggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 

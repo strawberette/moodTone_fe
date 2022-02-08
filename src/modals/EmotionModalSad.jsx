@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import "../App.css";
 import SadIcon from "../utility/sad.png";
 function EmotionModalSad() {

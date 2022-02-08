@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import "../App.css";
 import EnergyIcon from "../utility/energy.png";
 function EmotionModalEnergy() {
