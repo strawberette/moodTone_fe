@@ -14,6 +14,8 @@ import SoftIcon from "../utility/soft.png";
 import SadIcon from "../utility/sad.png";
 import PowerfulIcon from "../utility/powerful.png";
 
+import ReactAudioPlayer from "react-audio-player";
+
 function MusispherePage() {
   const [song, setSong] = useState("");
   const [mood, setMood] = useState("");
@@ -164,7 +166,7 @@ function MusispherePage() {
               </form>
             </div>
             <div>
-              <audio src={song.audio} autoPlay controls></audio>
+              <ReactAudioPlayer src={song.audio} autoPlay="true" controls className="audioPlayer" />
             </div>
           </div>
         </div>
