@@ -21,6 +21,7 @@ const EmotionsPage = () => {
 
   return (
     <div className="emotionsPage">
+      <NavigationPage />
       <div className="iconSide">
         <div className="logoWrapper">
           <ul className="circle">

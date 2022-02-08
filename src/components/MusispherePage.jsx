@@ -22,7 +22,7 @@ function MusispherePage() {
   const random = Math.floor(Math.random() * limit + 1);
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
 
-  const handleMood = (e) => setMood(e.target.value);
+  // const handleMood = (e) => setMood(e.target.value);
   const handleSubmit = async (e) => {
     // e.prevent.default();
     try {
