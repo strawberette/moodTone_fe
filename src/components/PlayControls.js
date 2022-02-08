@@ -1,6 +1,6 @@
-import React from 'react'; 
+// import React from 'react'; 
 import { useState } from 'react';
-import { FaPlay,FaPause, FaBackward,FaForward, FiHeart,BsHeartFill} from "react-icons/ai";
+// import { FaPlay,FaPause, FaBackward,FaForward, FiHeart,BsHeartFill} from "react-icons/ai";
 
 
 function PlayControrls() {
@@ -8,25 +8,25 @@ function PlayControrls() {
   const [mood, setMood] = useState(""); 
   const [favoriteTrack,setFav] = useState([]);
   
-  const audioPlaying=()=>{
-    const [isPlaying,setIsPlaying]=useState(false);
-  }
+  // const audioPlaying=()=>{
+  //   const [isPlaying,setIsPlaying]=useState(false);
+  // }
 
-  const togglePlayPause =()=>{
-    setIsPlaying(isPlaying)
+  // const togglePlayPause =()=>{
+  //   setIsPlaying(isPlaying)
   }
   
   const favoriteTrack=()=>{
     setFav(favoriteTrack)
   }
 
-  const forwardSong=()=>{
-    fowardSong(curentSong+1)
-  } 
+  // const forwardSong=()=>{
+  //   fowardSong(curentSong+1)
+  // } 
 
-  const backwardSong=()=>{
-    backwardSong=(curentSong-1)
-  }
+  // const backwardSong=()=>{
+  //   backwardSong=(curentSong-1)
+  // }
 
 
   const limit = 10;
@@ -50,7 +50,7 @@ function PlayControrls() {
   return <div>PlayControrls
       
 
-    <image src="https://api.jamendo.com/v3.0/artists/albums/?"></image>
+    {/* <image src="https://api.jamendo.com/v3.0/artists/albums/?"></image>
     <h4>title</h4> 
     <h4>aritist</h4> 
     <h4>albume</h4> 
@@ -58,7 +58,7 @@ function PlayControrls() {
 
       <button className='backward-btn' >
       <FaBackward/> 
-      </button>
+      </button> */}
       
       <audio src='baseURL'></audio>
       <button className='paly-btn' onClick={(togglePlayPause)=>setSong(!audioPlaying)}>
@@ -66,17 +66,17 @@ function PlayControrls() {
         <FaPlay/><FaPause/>
       </button > 
       
-      <button className='forward-btn' onClick={(fowardSong)} >
+      {/* <button className='forward-btn' onClick={(fowardSong)} >
       <FaForward/> 
-      </button>
+      </button> */}
 
       <button className='fav-track' onClick={(favoriteTrack)=>{setFav}}>
       favorite song
-      <FiHeart/><BsHeartFill/>
+      {/* <FiHeart/><BsHeartFill/> */}
       </button>
 
   </div>; 
  
-}
+
 
 export default PlayControrls;
