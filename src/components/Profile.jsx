@@ -78,7 +78,7 @@ const Profile = (props) => {
       </table>
 
       <div className="mediaPlayer">
-        <span>🎵</span><h1> Moodplayer </h1><span>🎶</span>
+        <h1> Moodplayer </h1>
         <audio src={audio} autoPlay controls></audio>
       </div>
     </div>
