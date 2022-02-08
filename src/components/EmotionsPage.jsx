@@ -18,7 +18,6 @@ import "../App.css";
 import NavigationPage from "./NavigationPage";
 
 const EmotionsPage = () => {
-
   return (
     <div className="emotionsPage">
       <NavigationPage />
@@ -39,6 +38,10 @@ const EmotionsPage = () => {
             <li className="segment yellow" />
           </ul>
         </div>
+        <div className="text">
+          <h2>moodTone</h2>
+        </div>
+
         <div className="iconsWrapper">
           <div className="emoticon">
             <RouteModalAnger />
@@ -80,21 +83,24 @@ const EmotionsPage = () => {
       </div>
       <div className="infoSide">
         <div className="infoBody">
-          <h1>Welcome to moodTone</h1>
+          <h1>Welcome to</h1>
+          <h2>moodTone</h2>
           <p>
             Here you can find out about the different colours we chose for this
             new App! Warm colors like red, yellow and orange evoke higher
             arousal Routes, such as love, passion, happiness, and anger. Cool
             colors, like blue, green and purple are linked to calmness, sadness
             and indifference. Colors can trigger these arousal states and
-            Routes. Much like music does!
+            Routes. Much like music does! So come and explore our Unique
+            musiSphere and find the right music to suit your mood. Your new
+            favourite track is one click away...
           </p>
         </div>
 
         <div className="entermusisphere">
           <Link to="/musisphere" style={{ textDecoration: "none" }}>
             <button type="musicbutton" className="entermusic">
-              !MUSISPHERE!
+              TAKE ME TO THE MUSISPHERE!
             </button>
           </Link>
         </div>
