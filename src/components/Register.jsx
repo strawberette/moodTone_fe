@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 function Register(props) {

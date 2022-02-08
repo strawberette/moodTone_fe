@@ -1,3 +1,4 @@
+import React from "react";
 import Logo from "../utility/logo.jpg";
 import "../App.css";
 import { useState, useEffect } from "react";
