@@ -1,57 +1,494 @@
-/* * {
-  margin: 0;
+/* ----------------------------------WHOLE APP STYLE----------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
 body {
   margin: 0;
-}
-.link {
-  color: var(--light);
-}
-
-nav a {
-  color: var(--light);
-  text-decoration: none;
+  height: 100vh;
+  width: 100;
+  overflow: hidden;
 }
 
-nav {
-  margin: 20px;
-  justify-content: center;
-}
-
-nav div {
+/* -----------------------------------LANDING PAGE STYLE---------------------------------------  */
+.wrapper {
+  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  /* border: 3px solid black; */
 }
-
-nav span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  list-style-type: none;
-  color: white;
-  padding: 0rem;
-  margin: 0 4rem;
+.circle {
+  transform: scale(1.5);
+  padding: 0;
+  width: 20em;
+  height: 20em;
+  border-radius: 50% 50% 0 0;
+  /* list-style: none; */
+  overflow: hidden;
+  /* border: solid black; */
 }
-
-.link {
+.logo {
+  scale: (0.98);
+  display: block;
   position: relative;
+  bottom: 161px;
+  left: -1px;
 }
 
-.link:before {
-  content: "";
+.enter {
+  position: relative;
+  bottom: 100px;
+  font-size: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 250px;
+  background-color: #5da271;
+  -moz-box-shadow: 0px 0px 10px 2px black;
+  -webkit-box-shadow: 0px 0px 10px 2px black;
+  box-shadow: 0px 0px 15px 2px black;
+  cursor: pointer;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+.enter:hover {
+  opacity: 1;
+}
+li {
+  /* overflow: hidden;
+  position: absolute; */
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+ol {
+  /* overflow: hidden;
+  position: absolute; */
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 0%;
+  transform-origin: 0% 100%;
+}
+.button {
   position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  background-color: var(--secondary);
-  visibility: hidden;
-  transition: all 0.1s ease-in-out;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(60deg) rotate(15deg);
+  padding-top: 20px;
+}
+.green {
+  transform: rotate(0deg) skewY(-60deg);
+}
+.darkBlue {
+  transform: rotate(30deg) skewY(-60deg);
+}
+.pink {
+  transform: rotate(60deg) skewY(-60deg);
+}
+.blue {
+  transform: rotate(90deg) skewY(-60deg);
 }
 
-.link:hover:before {
-  visibility: visible;
-} */
+.purple {
+  transform: rotate(120deg) skewY(-60deg);
+}
+.white {
+  transform: rotate(150deg) skewY(-60deg);
+}
+.beige {
+  transform: rotate(180deg) skewY(-60deg);
+}
+.gray {
+  transform: rotate(210deg) skewY(-60deg);
+}
+.black {
+  transform: rotate(240deg) skewY(-60deg);
+}
+.red {
+  transform: rotate(270deg) skewY(-60deg);
+}
+.orange {
+  transform: rotate(300deg) skewY(-60deg);
+}
+.yellow {
+  transform: rotate(330deg) skewY(-60deg);
+}
+.hidden {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+/* ---------------------------------------Musisphere Page------------------------------------ */
+
+.musispherePage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 14%;
+  padding-right: 14%;
+}
+
+.colorKey {
+  height: 40%;
+  width: 22%;
+  position: relative;
+  top: 200px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+}
+.keyColors {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  height: 18%;
+  padding-right: 5%;
+  border-bottom: 1px solid gray;
+  box-shadow: inset 2px 2px 0px 1px rgba(70, 70, 70, 0.2),
+    inset -2px -2px 0px 1px rgba(0, 0, 0, 0.3);
+}
+.keyColors:hover {
+  cursor: pointer;
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+.colorBox {
+  height: 15px;
+  width: 15px;
+  border: 1px black solid;
+  margin: 20px;
+}
+#yellowBox {
+  background-color: #ee9b00;
+}
+#orangeBox {
+  background-color: #bb3e03;
+}
+#redBox {
+  background-color: #ae2012;
+}
+#blackBox {
+  background-color: #050505;
+}
+#grayBox {
+  background-color: #696773;
+}
+#beigeBox {
+  background-color: #f3dfc1;
+}
+#greenBox {
+  background-color: #5da271;
+}
+#darkBlueBox {
+  background-color: #005f73;
+}
+#pinkBox {
+  background-color: #d87cac;
+}
+#purpleBox {
+  background-color: #745c97;
+}
+#blueBox {
+  background-color: #31afd4;
+}
+#whiteBox {
+  background-color: #f7f0f0;
+}
+.musisphere {
+  transform: scale(1.5);
+  top: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: 1em auto;
+  padding: 0;
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  list-style: none;
+  box-shadow: inset 0px 0px 0px 20px rgba(0, 0, 0, 0.75);
+  animation: spinningWheel linear 60s infinite;
+}
+.segment {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+.segment:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: #ae2012;
+  transform: rotateZ(30deg) skewY(-60);
+}
+.orange {
+  background-color: #bb3e03;
+  transform: rotateZ(60deg) skewY(-60);
+}
+.yellow {
+  background-color: #ee9b00;
+  transform: rotateZ(90deg) skewY(-60);
+}
+.green {
+  background-color: #5da271;
+  transform: rotateZ(120deg) skewY(-60);
+}
+.darkBlue {
+  background-color: #005f73;
+  transform: rotateZ(150deg) skewY(-60);
+}
+.pink {
+  background-color: #d87cac;
+  transform: rotateZ(180deg) skewY(-60);
+}
+.purple {
+  background-color: #745c97;
+  transform: rotateZ(210deg) skewY(-60);
+}
+.blue {
+  background-color: #31afd4;
+  transform: rotateZ(240deg) skewY(-60);
+}
+
+.white {
+  background-color: #f7f0f0;
+  transform: rotateZ(270deg) skewY(-60);
+}
+.beige {
+  background-color: #f3dfc1;
+  transform: rotateZ(300deg) skewY(-60);
+}
+.gray {
+  background-color: #696773;
+  transform: rotateZ(330deg) skewY(-60);
+}
+.black {
+  background-color: #050505;
+  transform: rotateZ(0deg) skewY(-60);
+}
+
+@keyframes spinningWheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ------------------------------------HOME PAGE CSS STYLE----------------------------- */
+
+.homePage {
+  background-image: url(./utility/smoke.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* -----------------------------EMOTIONS PAGE CSS STYLE-------------------------------- */
+
+/* Main wrapper ------------------------ */
+.emotionsPage {
+  background-image: url(./utility/smoke3.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  height: 100vh;
+  border: solid black;
+  /* margin: 0px; */
+  align-items: center;
+  padding: 50px 0px 100px 50px;
+}
+
+/* icons side -------------------------- */
+.iconSide {
+  display: flex;
+  border: solid black;
+}
+.iconsWrapper {
+  position: relative;
+  top: 80px;
+  height: 100vh;
+  left: -300px;
+  border: solid black;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 150px;
+  padding-bottom: 190px;
+}
+.logoWrapper {
+  position: relative;
+  border: black solid;
+  height: 200px;
+  bottom: 0px;
+  left: 200px;
+}
+.logoWrapper .circle {
+  transform: scale(0.5);
+}
+.emoticon {
+  /* border: solid black; */
+  width: 40px;
+  flex: 1 1 33.333%;
+  /* margin: -100; */
+  opacity: 0.8;
+}
+.emoticon:hover {
+  margin: -10px 0 0 0;
+  opacity: 1;
+}
+
+/* info side ----------------------------------- */
+.infoSide {
+  display: flex;
+  border: solid black;
+}
+.infoBody {
+  text-align: right;
+  font-size: 1.25rem;
+  width: 500px;
+  height: 500px;
+  border: solid black;
+  /* position: fixed; */
+  /* right: 300px;
+  padding: 30px 50px 0 0;
+  top: 250px; */
+}
+.infoBody h1 {
+  font-size: 2.5rem;
+}
+.entermusisphere {
+  border: solid black;
+  display: flex;
+  /* flex-direction: column; */
+}
+.entermusic {
+  font-size: 1.5rem;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 250px;
+  background-color: #005f73;
+  -moz-box-shadow: 0px 0px 10px 2px black;
+  -webkit-box-shadow: 0px 0px 10px 2px black;
+  box-shadow: 0px 0px 15px 2px black;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.entermusic:hover {
+  opacity: 1;
+}
+
+/* ------------------------------------/modal css/-------------------------------------------- */
+
+.react-responsive-modal-modal {
+  /* opacity: 0.9; */
+  border-radius: 5px;
+  height: 700px;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+}
+.modal-wrapper-anger {
+  background-color: #f9c6c2;
+  height: 690px;
+  border: 5px solid #f5aaa3;
+}
+.modal-wrapper-energy {
+  background-color: #fec8ae;
+  height: 690px;
+  border: 5px solid #feac86;
+}
+.modal-wrapper-happy {
+  background-color: #ffeac2;
+  height: 690px;
+  border: 5px solid #ffd485;
+}
+.modal-wrapper-serene {
+  background-color: #d8e9dd;
+  height: 690px;
+  border: 5px solid #b1d3bb;
+}
+.modal-wrapper-melancholic {
+  background-color: #c2f5ff;
+  height: 690px;
+  border: 5px solid #5ce4ff;
+}
+.modal-wrapper-romantic {
+  background-color: #f1d0e1;
+  height: 690px;
+  width: 500px;
+  border: 5px solid #de91b9;
+}
+.modal-wrapper-spiritual {
+  background-color: #dfd9e8;
+  height: 690px;
+  border: 5px solid #9f8cba;
+}
+.modal-wrapper-calm {
+  background-color: #cdebf4;
+  height: 690px;
+  border: 5px solid #58bcda;
+}
+.modal-wrapper-peaceful {
+  background-color: #f7f0f0;
+  height: 690px;
+  border: 5px solid #cda2a2;
+}
+.modal-wrapper-soft {
+  background-color: #efd3a9;
+  height: 690px;
+  border: 5px solid #d99530;
+}
+.modal-wrapper-sad {
+  background-color: #dfdfe2;
+  height: 690px;
+  border: 5px solid #9f9fa8;
+}
+.modal-wrapper-powerful {
+  background-color: #525252;
+  height: 690px;
+  border: 5px solid #333333;
+}

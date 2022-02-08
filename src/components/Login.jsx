@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Route, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
@@ -52,7 +52,7 @@ function Login({ user, setUser }) {
           onChange={handlePassword}
         />
 
-          <button type="submit"> Submit </button>
+        <button type="submit"> Submit </button>
       </form>
     </>
   );
