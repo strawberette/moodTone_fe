@@ -132,20 +132,25 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.keyAndSphere {
+  width: 100vw;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 14%;
-  padding-right: 14%;
+  margin-top: -30px;
+  flex-wrap: wrap;
 }
-
 .colorKey {
-  height: 40%;
+  height: 360px;
   width: 22%;
-  position: relative;
-  top: 200px;
   border: 1px solid gray;
   display: flex;
   flex-direction: column;
+  margin-top: 90px;
+  box-sizing: border-box;
 }
 .keyColors {
   display: flex;
@@ -154,8 +159,8 @@ body {
   justify-content: space-between;
   align-content: center;
   width: 100%;
-  height: 19%;
-  padding-right: 5%;
+  height: 60px;
+  padding-right: 15%;
   border-bottom: 1px solid gray;
   box-shadow: inset 2px 2px 0px 1px rgba(70, 70, 70, 0.2),
     inset -2px -2px 0px 1px rgba(0, 0, 0, 0.3);
@@ -165,22 +170,27 @@ body {
   background-color: rgba(100, 100, 100, 0.2);
 }
 .keyColors p {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .keyModal {
   height: 50px;
   width: 50px;
   overflow: hidden;
-  margin-left: 10px;
+  margin-left: 30px;
+  margin-top: 5px;
   box-sizing: border-box;
 }
-
+#left-colors {
+  margin-left: 75px;
+}
+#right-colors {
+  margin-right: 75px;
+}
 .musisphere {
   transform: scale(1.5);
-  top: 100px;
   overflow: hidden;
   position: relative;
-  margin: 1em auto;
+  box-sizing: border-box;
   padding: 0;
   width: 30em;
   height: 30em;
@@ -262,6 +272,24 @@ body {
   }
 }
 
+.mediaPlayer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.mediPlayer div {
+  margin: 0 auto;
+  padding: 0 auto;
+  justify-self: center;
+}
+
+.mediaPlayer div h1 {
+  text-align: center;
+}
+
 /* ------------------------------------NAV BAR STYLING------------------------------- */
 
 #logOutInfo {
@@ -271,6 +299,9 @@ body {
 .navPage {
   height: 50px;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .navBar {
