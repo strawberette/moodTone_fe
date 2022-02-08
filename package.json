@@ -5,7 +5,7 @@
   "dependencies": {
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.6.0",
+    "@emotion/styled": "^11.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
@@ -15,21 +15,20 @@
     "babel": "^6.23.0",
     "cross-spawn": "^7.0.3",
     "env": "^0.0.2",
+    "framer-motion": "^4.0.0",
     "link": "^0.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.4",
     "react-responsive-modal": "^6.2.0",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^3.0.1",
     "switch": "^0.0.0",
     "use-history": "^1.4.1",
     "utila": "^0.5.0-dev.1",
     "value-equal": "^1.0.1",
     "web-vitals": "^2.1.4",
     "webkit": "^0.0.0",
-    "webpack": "^5.68.0",
-    "webpack-manifest-plugin": "^4.1.1",
     "workbox-webpack-plugin": "^6.4.2",
     "yallist": "^4.0.0",
     "yocto-queue": "^1.0.0"
@@ -59,6 +58,5 @@
     ]
   },
   "devDependencies": {
-    "webpack-dev-server": "^4.7.4"
   }
 }

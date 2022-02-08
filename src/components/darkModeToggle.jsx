@@ -19,7 +19,7 @@ const Toggle = () => {
           {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
         </Button>
       </Flex>
-    </div>
+      </div>
   );
 };
 

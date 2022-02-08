@@ -15,9 +15,13 @@ import RouteModalSad from "../modalRoutes/RouteModalSad";
 import RouteModalPowerful from "../modalRoutes/RouteModalPowerful";
 import { Link } from "react-router-dom";
 import "../App.css";
+import NavigationPage from "./NavigationPage";
+
 const EmotionsPage = () => {
+
   return (
     <div className="emotionsPage">
+      <NavigationPage />
       <div className="iconSide">
         <div className="logoWrapper">
           <ul className="circle">

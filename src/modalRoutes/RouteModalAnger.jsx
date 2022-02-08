@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Modal } from "react-responsive-modal";
 import AngerIcon from "../utility/anger.png";
 // import "./App.css";
@@ -16,7 +16,7 @@ const RouteModalAnger = () => {
           style={{ width: "100px", cursor: "pointer" }}
         />
       </div>
-      <Modal open={open} onClose={() => setOpen(false)}>
+      <Modal open={open} onClick={() => setOpen(false)}>
         <EmotionModalAnger />
       </Modal>
     </>

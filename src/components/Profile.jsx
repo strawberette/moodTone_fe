@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
+import NavigationPage from "./NavigationPage";
 
 const Profile = (props) => {
   const [data, setData] = useState([]);
@@ -40,11 +41,13 @@ const Profile = (props) => {
   }, []);
 
   if (!props.user) {
-    return <Redirect to="/navigationPage" />;
+    return <Redirect to="/NavigationPage" />;
   }
 
   return (
+    <>
     <div>
+      <NavigationPage />
       <table>
         <thead>
           <tr>
@@ -75,10 +78,11 @@ const Profile = (props) => {
       </table>
 
       <div className="mediaPlayer">
-        <h1>🎵 Moodplayer 🎶</h1>
+        <span>🎵</span><h1> Moodplayer </h1><span>🎶</span>
         <audio src={audio} autoPlay controls></audio>
       </div>
     </div>
+    </>
   );
 };
 export default Profile;
