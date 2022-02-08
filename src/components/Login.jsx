@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const baseURL = `${process.env.REACT_APP_BASE_URL}/user/login`;
+  const baseURI = `${process.env.REACT_APP_BASE_URL}/user/login`;
 
   const handleUserName = (e) => setUserName(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
@@ -16,7 +16,7 @@ function Login({ user, setUser }) {
       password: password,
     });
 
-    const res = await fetch(baseURL, {
+    const res = await fetch(baseURI, {
       method: "POST",
       mode: "cors",
       headers: {
