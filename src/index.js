@@ -5,6 +5,7 @@ import App from "./App";
 import "./App.css";
 import reportWebVitals from "./reportWebVitals";
 import "./utility/logo.jpg";
+import "./utility/LeagueSpartan-Bold.otf";
 ReactDOM.render(
   <React.StrictMode>
     <App />

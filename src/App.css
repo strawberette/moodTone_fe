@@ -1,6 +1,12 @@
 /* ----------------------------------WHOLE APP STYLE----------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
+@font-face {
+  font-family: "LeagueSpartan-Bold";
+  src: local("LeagueSpartan-Bold"),
+    url("./utility/LeagueSpartan-Bold.otf") format("truetype");
+  font-weight: bold;
+}
 * {
   padding: 0;
   box-sizing: border-box;
@@ -342,50 +348,54 @@ body {
 
 /* Main wrapper ------------------------ */
 .emotionsPage {
-  background-image: url(./utility/smoke3.png);
-  background-position: right;
+  background-image: url(./utility/smoke5.png);
+  background-position: left;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
+  flex-direction: row;
   height: 100vh;
-  border: solid black;
-  /* margin: 0px; */
   align-items: center;
-  padding: 50px 0px 100px 50px;
+  justify-content: space-evenly;
 }
 
 /* icons side -------------------------- */
 .iconSide {
+  margin-top: -5%;
   display: flex;
-  border: solid black;
+  justify-content: center;
+  flex-direction: column;
 }
 .iconsWrapper {
   position: relative;
-  top: 80px;
-  height: 100vh;
-  left: -300px;
-  border: solid black;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 150px;
-  padding-bottom: 190px;
+  align-items: center;
+}
+.text h2 {
+  position: relative;
+  top: -15px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  font-family: "LeagueSpartan-Bold", "quicksand", sans-serif;
 }
 .logoWrapper {
-  position: relative;
-  border: black solid;
-  height: 200px;
-  bottom: 0px;
-  left: 200px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
 .logoWrapper .circle {
-  transform: scale(0.5);
+  transform: scale(0.4);
+  position: relative;
+  bottom: 80px;
 }
 .emoticon {
-  /* border: solid black; */
   width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 1 33.333%;
-  /* margin: -100; */
   opacity: 0.8;
 }
 .emoticon:hover {
@@ -395,34 +405,35 @@ body {
 
 /* info side ----------------------------------- */
 .infoSide {
+  margin-top: -5%;
   display: flex;
-  border: solid black;
+  display: flex;
+  flex-direction: column;
 }
 .infoBody {
   text-align: right;
   font-size: 1.25rem;
   width: 500px;
   height: 500px;
-  border: solid black;
-  /* position: fixed; */
-  /* right: 300px;
-  padding: 30px 50px 0 0;
-  top: 250px; */
 }
 .infoBody h1 {
   font-size: 2.5rem;
 }
+.infoBody h2 {
+  font-size: 4rem;
+  font-family: "LeagueSpartan-Bold", "quicksand", sans-serif;
+}
 .entermusisphere {
-  border: solid black;
   display: flex;
-  /* flex-direction: column; */
+  justify-content: center;
+  cursor: pointer;
 }
 .entermusic {
   font-size: 1.5rem;
-  width: 10rem;
+  width: 30rem;
   height: 3rem;
   border-radius: 250px;
-  background-color: #005f73;
+  background-color: #d87cac;
   -moz-box-shadow: 0px 0px 10px 2px black;
   -webkit-box-shadow: 0px 0px 10px 2px black;
   box-shadow: 0px 0px 15px 2px black;
@@ -436,76 +447,77 @@ body {
 /* ------------------------------------/modal css/-------------------------------------------- */
 
 .react-responsive-modal-modal {
-  /* opacity: 0.9; */
   border-radius: 5px;
-  height: 700px;
+  height: 690px;
   width: 500px;
   position: absolute;
-  left: 50%;
+  right: 0%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 0px;
+  color: #050505;
 }
 .modal-wrapper-anger {
   background-color: #f9c6c2;
-  height: 690px;
+  height: 650px;
   border: 5px solid #f5aaa3;
 }
 .modal-wrapper-energy {
   background-color: #fec8ae;
-  height: 690px;
+  height: 650px;
   border: 5px solid #feac86;
 }
 .modal-wrapper-happy {
   background-color: #ffeac2;
-  height: 690px;
+  height: 650px;
   border: 5px solid #ffd485;
 }
 .modal-wrapper-serene {
   background-color: #d8e9dd;
-  height: 690px;
+  height: 650px;
   border: 5px solid #b1d3bb;
 }
 .modal-wrapper-melancholic {
   background-color: #c2f5ff;
-  height: 690px;
+  height: 650px;
   border: 5px solid #5ce4ff;
 }
 .modal-wrapper-romantic {
   background-color: #f1d0e1;
-  height: 690px;
+  height: 650px;
   width: 500px;
   border: 5px solid #de91b9;
 }
 .modal-wrapper-spiritual {
   background-color: #dfd9e8;
-  height: 690px;
+  height: 650px;
   border: 5px solid #9f8cba;
 }
 .modal-wrapper-calm {
   background-color: #cdebf4;
-  height: 690px;
+  height: 650px;
   border: 5px solid #58bcda;
 }
 .modal-wrapper-peaceful {
   background-color: #f7f0f0;
-  height: 690px;
+  height: 650px;
   border: 5px solid #cda2a2;
 }
 .modal-wrapper-soft {
   background-color: #efd3a9;
-  height: 690px;
+  height: 650px;
   border: 5px solid #d99530;
 }
 .modal-wrapper-sad {
   background-color: #dfdfe2;
-  height: 690px;
+  height: 650px;
   border: 5px solid #9f9fa8;
 }
 .modal-wrapper-powerful {
   background-color: #525252;
-  height: 690px;
+  height: 650px;
   border: 5px solid #333333;
+  color: white;
 }
 
 /* ---------------------------------MUSISPHERE MEDIA PLAYER STYLING----------------------------------- */
