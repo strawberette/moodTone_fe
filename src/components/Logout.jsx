@@ -9,8 +9,8 @@ const Logout = ({ user, setUser }) => {
   }
 
   return (
-    <div>
-      <p id="logOutInfo">
+    <div id="logOutInfo">
+      <p>
         Logged in as <b>{user.username}</b>
       </p>
       <button onClick={handleClick}>Log out</button>
