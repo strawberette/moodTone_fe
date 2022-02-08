@@ -23,7 +23,7 @@ function MusispherePage() {
   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
 
   // const handleMood = (e) => setMood(e.target.value);
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     // e.prevent.default();
     try {
       const response = await fetch(baseURL);
@@ -164,7 +164,7 @@ function MusispherePage() {
               </form>
             </div>
             <div>
-              <audio src={song.audio} autoPlay controls></audio>
+              <audio src={song.audio} autoPlay controls className="audioPlayer"></audio>
             </div>
           </div>
         </div>
