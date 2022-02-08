@@ -29,9 +29,9 @@ body {
   width: 20em;
   height: 20em;
   border-radius: 50% 50% 0 0;
-  /* list-style: none; */
+  list-style: none;
   overflow: hidden;
-  /* border: solid black; */
+  border: solid black;
 }
 .logo {
   scale: (0.98);
@@ -363,7 +363,7 @@ ol {
   bottom: 0px;
   left: 200px;
 }
-.logoWrapper .circle {
+.logoWrapper {
   transform: scale(0.5);
 }
 .emoticon {

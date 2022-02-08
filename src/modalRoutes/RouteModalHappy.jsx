@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Modal } from "react-responsive-modal";
 import HappyIcon from "../utility/happy.png";
 // import "./App.css";
