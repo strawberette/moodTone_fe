@@ -1,6 +1,19 @@
 import "../App.css";
+import PlayControls from "./PlayControls";
 
-function MusispherePage() {
+function MusispherePage(props) {
+  const song = {
+    audio: "https://mp3l.jamendo.com/?trackid=1384095&format=mp31&from=1QMvo0oeeotukjXzLVqJsw%3D%3D%7CF2rZBJKuRDZNGMFmyXSFJw%3D%3D",
+    album_image: "https://usercontent.jamendo.com?type=album&id=162178&width=300&trackid=1384095",
+    id: "1384095"
+  }
+
+  const mood = {
+    moodId: "1",
+    moodColour: "yellow",
+    moodName: "happy"
+  }
+
   return (
     <>
       <div className="musispherePage">
@@ -119,6 +132,7 @@ function MusispherePage() {
           </li>
         </div>
       </div>
+      <PlayControls user={props.user} song={song} mood={mood} />
     </>
   );
 }
