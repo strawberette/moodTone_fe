@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-
+import "react-responsive-modal/styles.css";
 import Register from "./components/Register";
 import Login from "./components/Login.jsx";
 import Logout from "./components/Logout";
