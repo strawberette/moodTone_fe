@@ -5,7 +5,7 @@ import PowerfulIcon from "../utility/powerful.png";
 import EmotionModalPowerful from "../modals/EmotionModalPowerful";
 const RouteModalPowerful = () => {
   const [open, setOpen] = useState(false);
-  const [close, setClose] = useState(false);
+  // const [close, setClose] = useState(false);
   return (
     <>
       {/* Powerful  */}
@@ -16,7 +16,7 @@ const RouteModalPowerful = () => {
           style={{ width: "100px", cursor: "pointer" }}
         />
       </div>
-      <Modal open={open} onClose={(close) => setClose(false)}>
+      <Modal open={open} onClose={() => setOpen(false)}>
         <EmotionModalPowerful />
       </Modal>
     </>

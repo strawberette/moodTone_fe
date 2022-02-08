@@ -1,36 +1,33 @@
 import Logo from "../utility/logo.jpg";
 import "../App.css";
-import { useState, useEffect } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
-import {ChakraProvider} from "@chakra-ui/react"
-import Toggle from "./darkModeToggle";
+// import { ChakraProvider } from "@chakra-ui/react";
+// import Toggle from "./darkModeToggle";
 // import MoodTone from "./moodTone";
 
 function LandingPage() {
-  const [song, setSong] = useState({});
-  const [mood, setMood] = useState("");
+  // const [song, setSong] = useState({});
+  // const [mood, setMood] = useState("");
 
-  const limit = 10;
-  const random = Math.floor(Math.random() * limit + 1);
-  const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
+  // const limit = 10;
+  // const random = Math.floor(Math.random() * limit + 1);
+  // const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
 
-  const handleMood = (e) => setMood(e.target.value);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch(baseURL);
-      const songList = await response.json();
-      setSong(songList.results[random]);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-    
+  // const handleMood = (e) => setMood(e.target.value);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch(baseURL);
+  //     const songList = await response.json();
+  //     setSong(songList.results[random]);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
   return (
     <div className="App">
-      <ChakraProvider>
-          <Toggle />
-      </ChakraProvider>
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
@@ -59,9 +56,7 @@ function LandingPage() {
           </Link>
         </div>
       </div>
-      </div>
-      
-  
+    </div>
   );
 }
 export default LandingPage;
