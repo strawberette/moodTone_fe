@@ -6,7 +6,7 @@ const Profile = (props) => {
   const [data, setData] = useState([]);
   const [audio, setAudio] = useState();
 
-  useEffect(() => {
+  useEffect((props) => {
     const handleFetch = async () => {
       const baseURL = process.env.REACT_APP_BASE_URL;
       try {
@@ -64,12 +64,12 @@ const Profile = (props) => {
                 <td>{d.mood}</td>
                 <td>{d.artist_name}</td>
                 <td>
-                  <a href="" onClick={() => setAudio(d.audio)}>
+                  <a href="audio" onClick={() => setAudio(d.audio)}>
                     {d.name}
                   </a>
                 </td>
                 <td>
-                  <img src={d.album_image} width="50px" alt="Album Cover"/>
+                  <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
               </tr>
             );

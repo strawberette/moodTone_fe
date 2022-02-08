@@ -1,7 +1,9 @@
 import Logo from "../utility/logo.jpg";
 import "../App.css";
-import React, { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
+// import { ChakraProvider } from "@chakra-ui/react";
+// import Toggle from "./darkModeToggle";
 // import MoodTone from "./moodTone";
 function LandingPage() {
   // const [song, setSong] = useState({});
@@ -53,9 +55,7 @@ function LandingPage() {
           </Link>
         </div>
       </div>
-      </div>
-      
-  
+    </div>
   );
 }
 export default LandingPage;

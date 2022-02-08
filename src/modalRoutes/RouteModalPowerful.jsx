@@ -6,7 +6,6 @@ import EmotionModalPowerful from "../modals/EmotionModalPowerful";
 const RouteModalPowerful = () => {
   const [open, setOpen] = useState(false);
   // const [close, setClose] = useState(false);
-  
   return (
     <>
       {/* Powerful  */}
