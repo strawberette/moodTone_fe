@@ -5,8 +5,8 @@ import NavigationPage from "./NavigationPage";
 const Profile = (props) => {
   const [data, setData] = useState([]);
   const [audio, setAudio] = useState();
-
-  useEffect((props) => {
+  
+  useEffect(() => {
     const handleFetch = async () => {
       const baseURL = process.env.REACT_APP_BASE_URL;
       try {
@@ -38,7 +38,7 @@ const Profile = (props) => {
       }
     };
     handleFetch();
-  }, []);
+  }, [props]);
 
   if (!props.user) {
     return <Redirect to="/NavigationPage" />;

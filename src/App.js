@@ -44,7 +44,7 @@ function App() {
         <Logout user={user} setUser={setUser} />
         <Switch>
           <Route exact path="/">
-            <LandingPage></LandingPage>
+            <LandingPage />
           </Route>
           <Route exact path="/home">
             <Register user={user} />
@@ -54,7 +54,7 @@ function App() {
             <NavigationPage />
           </Route>
           <Route exact path="/musisphere">
-            <Musisphere></Musisphere>
+            <Musisphere user={user} />
           </Route>
           <Route exact path="/profile">
             <Profile user={user} key={document.location.href} />

@@ -171,6 +171,7 @@ function MusispherePage() {
           </div>
         </div>
       </div>
+      <PlayControls user={props.user} song={song} mood={mood} />
     </>
   );
 }
