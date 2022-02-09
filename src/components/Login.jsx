@@ -32,7 +32,8 @@ function Login({ user, setUser }) {
       jwt: data.token,
     };
     localStorage.setItem("user", JSON.stringify(loggedInUser));
-    setUser(loggedInUser);  };
+    setUser(loggedInUser);
+  };
   if (user) {
     return <Redirect to="/emotions" />;
   }
@@ -69,8 +70,7 @@ function Login({ user, setUser }) {
           </div>
           <div className="footer">
             <button type="submit" className="btn">
-              {" "}
-              Submit{" "}
+              Submit
             </button>
           </div>
         </form>

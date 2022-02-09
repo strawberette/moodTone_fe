@@ -86,7 +86,6 @@ function Register(props) {
           </div>
           <div className="footer">
             <button type="button" className="btn">
-              {" "}
               Submit
             </button>
           </div>
