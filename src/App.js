@@ -1,8 +1,10 @@
 import "./App.css";
+
 import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import Register from "./components/Register";
 import Login from "./components/Login.jsx";
+import Home from "./components/Home.jsx";
 import Logout from "./components/Logout";
 import Profile from "./components/Profile";
 import LandingPage from "./components/LandingPage";
@@ -14,26 +16,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Toggle from "./components/darkModeToggle";
 
 function App() {
-  //   const [song, setSong] = useState({});
-  //   const [mood, setMood] = useState("");
   const [user, setUser] = useState(null);
-
-  //   const limit = 10;
-  //   const random = Math.floor(Math.random() * limit + 1);
-  //   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
-
-  //   const handleMood = (e) => setMood(e.target.value);
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-  //     try {
-  //       const response = await fetch(baseURL);
-  //       const songList = await response.json();
-  //       setSong(songList.results[random]);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-
   return (
     <>
       <ChakraProvider>
@@ -47,8 +30,7 @@ function App() {
             <LandingPage></LandingPage>
           </Route>
           <Route exact path="/home">
-            <Register user={user} />
-            <Login user={user} setUser={setUser} />
+            <Home />
           </Route>
           <Route exact path="/navigationPage">
             <NavigationPage />

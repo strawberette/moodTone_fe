@@ -1,5 +1,8 @@
+// import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
+import moodTone from "../utility/moodTone.jpg";
+import "./style.scss";
 function Register(props) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -12,10 +15,10 @@ function Register(props) {
   const submitForm = async (e) => {
     e.preventDefault();
     const payload = JSON.stringify({
-      "email": user,
-      "password": password,
+      email: user,
+      password: password,
     });
-    console.log(payload)
+    console.log(payload);
     const res = await fetch(baseURL, {
       method: "POST",
       mode: "cors",
@@ -26,17 +29,13 @@ function Register(props) {
     });
 
     setResponse(res);
-
-    // const resJson = await res.json();
-    // console.log(resJson);
-    // setResult(resJson);
   };
   if (props.user) {
     return (
       <div className="App">
         <p>You are already logged in!</p>
         <br />
-        <Link to="/home">Home</Link>
+        <Link to="/emotions">Home</Link>
       </div>
     );
   }
@@ -54,31 +53,47 @@ function Register(props) {
   }
 
   if (response.status === 201) {
-    return <Redirect to="/navigationPage" />;
+    return <Redirect to="/emotions" />;
   }
 
   return (
-    <div className="register">
-      <h1>Register</h1>
-      <form onSubmit={submitForm}>
-        <label htmlFor="user">Email:</label>
-        <input
-          type="text"
-          name="user"
-          value={user}
-          onChange={handleUserChange}
-        />
-
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-
-        <input type="submit" value="Submit" />
-      </form>
+    <div className="base-container">
+      <div className="header">Register</div>
+      <div className="content">
+        <div className="image">
+          <img src={moodTone} alt={"mood tone rainbow logo"} />
+        </div>
+        <form onSubmit={submitForm}>
+          <div className="form">
+            <div className="form-group">
+              <label htmlFor="user">Email:</label>
+              <input
+                type="text"
+                name="user"
+                placeholder="email"
+                value={user}
+                onChange={handleUserChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="password"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+            </div>
+          </div>
+          <div className="footer">
+            <button type="button" className="btn">
+              {" "}
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
