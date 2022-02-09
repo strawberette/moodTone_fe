@@ -6,9 +6,9 @@ const Profile = (props) => {
   const [data, setData] = useState([]);
   const [audio, setAudio] = useState();
 
-  useEffect((props) => {
+  useEffect(() => {
+    const baseURL = process.env.REACT_APP_BASE_URL;
     const handleFetch = async () => {
-      const baseURL = process.env.REACT_APP_BASE_URL;
       try {
         const response = await fetch(
           `${baseURL}/track/${props.user.id}?secret_token=${props.user.jwt}`
@@ -38,10 +38,28 @@ const Profile = (props) => {
       }
     };
     handleFetch();
-  }, []);
+  }, [props]);
+
+  // const handleRemove = async (e) => {
+  //   const baseURL = process.env.REACT_APP_BASE_URL;
+  //   const payload = {
+  //     trackId: data[e.target.getAttribute("idx")].id
+  //   }
+  //   console.log("e.target.getAttribute", data[e.target.getAttribute("idx")].id)
+  //   await fetch(
+  //     `${baseURL}/track/${props.user.id}?secret_token=${props.user.jwt}`, {
+  //       method: "DELETE",
+  //       mode: "cors",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: payload,
+  //     }
+  //   );
+  // }
 
   if (!props.user) {
-    return <Redirect to="/NavigationPage" />;
+    return <Redirect to="/home" />;
   }
 
   return (
@@ -64,13 +82,16 @@ const Profile = (props) => {
                 <td>{d.mood}</td>
                 <td>{d.artist_name}</td>
                 <td>
-                  <a href="audio" onClick={() => setAudio(d.audio)}>
+                  <button onClick={() => setAudio(d.audio)}>
                     {d.name}
-                  </a>
+                  </button>
                 </td>
                 <td>
                   <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
+                {/* <td>
+                  <button idx={i} onClick={handleRemove}>Remove</button>
+                </td> */}
               </tr>
             );
           })}

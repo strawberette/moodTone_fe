@@ -2,6 +2,7 @@ import React from "react";
 
 const Logout = ({ user, setUser }) => {
   const handleClick = () => {
+    localStorage.removeItem("user");
     setUser(null);
   };
   if (!user) {

@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "react-responsive-modal/styles.css";
 import Register from "./components/Register";
 import Login from "./components/Login.jsx";
@@ -17,6 +17,12 @@ function App() {
   //   const [song, setSong] = useState({});
   //   const [mood, setMood] = useState("");
   const [user, setUser] = useState(null);
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null;
+    setUser(loggedInUser);
+  }, []);
 
   //   const limit = 10;
   //   const random = Math.floor(Math.random() * limit + 1);
@@ -54,7 +60,7 @@ function App() {
             <NavigationPage />
           </Route>
           <Route exact path="/musisphere">
-            <Musisphere></Musisphere>
+            <Musisphere user={user} />
           </Route>
           <Route exact path="/profile">
             <Profile user={user} key={document.location.href} />
