@@ -1,22 +1,22 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 
-const Logout = ({ user, setUser }) => {
+
+const Logout = (props) => {
+  // const user = localStorage.getItem("user")
+  console.log("props.user", props.user)
   const handleClick = () => {
     localStorage.removeItem("user");
-    setUser(null);
+    props.setLoggedOut(true)
   };
-  if (!user) {
-    return <></>;
+  if (!props.user) {
+    // return <Redirect to="/home" />;
+    return <></>
   }
 
-  return (
-    <div id="logOutInfo">
-      <p>
-        Logged in as <b>{user.username}</b>
-      </p>
-      <button onClick={handleClick}>Log out</button>
-    </div>
-  );
+
+  
+  return <button onClick={handleClick}>Log out</button>
 }
 
 export default Logout;
