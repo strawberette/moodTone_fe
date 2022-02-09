@@ -10,8 +10,6 @@ import Musisphere from "./components/MusispherePage";
 import NavigationPage from "./components/NavigationPage";
 import EmotionsPage from "./components/EmotionsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
-import Toggle from "./components/darkModeToggle";
 
 function App() {
   //   const [song, setSong] = useState({});
@@ -42,10 +40,6 @@ function App() {
 
   return (
     <>
-      <ChakraProvider>
-        <Toggle />
-      </ChakraProvider>
-
       <Router>
         <Logout user={user} setUser={setUser} />
         <Switch>

@@ -335,6 +335,38 @@ body {
   /* margin-left: -100px; */
 }
 
+.navBar li:nth-child(2) {
+  margin-left: -305px;
+}
+
+.navbarLogoWrapper {
+  min-height: 50px;
+  top: -10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarLogoCircle {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.navbarLogoCircle li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+
 /* ------------------------------------HOME PAGE CSS STYLE----------------------------- */
 
 .homePage {
@@ -532,4 +564,31 @@ body {
 
 .audioPlayer {
   margin-left: 30px;
+}
+
+/* ------------------------------RESPONSIVE CSS---------------------- */
+
+@media only screen and (max-width: 500px) {
+  .circle {
+    transform: scale(1.2);
+    margin-top: -125px;
+  }
+  .logo {
+    width: 384px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .circle {
+    transform: scale(1);
+    margin-top: -200px;
+  }
+  .logo {
+    width: 320px;
+  }
+  .enter {
+    animation: none;
+    opacity: 1;
+    bottom: 120px;
+  }
 }

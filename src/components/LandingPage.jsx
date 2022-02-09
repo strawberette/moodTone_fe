@@ -2,10 +2,15 @@ import React from "react";
 import Logo from "../utility/logo.jpg";
 import "../App.css";
 import { Link } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import Toggle from "./darkModeToggle";
 function LandingPage() {
 
   return (
     <div className="App">
+    <ChakraProvider>
+      <Toggle />
+    </ChakraProvider>
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
