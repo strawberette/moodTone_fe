@@ -92,54 +92,54 @@ function MusispherePage(props) {
     }
   }
 
-  // const redClick = () => {
-  //   setMood("Angry");
-  //   handleSubmit();
-  // }
-  // const orangeClick = () => {
-  //   setMood("Energetic");
-  //   handleSubmit();
-  // }
-  // const yellowClick = () => {
-  //   setMood("Happy");
-  //   handleSubmit();
-  // }
-  // const greenClick = () => {
-  //   setMood("Serene");
-  //   handleSubmit();
-  // }
-  // const darkBlueClick = () => {
-  //   setMood("Melancholic");
-  //   handleSubmit();
-  // }
-  // const pinkClick = () => {
-  //   setMood("Love");
-  //   handleSubmit();
-  // }
-  // const purpleClick = () => {
-  //   setMood("Spiritual");
-  //   handleSubmit();
-  // }
-  // const blueClick = () => {
-  //   setMood("Calm");
-  //   handleSubmit();
-  // }
-  // const whiteClick = () => {
-  //   setMood("Peaceful");
-  //   handleSubmit();
-  // }
-  // const beigeClick = () => {
-  //   setMood("Soft");
-  //   handleSubmit();
-  // }
-  // const grayClick = () => {
-  //   setMood("Sad");
-  //   handleSubmit();
-  // }
-  // const blackClick = () => {
-  //   setMood("Powerful");
-  //   handleSubmit();
-  // }
+  const redClick = () => {
+    setMood("Angry");
+    handleSubmit();
+  }
+  const orangeClick = () => {
+    setMood("Energetic");
+    handleSubmit();
+  }
+  const yellowClick = () => {
+    setMood("Happy");
+    handleSubmit();
+  }
+  const greenClick = () => {
+    setMood("Serene");
+    handleSubmit();
+  }
+  const darkBlueClick = () => {
+    setMood("Melancholic");
+    handleSubmit();
+  }
+  const pinkClick = () => {
+    setMood("Love");
+    handleSubmit();
+  }
+  const purpleClick = () => {
+    setMood("Spiritual");
+    handleSubmit();
+  }
+  const blueClick = () => {
+    setMood("Calm");
+    handleSubmit();
+  }
+  const whiteClick = () => {
+    setMood("Peaceful");
+    handleSubmit();
+  }
+  const beigeClick = () => {
+    setMood("Soft");
+    handleSubmit();
+  }
+  const grayClick = () => {
+    setMood("Sad");
+    handleSubmit();
+  }
+  const blackClick = () => {
+    setMood("Powerful");
+    handleSubmit();
+  }
   return (
     <>
       <div className="musispherePage">
@@ -156,7 +156,7 @@ function MusispherePage(props) {
                 )
               })
             }
-            {/* <li className="keyColors" onClick={() => yellowClick()}>
+            <li className="keyColors" onClick={() => yellowClick()}>
               <div className="keyModal"><img src={HappyIcon} alt="Happy icon"/></div>
               <div><p>Yellow = Happy</p></div>
             </li>
@@ -179,13 +179,13 @@ function MusispherePage(props) {
             <li className="keyColors" onClick={() => beigeClick()}>
               <div className="keyModal"><img src={SoftIcon} alt="Soft and cosy icon"/></div>
               <div><p>Beige = Cosy</p></div>
-            </li> */}
+            </li>
           </div>
           <div className="musisphere">
           {moodList.map((m,i) => {
               return <li key={i} idx={i} className={`segment ${m.moodColour}`} onClick={handleSubmit} />
             })}
-            {/* <li className="segment green" onClick={() => greenClick()} />
+            <li className="segment green" onClick={() => greenClick()} />
             <li className="segment blue" onClick={() => blueClick()} />
             <li className="segment pink" onClick={() => pinkClick()} />
             <li className="segment darkBlue" onClick={() => darkBlueClick()} />
@@ -196,7 +196,7 @@ function MusispherePage(props) {
             <li className="segment black" onClick={() => blackClick()} />
             <li className="segment red" onClick={() => redClick()} />
             <li className="segment orange" onClick={() => orangeClick()} />
-            <li className="segment yellow" onClick={() => yellowClick()} /> */}
+            <li className="segment yellow" onClick={() => yellowClick()} />
           </div>
           <div className="colorKey" id="right-colors">
           {
@@ -210,7 +210,7 @@ function MusispherePage(props) {
                 )
               })
             }
-            {/* <li className="keyColors" onClick={() => greenClick()}>
+            <li className="keyColors" onClick={() => greenClick()}>
               <div className="keyModal"><img src={SereneIcon} alt="Serene icon"/></div>
               <div><p>Green = Serene</p></div>
             </li>
@@ -233,7 +233,7 @@ function MusispherePage(props) {
             <li className="keyColors" onClick={() => whiteClick()}>
               <div className="keyModal"><img src={PeaceIcon} alt="Peaceful icon"/></div>
               <div><p>White = Peaceful</p></div>
-            </li> */}
+            </li>
           </div>
           <div className="mediaPlayer">
             <div>
