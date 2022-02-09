@@ -308,6 +308,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .navBar {
@@ -321,6 +323,7 @@ body {
   position: fixed;
   padding-right: 5%;
   box-sizing: border-box;
+  order: 1;
 }
 
 .navBar li {
@@ -335,7 +338,7 @@ body {
   /* margin-left: -100px; */
 }
 
-.navBar li:nth-child(2) {
+.navBar li:nth-of-type(2) {
   margin-left: -305px;
 }
 
@@ -365,6 +368,13 @@ body {
   width: 50%;
   height: 50%;
   transform-origin: 0% 100%;
+}
+.burgerMenu {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  order: 2;
+  justify-self: flex-end;
 }
 
 /* ------------------------------------HOME PAGE CSS STYLE----------------------------- */
@@ -568,7 +578,19 @@ body {
 
 /* ------------------------------RESPONSIVE CSS---------------------- */
 
+@media only screen and (max-width: 1350px) {
+  .navBar {
+    padding-right: 8%;
+  }
+  .navBar li:nth-of-type(2) {
+    margin-left: -10%;
+  }
+}
+
 @media only screen and (max-width: 979px) {
+  .navbarLogoWrapper{
+    width: 50px;
+  }
   .iconSide {
     order: 2;
     margin-top: 50px;
@@ -579,6 +601,12 @@ body {
   }
   body {
     overflow-y: visible;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .navbarlink {
+    visibility: hidden;
   }
 }
 

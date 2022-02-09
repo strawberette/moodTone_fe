@@ -14,18 +14,20 @@ const NavigationPage = () => {
   return (
     <>
     <div className="navPage">
-      <ul className="navBar">
+    <div><ul className="navBar">
         <li><div className="darkModeToggle">
           <ChakraProvider >
               <Toggle />
           </ChakraProvider>
         </div></li>
-        <li><Link to="/emotions">Emotional Colours</Link></li>
-        <li><Link to="/musisphere">Musisphere</Link></li>
+        <li className="navbarlink"><Link to="/emotions">Emotional Colours</Link></li>
+        <li className="navbarlink"><Link to="/musisphere">Musisphere</Link></li>
         <li><Logo /></li>
-        <li><Link to="/profile">Profile</Link></li>
-        <li><div><Link to="/" style={{ textDecoration: "none" }}>Log Out</Link></div></li>
+        <li className="navbarlink"><Link to="/profile">Profile</Link></li>
+        <li className="navbarlink"><div><Link to="/" style={{ textDecoration: "none" }}>Log Out</Link></div></li>
       </ul>
+      </div>
+      <div className="burgerMenu"></div>
     </div>
     </>
   );
