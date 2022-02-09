@@ -568,6 +568,20 @@ body {
 
 /* ------------------------------RESPONSIVE CSS---------------------- */
 
+@media only screen and (max-width: 979px) {
+  .iconSide {
+    order: 2;
+    margin-top: 50px;
+  }
+  .infoSide {
+    order: 1;
+    margin-top: 100px;
+  }
+  body {
+    overflow-y: visible;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .circle {
     transform: scale(1.2);
@@ -575,6 +589,40 @@ body {
   }
   .logo {
     width: 384px;
+  }
+  .infoBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .infoBody h1,
+  .infoBody h2 {
+    padding-right: 40px;
+  }
+  .infoBody p {
+    font-size: 18px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 10px;
+    height: 600px;
+    word-wrap: normal;
+    display: block;
+  }
+  .emotionsPage {
+    padding-left: 40px;
+  }
+  .entermusisphere {
+    margin-top: -80px;
+  }
+  .entermusic {
+    width: 90vw;
+  }
+  .iconSide div ul {
+    top: 20px;
+  }
+  .iconSide.text h2 {
+    top: -35px;
   }
 }
 
@@ -590,5 +638,12 @@ body {
     animation: none;
     opacity: 1;
     bottom: 120px;
+  }
+  .entermusic {
+    width: 80vw;
+    font-size: 18px;
+  }
+  .iconSide div ul {
+    top: 120px;
   }
 }
