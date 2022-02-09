@@ -1,8 +1,6 @@
-// import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import moodTone from "../utility/moodTone.jpg";
-import "./style.scss";
 function Register(props) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -58,9 +56,9 @@ function Register(props) {
 
   return (
     <div className="base-container">
-      <div className="header">Register</div>
       <div className="content">
         <div className="image">
+          <div className="header">REGISTER</div>
           <img src={moodTone} alt={"mood tone rainbow logo"} />
         </div>
         <form onSubmit={submitForm}>

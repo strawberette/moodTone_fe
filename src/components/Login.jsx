@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import moodTone from "../utility/moodTone.jpg";
-import "./style.scss";
 
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
@@ -35,9 +34,9 @@ function Login({ user, setUser }) {
 
   return (
     <div className="base-container">
-      <div className="header">Login</div>
       <div className="content">
         <div className="image">
+          <div className="header">Login</div>
           <img src={moodTone} alt={"moodtone rainbow logo"} />
         </div>
         <form onSubmit={handleSubmit}>
