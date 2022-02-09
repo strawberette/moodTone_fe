@@ -59,7 +59,7 @@ const Profile = (props) => {
   // }
 
   if (!props.user) {
-    return <Redirect to="/emotions" />;
+    return <Redirect to="/home" />;
   }
 
   return (

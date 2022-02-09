@@ -33,7 +33,7 @@ function Login({ user, setUser }) {
     localStorage.setItem("user", JSON.stringify(loggedInUser));
     setUser(loggedInUser);  };
   if (user) {
-    return <Redirect to="/navigationPage" />;
+    return <Redirect to="/emotions" />;
   }
 
   return (

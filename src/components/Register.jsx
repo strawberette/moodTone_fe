@@ -54,7 +54,7 @@ function Register(props) {
   }
 
   if (response.status === 201) {
-    return <Redirect to="/navigationPage" />;
+    return <Redirect to="/emotions" />;
   }
 
   return (
