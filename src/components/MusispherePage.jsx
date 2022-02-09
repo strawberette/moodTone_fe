@@ -21,6 +21,7 @@ function MusispherePage(props) {
   const [song, setSong] = useState("");
   const [mood, setMood] = useState({});
   const [moodList, setMoodList] = useState([])
+  const [liked, setLiked] = useState(false)
 
   const iconMap = {
     red: AngerIcon,
@@ -87,6 +88,8 @@ function MusispherePage(props) {
         },
         body: payload,
       });
+
+      setLiked(true)
     } catch (err) {
       console.log(err);
     }
@@ -143,7 +146,7 @@ function MusispherePage(props) {
   return (
     <>
       <div className="musispherePage">
-        <NavigationPage />
+        <NavigationPage user={props.user} setUser={props.setUser} />
         <div className="keyAndSphere">
           <div className="colorKey" id="left-colors">
             {
@@ -247,10 +250,15 @@ function MusispherePage(props) {
               </form>
             </div>
             <div>
-              <ReactAudioPlayer src={song.audio} autoPlay={true} controls className="audioPlayer" />
-              <button onClick={handleLike}>
-                Like
-              </button>
+              <ReactAudioPlayer src={song ? song.audio: ""} autoPlay={true} controls className="audioPlayer" />
+              {!liked && song
+                ? 
+                <button onClick={handleLike}>
+                  Like
+                </button> 
+                : 
+                <></>
+              }
             </div>
           </div>
         </div>

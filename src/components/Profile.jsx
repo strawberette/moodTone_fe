@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
 import NavigationPage from "./NavigationPage";
 
 const Profile = (props) => {
   const [data, setData] = useState([]);
   const [audio, setAudio] = useState();
+  const [deletedTrack, setDeletedTrack] = useState()
 
   useEffect(() => {
     const baseURL = process.env.REACT_APP_BASE_URL;
@@ -38,34 +38,38 @@ const Profile = (props) => {
       }
     };
     handleFetch();
-  }, [props]);
+  }, [props, deletedTrack]);
 
-  // const handleRemove = async (e) => {
-  //   const baseURL = process.env.REACT_APP_BASE_URL;
-  //   const payload = {
-  //     trackId: data[e.target.getAttribute("idx")].id
-  //   }
-  //   console.log("e.target.getAttribute", data[e.target.getAttribute("idx")].id)
-  //   await fetch(
-  //     `${baseURL}/track/${props.user.id}?secret_token=${props.user.jwt}`, {
-  //       method: "DELETE",
-  //       mode: "cors",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: payload,
-  //     }
-  //   );
-  // }
+  const handleRemove = async (e) => {
+    const baseURL = process.env.REACT_APP_BASE_URL;
+    const payload = JSON.stringify({
+      trackId: data[e.target.getAttribute("idx")].id
+    })
 
-  if (!props.user) {
-    return <Redirect to="/home" />;
+    try {
+      const res = await fetch(
+        `${baseURL}/track/${props.user.id}?secret_token=${props.user.jwt}`, {
+          method: "DELETE",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: payload,
+        }
+      );
+
+      const resJSON = await res.json()
+      setDeletedTrack(resJSON.deletedTrack.id)
+    } catch(err) {
+      console.log(err)
+    }
+
   }
 
   return (
     <>
     <div>
-      <NavigationPage />
+      <NavigationPage user={props.user} setUser={props.setUser}/>
       <table>
         <thead>
           <tr>
@@ -89,9 +93,9 @@ const Profile = (props) => {
                 <td>
                   <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
-                {/* <td>
+                <td>
                   <button idx={i} onClick={handleRemove}>Remove</button>
-                </td> */}
+                </td>
               </tr>
             );
           })}
