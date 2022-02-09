@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "react-responsive-modal/styles.css";
 // import Register from "./components/Register";
 // import Login from "./components/Login.jsx";
@@ -17,6 +17,31 @@ import Toggle from "./components/darkModeToggle";
 
 function App() {
   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null;
+    setUser(loggedInUser);
+  }, []);
+
+  //   const limit = 10;
+  //   const random = Math.floor(Math.random() * limit + 1);
+  //   const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
+
+  //   const handleMood = (e) => setMood(e.target.value);
+  //   const handleSubmit = async (e) => {
+  //     e.preventDefault();
+  //     try {
+  //       const response = await fetch(baseURL);
+  //       const songList = await response.json();
+  //       setSong(songList.results[random]);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+
+
   return (
     <>
       <ChakraProvider>
@@ -36,7 +61,7 @@ function App() {
             <NavigationPage />
           </Route>
           <Route exact path="/musisphere">
-            <Musisphere></Musisphere>
+            <Musisphere user={user} />
           </Route>
           <Route exact path="/profile">
             <Profile user={user} key={document.location.href} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import NavigationPage from "./NavigationPage";
 import HappyIcon from "../utility/happy.png";
@@ -16,17 +16,53 @@ import PowerfulIcon from "../utility/powerful.png";
 
 import ReactAudioPlayer from "react-audio-player";
 
-function MusispherePage() {
+function MusispherePage(props) {
+  
   const [song, setSong] = useState("");
-  const [mood, setMood] = useState("");
+  const [mood, setMood] = useState({});
+  const [moodList, setMoodList] = useState([])
 
-  const limit = 10;
-  const random = Math.floor(Math.random() * limit + 1);
-  const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${mood}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
+  const iconMap = {
+    red: AngerIcon,
+    orange: EnergyIcon,
+    yellow: HappyIcon,
+    green: SereneIcon,
+    darkBlue: MelancholicIcon,
+    pink: RomanticIcon,
+    purple: SpiritualIcon,
+    blue: CalmIcon,
+    white: PeaceIcon,
+    beige: SoftIcon,
+    gray: SadIcon,
+    black: PowerfulIcon
+  }
 
+  useEffect(() => {
+    const user = localStorage.getItem("user")
+    const getMoods = async () => {
+      try {
+        const baseURL = process.env.REACT_APP_BASE_URL;
+        const response = await fetch(
+          `${baseURL}/mood?secret_token=${user.jwt}`
+          
+        );
+        const moodsJSON = await response.json();
+        setMoodList(moodsJSON.mood)
+      } catch(err) {
+        console.log(err)
+      }
+    }
+    getMoods() 
+  }, [props])
+
+  
   // const handleMood = (e) => setMood(e.target.value);
   const handleSubmit = async (e) => {
-    // e.prevent.default();
+    setMood(moodList[e.target.getAttribute("idx")])
+    const moodName = moodList[e.target.getAttribute("idx")].moodName
+    const limit = 50;
+    const random = Math.floor(Math.random() * limit + 1);
+    const baseURL = `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.REACT_APP_CLIENT_ID}&format=jsonpretty&limit=${limit}&fuzzytags=${moodName}&speed=high%2Bveryhigh&include=musicinfo&groupby=artist_id`;
     try {
       const response = await fetch(baseURL);
       const songList = await response.json();
@@ -35,61 +71,92 @@ function MusispherePage() {
       console.log(error);
     }
   };
-  const redClick = () => {
-    setMood("Angry");
-    handleSubmit();
+
+  const handleLike = async () => {
+    const baseURL = process.env.REACT_APP_BASE_URL;
+    try {
+      const payload = JSON.stringify({
+        trackId: song.id,
+        moodId: mood.moodId,
+      })
+      await fetch(`${baseURL}/track/${props.user.id}?secret_token=${props.user.jwt}`, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: payload,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
-  const orangeClick = () => {
-    setMood("Energetic");
-    handleSubmit();
-  }
-  const yellowClick = () => {
-    setMood("Happy");
-    handleSubmit();
-  }
-  const greenClick = () => {
-    setMood("Serene");
-    handleSubmit();
-  }
-  const darkBlueClick = () => {
-    setMood("Melancholic");
-    handleSubmit();
-  }
-  const pinkClick = () => {
-    setMood("Love");
-    handleSubmit();
-  }
-  const purpleClick = () => {
-    setMood("Spiritual");
-    handleSubmit();
-  }
-  const blueClick = () => {
-    setMood("Calm");
-    handleSubmit();
-  }
-  const whiteClick = () => {
-    setMood("Peaceful");
-    handleSubmit();
-  }
-  const beigeClick = () => {
-    setMood("Soft");
-    handleSubmit();
-  }
-  const grayClick = () => {
-    setMood("Sad");
-    handleSubmit();
-  }
-  const blackClick = () => {
-    setMood("Powerful");
-    handleSubmit();
-  }
+
+  // const redClick = () => {
+  //   setMood("Angry");
+  //   handleSubmit();
+  // }
+  // const orangeClick = () => {
+  //   setMood("Energetic");
+  //   handleSubmit();
+  // }
+  // const yellowClick = () => {
+  //   setMood("Happy");
+  //   handleSubmit();
+  // }
+  // const greenClick = () => {
+  //   setMood("Serene");
+  //   handleSubmit();
+  // }
+  // const darkBlueClick = () => {
+  //   setMood("Melancholic");
+  //   handleSubmit();
+  // }
+  // const pinkClick = () => {
+  //   setMood("Love");
+  //   handleSubmit();
+  // }
+  // const purpleClick = () => {
+  //   setMood("Spiritual");
+  //   handleSubmit();
+  // }
+  // const blueClick = () => {
+  //   setMood("Calm");
+  //   handleSubmit();
+  // }
+  // const whiteClick = () => {
+  //   setMood("Peaceful");
+  //   handleSubmit();
+  // }
+  // const beigeClick = () => {
+  //   setMood("Soft");
+  //   handleSubmit();
+  // }
+  // const grayClick = () => {
+  //   setMood("Sad");
+  //   handleSubmit();
+  // }
+  // const blackClick = () => {
+  //   setMood("Powerful");
+  //   handleSubmit();
+  // }
   return (
     <>
       <div className="musispherePage">
         <NavigationPage />
         <div className="keyAndSphere">
           <div className="colorKey" id="left-colors">
-            <li className="keyColors" onClick={() => yellowClick()}>
+            {
+              moodList.slice(0, moodList.length/2).map((m, i) => {
+                return (
+                  <li key={i} idx={i} className="keyColors" onClick={handleSubmit}>
+                    <div idx={i} className="keyModal"><img src={iconMap[m.moodColour]} alt="Happy icon"/></div>
+                    <div><p idx={i}>{m.moodColour} = {m.moodName}</p></div>
+                </li>
+                )
+              })
+            }
+            {/* <li className="keyColors" onClick={() => yellowClick()}>
               <div className="keyModal"><img src={HappyIcon} alt="Happy icon"/></div>
               <div><p>Yellow = Happy</p></div>
             </li>
@@ -112,10 +179,13 @@ function MusispherePage() {
             <li className="keyColors" onClick={() => beigeClick()}>
               <div className="keyModal"><img src={SoftIcon} alt="Soft and cosy icon"/></div>
               <div><p>Beige = Cosy</p></div>
-            </li>
+            </li> */}
           </div>
           <div className="musisphere">
-            <li className="segment green" onClick={() => greenClick()} />
+          {moodList.map((m,i) => {
+              return <li key={i} idx={i} className={`segment ${m.moodColour}`} onClick={handleSubmit} />
+            })}
+            {/* <li className="segment green" onClick={() => greenClick()} />
             <li className="segment blue" onClick={() => blueClick()} />
             <li className="segment pink" onClick={() => pinkClick()} />
             <li className="segment darkBlue" onClick={() => darkBlueClick()} />
@@ -126,10 +196,21 @@ function MusispherePage() {
             <li className="segment black" onClick={() => blackClick()} />
             <li className="segment red" onClick={() => redClick()} />
             <li className="segment orange" onClick={() => orangeClick()} />
-            <li className="segment yellow" onClick={() => yellowClick()} />
+            <li className="segment yellow" onClick={() => yellowClick()} /> */}
           </div>
           <div className="colorKey" id="right-colors">
-            <li className="keyColors" onClick={() => greenClick()}>
+          {
+              moodList.slice(-moodList.length/2).map((m, i) => {
+                const idx = moodList.length/2 + i
+                return (
+                  <li key={idx} idx={idx} className="keyColors" onClick={handleSubmit}>
+                    <div idx={idx} className="keyModal"><img src={iconMap[m.moodColour]} alt="Happy icon"/></div>
+                    <div><p idx={idx}>{m.moodColour} = {m.moodName}</p></div>
+                </li>
+                )
+              })
+            }
+            {/* <li className="keyColors" onClick={() => greenClick()}>
               <div className="keyModal"><img src={SereneIcon} alt="Serene icon"/></div>
               <div><p>Green = Serene</p></div>
             </li>
@@ -152,7 +233,7 @@ function MusispherePage() {
             <li className="keyColors" onClick={() => whiteClick()}>
               <div className="keyModal"><img src={PeaceIcon} alt="Peaceful icon"/></div>
               <div><p>White = Peaceful</p></div>
-            </li>
+            </li> */}
           </div>
           <div className="mediaPlayer">
             <div>
@@ -161,12 +242,15 @@ function MusispherePage() {
             <div>
               <form onSubmit={handleSubmit}>
                 <label htmlFor="mood">What mood are you in? </label>
-                <input type="text" name="mood" value={mood} className="musisphereInputBox"/>
+                <span className="musisphereInputBox">{mood.moodName}</span>
                 <input type="submit" value="Submit" className="hidden" />
               </form>
             </div>
             <div>
-              <ReactAudioPlayer src={song.audio} autoPlay="true" controls className="audioPlayer" />
+              <ReactAudioPlayer src={song.audio} autoPlay={true} controls className="audioPlayer" />
+              <button onClick={handleLike}>
+                Like
+              </button>
             </div>
           </div>
         </div>

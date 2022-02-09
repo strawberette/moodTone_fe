@@ -26,10 +26,15 @@ function Login({ user, setUser }) {
       body: payload,
     });
     const data = await res.json();
-    setUser({ username: data.user.name, id: data.user.id, jwt: data.token });
-  };
+    const loggedInUser = {
+      username: data.user.name,
+      id: data.user.id,
+      jwt: data.token,
+    };
+    localStorage.setItem("user", JSON.stringify(loggedInUser));
+    setUser(loggedInUser);  };
   if (user) {
-    return <Redirect to="/navigationPage" />;
+    return <Redirect to="/emotions" />;
   }
 
   return (
