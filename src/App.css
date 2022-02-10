@@ -311,9 +311,10 @@ body {
 .profileMood{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box; 
-  padding: 20%;
+  padding: 20%; 
+  font-family: "LeagueSpartan-Bold"
 
 }
 
@@ -321,7 +322,8 @@ body {
   display: flex;
   flex-direction:row; 
   justify-content:center; 
-  padding: 40;
+  padding: 20%; 
+  font-family: "LeagueSpartan-Bold"
 
 } 
 
@@ -329,27 +331,31 @@ body {
   display: flex;
   flex-direction:row; 
   justify-items:center;
-  padding: 40;
+  padding: 20%; 
+  font-family: "LeagueSpartan-Bold"
 
 } 
 
 .profileArtwork{
-  
+  display: flex;
   flex-direction:row; 
   justify-items:center;
-  padding: 40;
+  padding: 20%; 
+  font-family: "LeagueSpartan-Bold"
 } 
-
-.mediaPlayer{
-  flex-direction:row; 
-  justify-items:center;
-}
 
 .moodPlayer{
   font: optional;
   flex-direction:row; 
-  justify-items:center;
-  padding: 40;
+  justify-items:center; 
+  font-family: "LeagueSpartan-Bold" 
+
+} 
+
+.profilePlayer{ 
+  display:flex;
+  flex-direction:row; 
+  justify-items:center
 }
 
 /* ------------------------------------NAV BAR STYLING------------------------------- */
