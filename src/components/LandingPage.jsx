@@ -1,9 +1,8 @@
 import React from "react";
-import Logo from "../utility/logo.jpg";
 import "../App.css";
+import "animate.css";
 import { Link } from "react-router-dom";
 function LandingPage() {
-
   return (
     <div className="App">
       <div className="wrapper">
@@ -21,11 +20,7 @@ function LandingPage() {
           <li className="segment orange" />
           <li className="segment yellow" />
         </ul>
-        <img
-          src={Logo}
-          className="logo"
-          alt="black and white logo mood flow"
-        ></img>
+        <h1 class="animate__animated animate__fadeInLeftBig">moodTone</h1>
         <div className="enterApp>">
           <Link to="/home" style={{ textDecoration: "none" }}>
             <button type="button" className="enter">
