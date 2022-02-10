@@ -17,10 +17,10 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import NavigationPage from "./NavigationPage";
 
-const EmotionsPage = () => {
+const EmotionsPage = (props) => {
   return (
     <div className="emotionsPage">
-      <NavigationPage />
+      <NavigationPage user={props.user} setUser={props.setUser} />
       <div className="iconSide">
         <div className="logoWrapper">
           <ul className="circle">
