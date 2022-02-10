@@ -113,7 +113,11 @@ const Profile = (props) => {
       </div>
     </div> 
 
-    <image src={happy} ></image>
+    <img 
+      src={happy}
+      className="happy" 
+      alt="happy icon"  
+    ></img>
     </>
   );
 };
