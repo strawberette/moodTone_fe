@@ -32,7 +32,7 @@ function Register(props) {
       <div className="App">
         <p>You are already logged in!</p>
         <br />
-        <Link to="/emotions">Home</Link>
+        <Link to="/login">Home</Link>
       </div>
     );
   }

@@ -22,7 +22,7 @@ function LandingPage() {
         </ul>
         <h1 class="animate__animated animate__fadeInLeftBig">moodTone</h1>
         <div className="enterApp>">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <Link to="/login" style={{ textDecoration: "none" }}>
             <button type="button" className="enter">
               ENTER
             </button>
