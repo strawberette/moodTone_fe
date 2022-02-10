@@ -378,13 +378,13 @@ body {
   height: 50px;
   width: 50px;
   position: fixed;
-  left: 580px;
+  left: 530px;
   order: 2;
-  margin-right: 50px;
-  padding-right:50px; 
+  margin-right: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99;
 }
 .burgerMenuLines {
   display: none;
@@ -704,6 +704,9 @@ body {
 @media only screen and (max-width: 600px) {
   .burgerMenu {
     left: 500px;
+  }
+  .entermusic {
+    font-size: 18px;
   }
 }
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import Toggle from "./darkModeToggle";
 import { Link, Redirect } from "react-router-dom";
