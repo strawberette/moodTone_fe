@@ -73,12 +73,12 @@ const Profile = (props) => {
     <div>
       <NavigationPage user={props.user} setUser={props.setUser}/>
       <table>
-        <thead>
+        <thead className="profile" >
           <tr>
             <th className="profileMood">Mood</th>
             <th className="profileArtist">Artist</th>
             <th className="profileSong">Song</th>
-            <th className="profileSong">Artwork</th>
+            <th className="profileArtwork">Artwork</th>
           </tr>
         </thead>
         <tbody>
@@ -105,7 +105,8 @@ const Profile = (props) => {
       </table>
 
       <div className="mediaPlayer">
-        <h1 className="moodPlayer"> Moodplayer </h1>
+        <h1 className="moodPlayer"> Moodplayer </h1> 
+        <br/>
         <audio className="profilePlayer" src={audio} autoPlay controls></audio>
       </div>
     </div>
