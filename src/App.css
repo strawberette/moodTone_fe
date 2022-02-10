@@ -299,12 +299,6 @@ body {
 
 /* ------------------------------------ PROFILE STYLING------------------------------- */
 
-.porfile{
-  flex-direction:row; 
-  justify-items:center;  
-  padding: 40;
-}
-
 .profileMood{
   flex-direction:row; 
   justify-items:center;
@@ -331,6 +325,10 @@ body {
   justify-items:center;
   padding: 40;
 } 
+
+.mediaPlayer{
+
+}
 
 .moodPlayer{
   font: optional;
