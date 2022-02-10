@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NavigationPage from "./NavigationPage";
+import NavigationPage from "./NavigationPage"; 
+
+import "../App.css"
 
 const Profile = (props) => {
   const [data, setData] = useState([]);
@@ -73,10 +75,10 @@ const Profile = (props) => {
       <table>
         <thead>
           <tr>
-            <th>Mood</th>
-            <th>Artist</th>
-            <th>Song</th>
-            <th>Artwork</th>
+            <th className="profileMood">Mood</th>
+            <th className="profileArtist">Artist</th>
+            <th className="profileSong">Song</th>
+            <th className="profileSong">Artwork</th>
           </tr>
         </thead>
         <tbody>
@@ -103,7 +105,7 @@ const Profile = (props) => {
       </table>
 
       <div className="mediaPlayer">
-        <h1> Moodplayer </h1>
+        <h1 className="moodplayer"> Moodplayer </h1>
         <audio src={audio} autoPlay controls></audio>
       </div>
     </div>

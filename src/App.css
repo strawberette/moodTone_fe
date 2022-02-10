@@ -296,6 +296,46 @@ body {
   text-align: center;
 }
 
+
+/* ------------------------------------ PROFILE STYLING------------------------------- */
+
+.porfile{
+  flex-direction:row; 
+  justify-items:center;  
+  padding: 40;
+}
+
+.profileMood{
+  flex-direction:row; 
+  justify-items:center;
+  padding: 40;
+
+}
+
+.profileArtist{
+  flex-direction:row; 
+  justify-items:center; 
+  padding: 40;
+
+} 
+
+.profileSong{
+  flex-direction:row; 
+  justify-items:center;
+  padding: 40;
+
+} 
+
+.profileArtwork{
+  flex-direction:row; 
+  justify-items:center;
+  padding: 40;
+} 
+
+.moodPlayer{
+  font: optional;
+}
+
 /* ------------------------------------NAV BAR STYLING------------------------------- */
 
 #logOutInfo {
