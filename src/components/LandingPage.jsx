@@ -1,11 +1,15 @@
 import React from "react";
-import Logo from "../utility/logo.jpg";
 import "../App.css";
+import "animate.css";
 import { Link } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import Toggle from "./darkModeToggle";
 function LandingPage() {
-
   return (
     <div className="App">
+    <ChakraProvider>
+      <Toggle />
+    </ChakraProvider>
       <div className="wrapper">
         <ul className="circle">
           <li className="segment green" />
@@ -21,13 +25,9 @@ function LandingPage() {
           <li className="segment orange" />
           <li className="segment yellow" />
         </ul>
-        <img
-          src={Logo}
-          className="logo"
-          alt="black and white logo mood flow"
-        ></img>
+        <h1 class="animate__animated animate__fadeInLeftBig">moodTone</h1>
         <div className="enterApp>">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <Link to="/login" style={{ textDecoration: "none" }}>
             <button type="button" className="enter">
               ENTER
             </button>

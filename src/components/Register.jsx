@@ -12,8 +12,8 @@ function Register(props) {
   const submitForm = async (e) => {
     e.preventDefault();
     const payload = JSON.stringify({
-      "email": user,
-      "password": password,
+      email: user,
+      password: password,
     });
     console.log(payload);
     const res = await fetch(baseURL, {
@@ -33,7 +33,7 @@ function Register(props) {
       <div className="App">
         <p>You are already logged in!</p>
         <br />
-        <Link to="/home">Home</Link>
+        <Link to="/login">Home</Link>
       </div>
     );
   }
@@ -43,40 +43,52 @@ function Register(props) {
       <div className="App">
         <p>User {user} is already registered!</p>
         <br />
-        <a href="/home">Try again</a>
+        <a href="/login">Try again</a>
         <br />
-        <Link to="/home">Home</Link>
+        <Link to="/login">Home</Link>
       </div>
     );
   }
 
   if (response.status === 201) {
-    return <p>Successfully registered, please login.</p>;
+    return (
+      <>
+        <p>Successfully registered, please login.</p>
+        <Link to="/login">
+          <button>Back to Login</button>
+        </Link>
+      </>
+    );
   }
 
   return (
-    <div className="register">
-      <h1>Register</h1>
-      <form onSubmit={submitForm}>
-        <label htmlFor="user">Email:</label>
-        <input
-          type="text"
-          name="user"
-          value={user}
-          onChange={handleUserChange}
-        />
+    <>
+      <div className="register">
+        <h1>Register</h1>
+        <form onSubmit={submitForm}>
+          <label htmlFor="user">Email:</label>
+          <input
+            type="text"
+            name="user"
+            value={user}
+            onChange={handleUserChange}
+          />
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
 
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+          <input type="submit" value="Submit" />
+          <Link to="/login" className="btn btn-link">
+            Cancel
+          </Link>
+        </form>
+      </div>
+    </>
   );
 }
 
