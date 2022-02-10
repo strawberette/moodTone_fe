@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Register(props) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +15,6 @@ function Register(props) {
       "email": user,
       "password": password,
     });
-    console.log(payload)
     const res = await fetch(baseURL, {
       method: "POST",
       mode: "cors",
@@ -26,11 +25,8 @@ function Register(props) {
     });
 
     setResponse(res);
-
-    // const resJson = await res.json();
-    // console.log(resJson);
-    // setResult(resJson);
   };
+
   if (props.user) {
     return (
       <div className="App">
@@ -54,7 +50,7 @@ function Register(props) {
   }
 
   if (response.status === 201) {
-    return <Redirect to="/emotions" />;
+    return <p>Successfully registered, please login.</p>;
   }
 
   return (
