@@ -302,7 +302,7 @@ body {
 .profile{
   display: flex;
   flex-direction: row;
-  justify-content: space-between ;
+  justify-content: space-around ;
   box-sizing: border-box;
   font-family: "LeagueSpartan-Bold";
 
@@ -328,7 +328,9 @@ body {
 .profilePlayer{
   display: flex;
   flex-direction: row; 
-  justify-content: center;
+  justify-content: center; 
+  align-items: center; 
+  align-content: center;
 }
 
 
