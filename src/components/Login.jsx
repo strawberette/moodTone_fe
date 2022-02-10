@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Toggle from "./darkModeToggle";
 import { Link, Redirect } from "react-router-dom";
 
 function Login({ user, setUser }) {
@@ -39,6 +41,9 @@ function Login({ user, setUser }) {
 
   return (
     <>
+    <ChakraProvider>
+      <Toggle />
+    </ChakraProvider>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="user">Email:</label>
