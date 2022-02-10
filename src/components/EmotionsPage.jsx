@@ -86,6 +86,7 @@ const EmotionsPage = (props) => {
           <h1>Welcome to</h1>
           <h2>moodTone</h2>
           <p>
+            <span>
             Here you can find out about the different colours we chose for this
             new App! Warm colors like red, yellow and orange evoke higher
             arousal Routes, such as love, passion, happiness, and anger. Cool
@@ -94,6 +95,7 @@ const EmotionsPage = (props) => {
             Routes. Much like music does! So come and explore our Unique
             musiSphere and find the right music to suit your mood. Your new
             favourite track is one click away...
+            </span>
           </p>
         </div>
 

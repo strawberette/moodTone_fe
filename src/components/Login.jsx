@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Toggle from "./darkModeToggle";
 import { Link, Redirect } from "react-router-dom";
 import LoveBody from "../utility/fullromantic.png";
 import Rainbow from "../utility/rainbow.png";
@@ -40,6 +42,7 @@ function Login({ user, setUser }) {
 
   return (
     <>
+
       <div className="login-container">
         <div className="welcome-info">
           <h2>Welcome to </h2>
@@ -72,6 +75,20 @@ function Login({ user, setUser }) {
               />
             </div>
             <br />
+
+    <ChakraProvider>
+      <Toggle />
+    </ChakraProvider>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="user">Email:</label>
+        <input
+          type="text"
+          name="user"
+          value={userName}
+          onChange={handleUserName}
+        />
+
 
             <div className="password">
               <label htmlFor="password">Password:</label>
