@@ -28,6 +28,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+.wrapper h1 {
+  position: relative;
+  bottom: 150px;
+  font-size: 6rem;
+  font-family: "LeagueSpartan-Bold";
+}
 .circle {
   transform: scale(1.5);
   padding: 0;
@@ -322,7 +328,7 @@ body {
   left: 0;
   position: fixed;
   box-sizing: border-box;
-  padding: 0;
+  padding-right: 5%;
 }
 
 .navBar li {
@@ -338,7 +344,7 @@ body {
 }
 
 .navBar li:nth-of-type(2) {
-  margin-left: -400px;
+  margin-left: -305px;
 }
 
 .navbarLogoWrapper {
@@ -616,7 +622,7 @@ body {
   border: 1px solid darkslategray;
   text-align: center;
   border-radius: 10px;
-  color:rgba(70, 70, 70) !important;
+  color: rgba(70, 70, 70) !important;
 }
 
 .audioPlayer {
@@ -632,8 +638,20 @@ body {
   .navBar li:nth-of-type(2) {
     margin-left: -10%;
   }
+  .musisphere {
+    width: 25em;
+    height: 25em;
+    margin-top: 70px;
+    }
 }
-
+@media only screen and (max-width: 982px) {
+  #left-colors {
+    margin-left: 25px;
+  }
+  #right-colors {
+    margin-right: 25px;
+  }
+}
 @media only screen and (max-width: 979px) {
   .navbarLogoWrapper{
     width: 50px;
@@ -650,7 +668,13 @@ body {
     overflow-y: visible;
   }
 }
-
+@media only screen and (max-width: 803px) {
+  .musisphere {
+    width: 20em;
+    height: 20em;
+    margin-top: 100px;
+  }
+}
 @media only screen and (max-width: 750px) {
   .navbarlink {
     visibility: hidden;
@@ -663,6 +687,17 @@ body {
   }
   .entermusic {
     width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .musisphere {
+    display: none;
+  }
+  .colorKey {
+    width: 45%;
+    margin: 0;
+    justify-items: center;
   }
 }
 
@@ -717,6 +752,18 @@ body {
   .burgerMenu {
     left: 450px;
   }
+  #left-colors{
+    margin-left: 0;
+  }
+  #right-colors{
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .burgerMenu {
+    left: 400px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -738,5 +785,9 @@ body {
   }
   .iconSide div ul {
     top: 120px;
+  }
+  .burgerMenu {
+    left: 350px;
+    margin-right: 50px;
   }
 }

@@ -5,13 +5,9 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Toggle from "./darkModeToggle";
 import Logo from "./Logo";
 import BurgerMenuLink from "./burgerMenuLink";
+import Logout from "./Logout";
 
-const NavigationPage = () => {
-  
-  // const handleClick = ({ user, setUser }) => {
-  //   setUser(null);
-  // };
-
+const NavigationPage = (props) => {
   return (
     <>
     <div className="navPage">
@@ -25,7 +21,7 @@ const NavigationPage = () => {
         <li className="navbarlink"><Link to="/musisphere">Musisphere</Link></li>
         <li><Logo /></li>
         <li className="navbarlink"><Link to="/profile">Profile</Link></li>
-        <li className="navbarlink"><div><Link to="/" style={{ textDecoration: "none" }}>Log Out</Link></div></li>
+        <li className="navbarLink"><div className="navbarLink"><Logout user={props.user} setUser={props.setUser}/></div></li>
       </ul>
       <BurgerMenuLink />
     </div>

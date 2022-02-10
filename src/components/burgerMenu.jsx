@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import Logout from "./Logout";
 
-const MobileMenu = () => {
+const MobileMenu = (props) => {
     return (
         <div className="mobileMenu">
             <ul className="mobileMenuList">
@@ -12,7 +13,7 @@ const MobileMenu = () => {
                 <li><hr /></li>
                 <li className="mobileMenuLink"><Link to="/profile">Profile</Link></li>
                 <li><hr /></li>
-                <li className="mobileMenuLink"><Link to="/">Log Out</Link></li>
+                <li className="mobileMenuLink"><Logout user={props.user} setUser={props.setUser} /></li>
             </ul>
         </div>
     );
