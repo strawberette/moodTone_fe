@@ -28,6 +28,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+.wrapper h1 {
+  position: relative;
+  bottom: 150px;
+  font-size: 6rem;
+  font-family: "LeagueSpartan-Bold";
+}
 .circle {
   transform: scale(1.5);
   padding: 0;
@@ -527,7 +533,7 @@ body {
   border: 1px solid darkslategray;
   text-align: center;
   border-radius: 10px;
-  color:rgba(70, 70, 70) !important;
+  color: rgba(70, 70, 70) !important;
 }
 
 .audioPlayer {
