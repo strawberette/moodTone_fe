@@ -353,10 +353,30 @@ body {
 } 
 
 .profilePlayer{ 
-  display:flex;
-  flex-direction:row; 
-  justify-items:center
-}
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  box-sizing: border-box;
+  padding-top: 40px;  
+} 
+
+.mediaPlayer div h1 {
+  text-align: center; 
+  font-family: "LeagueSpartan-Bold"
+} 
+
+.mediaPlayer audio {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+} 
+
+
 
 /* ------------------------------------NAV BAR STYLING------------------------------- */
 
