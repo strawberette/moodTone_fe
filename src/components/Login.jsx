@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Toggle from "./darkModeToggle";
 import { Link, Redirect } from "react-router-dom";
 import LoveBody from "../utility/fullromantic.png";
 import Rainbow from "../utility/rainbow.png";
@@ -40,6 +42,10 @@ function Login({ user, setUser }) {
 
   return (
     <>
+      <ChakraProvider>
+        <Toggle />
+      </ChakraProvider>
+
       <div className="login-container">
         <div className="welcome-info">
           <h2>Welcome to </h2>

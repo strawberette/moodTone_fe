@@ -8,8 +8,6 @@ import LandingPage from "./components/LandingPage";
 import Musisphere from "./components/MusispherePage";
 import EmotionsPage from "./components/EmotionsPage";
 import { Switch, Route } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
-import Toggle from "./components/darkModeToggle";
 
 function App() {
   const loggedInUser = localStorage.getItem("user")
@@ -20,10 +18,6 @@ function App() {
   console.log(user);
   return (
     <>
-      <ChakraProvider>
-        <Toggle />
-      </ChakraProvider>
-
       <Switch>
         <Route exact path="/">
           <LandingPage></LandingPage>
