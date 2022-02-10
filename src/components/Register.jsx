@@ -52,39 +52,42 @@ function Register(props) {
   if (response.status === 201) {
     return (
       <>
+        <p>Successfully registered, please login.</p>
         <Link to="/login">
-          <p>Successfully registered, please login.</p>;
+          <button>Back to Login</button>
         </Link>
       </>
     );
   }
 
   return (
-    <div className="register">
-      <h1>Register</h1>
-      <form onSubmit={submitForm}>
-        <label htmlFor="user">Email:</label>
-        <input
-          type="text"
-          name="user"
-          value={user}
-          onChange={handleUserChange}
-        />
+    <>
+      <div className="register">
+        <h1>Register</h1>
+        <form onSubmit={submitForm}>
+          <label htmlFor="user">Email:</label>
+          <input
+            type="text"
+            name="user"
+            value={user}
+            onChange={handleUserChange}
+          />
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
 
-        <input type="submit" value="Submit" />
-        <Link to="/login" className="btn btn-link">
-          Cancel
-        </Link>
-      </form>
-    </div>
+          <input type="submit" value="Submit" />
+          <Link to="/login" className="btn btn-link">
+            Cancel
+          </Link>
+        </form>
+      </div>
+    </>
   );
 }
 
