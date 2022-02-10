@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavigationPage from "./NavigationPage"; 
 
-import happy from "../utility/happy.png"
+import happy from "../utility/fullhappy.png"
 
 import "../App.css"
 
