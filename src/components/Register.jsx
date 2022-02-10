@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 function Register(props) {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -50,7 +50,12 @@ function Register(props) {
   }
 
   if (response.status === 201) {
-    return <p>Successfully registered, please login.</p>;
+    return (
+      <>
+        <p>Successfully registered, please login.</p>;
+        <Redirect to="/login" />;
+      </>
+    );
   }
 
   return (
