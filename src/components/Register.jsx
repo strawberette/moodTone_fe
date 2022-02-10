@@ -5,7 +5,7 @@ function Register(props) {
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState({});
   const baseURL = `${process.env.REACT_APP_BASE_URL}/user/registeruser`;
-
+  
   const handleUserChange = (e) => setUser(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
@@ -15,7 +15,8 @@ function Register(props) {
       "email": user,
       "password": password,
     });
-    const res = await fetch(baseURI, {
+    console.log(payload);
+    const res = await fetch(baseURL, {
       method: "POST",
       mode: "cors",
       headers: {

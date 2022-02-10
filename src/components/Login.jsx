@@ -16,7 +16,7 @@ function Login({ user, setUser }) {
       password: password,
     });
 
-    const res = await fetch(baseURI, {
+    const res = await fetch(baseURL, {
       method: "POST",
       mode: "cors",
       headers: {
