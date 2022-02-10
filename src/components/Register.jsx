@@ -12,8 +12,8 @@ function Register(props) {
   const submitForm = async (e) => {
     e.preventDefault();
     const payload = JSON.stringify({
-      "email": user,
-      "password": password,
+      email: user,
+      password: password,
     });
     const res = await fetch(baseURL, {
       method: "POST",
@@ -32,7 +32,7 @@ function Register(props) {
       <div className="App">
         <p>You are already logged in!</p>
         <br />
-        <Link to="/home">Home</Link>
+        <Link to="/login">Home</Link>
       </div>
     );
   }
@@ -42,15 +42,21 @@ function Register(props) {
       <div className="App">
         <p>User {user} is already registered!</p>
         <br />
-        <a href="/home">Try again</a>
+        <a href="/login">Try again</a>
         <br />
-        <Link to="/home">Home</Link>
+        <Link to="/login">Home</Link>
       </div>
     );
   }
 
   if (response.status === 201) {
-    return <p>Successfully registered, please login.</p>;
+    return (
+      <>
+        <Link to="/login">
+          <p>Successfully registered, please login.</p>;
+        </Link>
+      </>
+    );
   }
 
   return (
@@ -74,6 +80,9 @@ function Register(props) {
         />
 
         <input type="submit" value="Submit" />
+        <Link to="/login" className="btn btn-link">
+          Cancel
+        </Link>
       </form>
     </div>
   );

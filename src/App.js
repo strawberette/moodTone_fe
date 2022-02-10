@@ -22,9 +22,11 @@ function App() {
         <Route exact path="/">
           <LandingPage></LandingPage>
         </Route>
-        <Route exact path="/home">
-          <Register user={user} />
+        <Route exact path="/login">
           <Login user={user} setUser={setUser} />
+        </Route>
+        <Route exact path="/register">
+          <Register user={user} />
         </Route>
         <Route exact path="/navigationPage"></Route>
         <Route exact path="/musisphere">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import Toggle from "./darkModeToggle";
+import { Link, Redirect } from "react-router-dom";
 
 function Login({ user, setUser }) {
   const [userName, setUserName] = useState("");
@@ -33,7 +34,8 @@ function Login({ user, setUser }) {
       jwt: data.token,
     };
     localStorage.setItem("user", JSON.stringify(loggedInUser));
-    setUser(loggedInUser);  };
+    setUser(loggedInUser);
+  };
   if (user) {
     return <Redirect to="/emotions" />;
   }
@@ -62,6 +64,9 @@ function Login({ user, setUser }) {
         />
 
         <button type="submit"> Submit </button>
+        <Link to="/register" className="btn btn-link">
+          Register
+        </Link>
       </form>
     </>
   );
