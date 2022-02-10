@@ -321,9 +321,7 @@ body {
   top: 0;
   left: 0;
   position: fixed;
-  padding-right: 5%;
   box-sizing: border-box;
-  order: 1;
 }
 
 .navBar li {
@@ -340,6 +338,9 @@ body {
 
 .navBar li:nth-of-type(2) {
   margin-left: -305px;
+}
+.navbarBurger {
+  width: 50px;
 }
 
 .navbarLogoWrapper {
@@ -372,9 +373,29 @@ body {
 .burgerMenu {
   height: 50px;
   width: 50px;
-  border: 1px solid black;
-  order: 2;
-  justify-self: flex-end;
+  position: relative;
+}
+.burgerMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.burgerMenuLines {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.burgerMenuLines:hover {
+  cursor: pointer;
+}
+.burgerLines {
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+.blackLines {
+  background-color: black;
 }
 
 /* ------------------------------------HOME PAGE CSS STYLE----------------------------- */
