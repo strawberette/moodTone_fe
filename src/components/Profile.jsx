@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import NavigationPage from "./NavigationPage"; 
 
+import happy from "../utility/happy.png"
+
 import "../App.css"
 
 const Profile = (props) => {
@@ -109,7 +111,9 @@ const Profile = (props) => {
         <br/>
         <audio className="profilePlayer" src={audio} autoPlay controls></audio>
       </div>
-    </div>
+    </div> 
+
+    <image src={happy} ></image>
     </>
   );
 };
