@@ -302,79 +302,28 @@ body {
 .profile{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  box-sizing: border-box; 
+  justify-content: space-between ;
+  box-sizing: border-box;
+  font-family: "LeagueSpartan-Bold";
 
+  list-style: none;
+  text-align: center;
+  width: 900px;
+  padding-top: 10px;
 }
-
-
-.profileMood{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  box-sizing: border-box; 
-  padding: 20%; 
-  font-family: "LeagueSpartan-Bold"
-
-}
-
-.profileArtist{ 
-  display: flex;
-  flex-direction:row; 
-  justify-content:center; 
-  padding: 20%; 
-  font-family: "LeagueSpartan-Bold"
-
-} 
-
-.profileSong{
-  display: flex;
-  flex-direction:row; 
-  justify-items:center;
-  padding: 20%; 
-  font-family: "LeagueSpartan-Bold"
-
-} 
-
-.profileArtwork{
-  display: flex;
-  flex-direction:row; 
-  justify-items:center;
-  padding: 20%; 
-  font-family: "LeagueSpartan-Bold"
-} 
 
 .moodPlayer{
-  font: optional;
-  flex-direction:row; 
-  justify-items:center; 
-  font-family: "LeagueSpartan-Bold" 
-
-} 
-
-.profilePlayer{ 
-
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  box-sizing: border-box;
-  padding-top: 40px;  
-} 
-
-.mediaPlayer div h1 {
-  text-align: center; 
-  font-family: "LeagueSpartan-Bold"
-} 
-
-.mediaPlayer audio {
-  display: flex;
-  justify-content: center;
   flex-direction: row;
-  align-content: center;
-  box-sizing: border-box;
-  padding-top: 40px;
-} 
+  justify-content: center;
+  box-sizing: border-box; 
+  font-family: "LeagueSpartan-Bold"
+}   
+
+.profileTable{
+  width: 25%;
+}
+
 
 
 
