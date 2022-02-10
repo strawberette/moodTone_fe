@@ -4,6 +4,7 @@ import "../App.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Toggle from "./darkModeToggle";
 import Logo from "./Logo";
+import BurgerMenuLink from "./burgerMenuLink";
 
 const NavigationPage = () => {
   
@@ -26,15 +27,7 @@ const NavigationPage = () => {
         <li className="navbarlink"><Link to="/profile">Profile</Link></li>
         <li className="navbarlink"><div><Link to="/" style={{ textDecoration: "none" }}>Log Out</Link></div></li>
       </ul>
-      <div className="burgerMenu">
-        <ul className="burgerMenuLines">
-          <li className="burgerLines blackLines"></li>
-          <li className="burgerLines whiteLines"></li>
-          <li className="burgerLines blackLines"></li>
-          <li className="burgerLines whiteLines"></li>
-          <li className="burgerLines blackLines"></li>
-        </ul>
-      </div>
+      <BurgerMenuLink />
     </div>
     </>
   );
