@@ -52,8 +52,7 @@ function Register(props) {
   if (response.status === 201) {
     return (
       <>
-        <p>Successfully registered, please login.</p>;
-        <Redirect to="/login" />;
+        <Redirect to="/login" />;<p>Successfully registered, please login.</p>;
       </>
     );
   }
