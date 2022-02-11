@@ -157,7 +157,7 @@ function MusispherePage(props) {
             })}
           </div>
           <div className="mediaPlayer">
-            <div>
+            {/* <div>
               <h1>Moodplayer</h1>
             </div>
             <div>
@@ -166,7 +166,7 @@ function MusispherePage(props) {
                 <span className="musisphereInputBox">{mood.moodName}</span>
                 <input type="submit" value="Submit" className="hidden" />
               </form>
-            </div>
+            </div> */}
             <div>
               <ReactAudioPlayer
                 src={song ? song.audio : ""}
