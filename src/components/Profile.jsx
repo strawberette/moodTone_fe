@@ -85,7 +85,8 @@ const Profile = (props) => {
             <th className="profileTable" >Mood</th>
             <th className="profileTable">Artist</th>
             <th className="profileTable">Song</th>
-            <th className="profileTable">Artwork</th>
+            <th className="profileTable">Artwork</th> 
+            <th className="profileTable"></th>
           </tr>
         </thead>
         <tbody>
