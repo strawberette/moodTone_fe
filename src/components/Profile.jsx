@@ -92,7 +92,7 @@ const Profile = (props) => {
         <tbody>
           {data.map((d, i) => {
             return (
-              <tr className="profileContainer" key={i}>
+              <tr className="profileContainer1" key={i}>
                 <td className="profilemList">{d.mood}</td>
                 <td className="profilemList">{d.artist_name}</td>
                 <td className="profilemList">
