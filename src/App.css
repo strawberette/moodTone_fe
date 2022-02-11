@@ -393,6 +393,7 @@ body {
 }
 
 .profileContainer{
+  font-family: "LeagueSpartan-Bold";
   display:flex; 
   flex-direction: row; 
   justify-self: space-around;  
