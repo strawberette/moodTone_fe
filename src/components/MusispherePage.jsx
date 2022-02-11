@@ -13,7 +13,7 @@ import PeaceIcon from "../utility/peace.png";
 import SoftIcon from "../utility/soft.png";
 import SadIcon from "../utility/sad.png";
 import PowerfulIcon from "../utility/powerful.png";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 import ReactAudioPlayer from "react-audio-player";
 
 function MusispherePage(props) {
@@ -181,7 +181,7 @@ function MusispherePage(props) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    `${song.name} by ${song.artist_name}`
+                    `{song.name} by {song.artist_name}`
                   </a>
                 ) : (
                   <></>
