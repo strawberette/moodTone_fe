@@ -74,6 +74,10 @@ const Profile = (props) => {
     <>
     <div>
       <NavigationPage user={props.user} setUser={props.setUser}/>
+      <br/>
+      <br/> 
+      <br/>
+      <br/>
       <table>
         <thead>
           <tr className="profile">
