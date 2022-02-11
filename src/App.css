@@ -396,7 +396,7 @@ body {
   font-family: "LeagueSpartan-Bold";
   display:flex; 
   flex-direction: row; 
-  justify-self: space-around;  
+  justify-self: space-between;  
   width: 1500px; 
   padding-left: 100px;
 
