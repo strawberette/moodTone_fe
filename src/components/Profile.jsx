@@ -92,14 +92,14 @@ const Profile = (props) => {
           {data.map((d, i) => {
             return (
               <tr key={i}>
-                <td>{d.mood}</td>
-                <td>{d.artist_name}</td>
-                <td>
+                <td className="profileTable">{d.mood}</td>
+                <td className="profileTable">{d.artist_name}</td>
+                <td className="profileTable">
                   <button onClick={() => setAudio(d.audio)}>
                     {d.name}
                   </button>
                 </td>
-                <td>
+                <td className="profileTable">
                   <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
                 <td>
