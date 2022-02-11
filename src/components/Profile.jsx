@@ -125,7 +125,7 @@ const Profile = (props) => {
         className="fullhappy" 
         alt="happy"  
       ></img> 
-
+      
       <img
         src={serene} 
         className=" fullserene"
