@@ -16,15 +16,9 @@ function EmotionModalCalm() {
           cursor: "pointer",
         }}
       />
-      <h2>Calm</h2>
+      <h2>CALM</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Calmness is a state of openness, tranquillity and reflectiveness. It is characterised by the absence of turbulence, agitation and excitement in the mind. It is often associated with shades of blue, like pastel blue or baby blue. It has been argued that this association may reflect the sense of calmness one feels when looking at a clear blue sky, or clear waters. This state and colour are often associated with slow paced music in major tonality.`}
       </p>
     </div>
   );

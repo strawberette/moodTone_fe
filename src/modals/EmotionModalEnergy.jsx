@@ -16,15 +16,9 @@ function EmotionModalEnergy() {
           cursor: "pointer",
         }}
       />
-      <h2>ENERGY</h2>
+      <h2>ENERGETIC</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Energy is a state of high intensity, that elicits pleasure, wellbeing, positive emotions, and promote human flourishing . It is often associated with the colour orange, which is a combination of the colour red (which stimulates energy), and the colour yellow (that elicits happiness). The colour orange is known to stimulate mental activity and to produce an invigorating effect. This state and colour are often associated with  fast paced music in major tonality.`}
       </p>
     </div>
   );
