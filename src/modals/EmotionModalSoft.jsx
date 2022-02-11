@@ -16,15 +16,9 @@ function EmotionModalSoft() {
           cursor: "pointer",
         }}
       />
-      <h2>SOFT</h2>
+      <h2>COSY</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Cosiness is a state of comfort and relaxation. A warm, intimate feeling of safety and contentment, that reflects a culture of low stress, slowing down and staying in. It is often associated with the colour beige, which represents simplicity, a sense of sweetness and inspires tranquillity. This feeling of cosiness and the colour beige are often also associated with slow paced music in major tonality.`}
       </p>
     </div>
   );

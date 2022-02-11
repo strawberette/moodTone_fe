@@ -275,6 +275,49 @@ body {
   transform: rotateZ(0deg) skewY(-60);
 }
 
+.redBgColour {
+  background-color: #ae1f1283;
+}
+.orangeBgColour {
+  background-color: #bb3d0385;
+}
+.yellowBgColour {
+  background-color: #ee9b0080;
+}
+.greenBgColour {
+  background-color: #5da27080;
+}
+.darkBlueBgColour {
+  background-color: #00607381;
+}
+.pinkBgColour {
+  background-color: #d87cac88;
+}
+.purpleBgColour {
+  background-color: #745c9786;
+}
+.blueBgColour {
+  background-color: #31aed483;
+}
+
+.whiteBgColour {
+  background-color: #f7f0f083;
+}
+.beigeBgColour {
+  background-color: #f3dfc186;
+}
+.grayBgColour {
+  background-color: #69677385;
+}
+.blackBgColour {
+  background-color: #050505ad;
+}
+
+.likeButton {
+  align-self: center;
+  font-size: 25px;
+}
+
 @keyframes spinningWheel {
   0% {
     transform: rotate(0deg);
@@ -358,6 +401,11 @@ body {
   width: 300px;
   height:300px; 
 } 
+
+.credits {
+  text-align: center;
+  font-size: 10px;
+}
 
 /* ------------------------------------NAV BAR STYLING------------------------------- */
 

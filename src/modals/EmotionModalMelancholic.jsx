@@ -18,13 +18,7 @@ function EmotionModalMelancholic() {
       />
       <h2>MELANCHOLIC</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Melancholy is a state of pensive sadness and contemplation. It is a reflective feeling of introspective nature, a sober thoughtfulness, usually with not obvious cause. It is often associated with darker shades of the colour blue. This association is also reflected semantically, “feeling blue”. Scientific studies have been arguing that people with depression perceive the colour blue more than other colours. This state and colour are often associated with slow paced music in minor tonality.`}
       </p>
     </div>
   );

@@ -18,13 +18,7 @@ function EmotionModalRomantic() {
       />
       <h2>ROMANTIC</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Love is a state of intimacy, closeness, affection. It is often characterised by trust and commitment, and generally involves attractiveness and passion. It is often associated with different shades of the colour red, ranging from vivid red to pink. The colour pink, in fact,  elicit tenderness, softness, affection, nurturance, kindness. This feeling and colour are often associated with medium-fast paced music in major tonality.`}
       </p>
     </div>
   );
