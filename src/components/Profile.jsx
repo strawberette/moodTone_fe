@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import NavigationPage from "./NavigationPage"; 
 
-import happy from "../utility/fullhappy.png"
+import happy from "../utility/fullhappy.png" 
+import serene from "../utility/fullserene.png"
 
 import "../App.css"
 
@@ -118,11 +119,19 @@ const Profile = (props) => {
       </div>
     </div> 
 
-    <img 
-      src={happy}
-      className="happy" 
-      alt="happy icon"  
-    ></img>
+    <div className="profilefull">
+      <img 
+        src={happy}
+        className="fullhappy" 
+        alt="happy"  
+      ></img> 
+
+      <img
+        src={serene} 
+        className=" fullserene"
+        alt="serene"
+      ></img> 
+    </div>
     </>
   );
 };
