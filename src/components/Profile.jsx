@@ -91,15 +91,15 @@ const Profile = (props) => {
         <tbody>
           {data.map((d, i) => {
             return (
-              <tr key={i}>
-                <td className="profileTable">{d.mood}</td>
-                <td className="profileTable">{d.artist_name}</td>
-                <td className="profileTable">
+              <tr className="profileContainer" key={i}>
+                <td className="profilemList">{d.mood}</td>
+                <td className="profilemList">{d.artist_name}</td>
+                <td className="profilemList">
                   <button onClick={() => setAudio(d.audio)}>
                     {d.name}
                   </button>
                 </td>
-                <td className="profileTable">
+                <td className="profilemList">
                   <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
                 <td>

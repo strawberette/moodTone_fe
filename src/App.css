@@ -392,6 +392,17 @@ body {
   justify-content: space-around;
 }
 
+.profileContainer{
+  display:flex; 
+  flex-direction: row; 
+  justify-self: space-around;  
+  width: 1200px
+}
+
+.profilemList{
+  width: 20%;
+}
+
 .fullhappy{
   width: 300px;
   height:300px; 
