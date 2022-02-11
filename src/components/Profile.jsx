@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import NavigationPage from "./NavigationPage";
+import NavigationPage from "./NavigationPage"; 
+
+import happy from "../utility/fullhappy.png" 
+import serene from "../utility/fullserene.png"
+
+import "../App.css"
 
 const Profile = (props) => {
   const [data, setData] = useState([]);
@@ -70,27 +75,32 @@ const Profile = (props) => {
     <>
     <div>
       <NavigationPage user={props.user} setUser={props.setUser}/>
+      <br/>
+      <br/> 
+      <br/>
+      <br/>
       <table>
         <thead>
-          <tr>
-            <th>Mood</th>
-            <th>Artist</th>
-            <th>Song</th>
-            <th>Artwork</th>
+          <tr className="profile">
+            <th className="profileTable" >Mood</th>
+            <th className="profileTable">Artist</th>
+            <th className="profileTable">Song</th>
+            <th className="profileTable">Artwork</th> 
+            <th className="profileTable"></th>
           </tr>
         </thead>
         <tbody>
           {data.map((d, i) => {
             return (
-              <tr key={i}>
-                <td>{d.mood}</td>
-                <td>{d.artist_name}</td>
-                <td>
+              <tr className="profileContainer1" key={i}>
+                <td className="profilemList">{d.mood}</td>
+                <td className="profilemList">{d.artist_name}</td>
+                <td className="profilemList">
                   <button onClick={() => setAudio(d.audio)}>
                     {d.name}
                   </button>
                 </td>
-                <td>
+                <td className="profilemList">
                   <img src={d.album_image} alt="album cover" width="50px" />
                 </td>
                 <td>
@@ -101,11 +111,27 @@ const Profile = (props) => {
           })}
         </tbody>
       </table>
-
-      <div className="mediaPlayer">
-        <h1> Moodplayer </h1>
-        <audio src={audio} autoPlay controls></audio>
+          
+      <div className="moodPlayer">
+        <h1 className="moodPlayer"> Moodplayer </h1> 
+        <br/> 
+        <br/>
+        <audio className="profilePlayer" src={audio} autoPlay controls></audio>
       </div>
+    </div> 
+
+    <div className="profilefull">
+      <img 
+        src={happy}
+        className="fullhappy" 
+        alt="happy"  
+      ></img> 
+      
+      <img
+        src={serene} 
+        className=" fullserene"
+        alt="serene"
+      ></img> 
     </div>
     </>
   );

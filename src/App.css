@@ -346,6 +346,86 @@ body {
   text-align: center;
 }
 
+
+/* ------------------------------------ PROFILE STYLING------------------------------- */
+
+.profile{
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  box-sizing: border-box;
+  padding-left: 100px;
+  text-align: center;
+  width: 1000px;
+}
+
+.profileTable{
+  width: 60px;
+}
+
+.moodPlayer{
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box; 
+  align-items: center; 
+  padding-top: 40px;  
+  }   
+
+.profilePlayer{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center; 
+}
+
+
+.profilefull{
+  display: flex ;  
+  flex-direction: row; 
+  justify-content: space-around;
+}
+
+.profileContainer1{
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
+  display:flex; 
+  flex-direction: row; 
+  justify-self: space-between;  
+  box-sizing: border-box;
+  padding-left: 110px;
+  text-align: left;
+  width: 1500px;
+} 
+
+.profileContainer{
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
+  display:flex; 
+  flex-direction: row; 
+  justify-self: space-between;  
+  box-sizing: border-box;
+  padding-left: 10px;
+  text-align: left;
+  width: 1500px;
+}
+
+.profilemList{
+  width: 15%;
+}
+
+.fullhappy{
+  width: 300px;
+  height:300px; 
+} 
+
+.fullserene{
+  width: 350px;
+  height:350px; 
+} 
+
 .credits {
   text-align: center;
   font-size: 10px;
