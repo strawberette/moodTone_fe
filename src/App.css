@@ -395,7 +395,7 @@ body {
   flex-direction: row; 
   justify-self: space-between;  
   box-sizing: border-box;
-  padding-left: 80px;
+  padding-left: 20%;
   text-align: center;
   width: 1500px; 
   
