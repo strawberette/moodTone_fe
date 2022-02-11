@@ -56,9 +56,8 @@ function Login({ user, setUser }) {
           />
           <h1>moodTone </h1>
           <p>
-            The brand new music app that takes care of your emotions! Login here
-            to experience our unique musiSphere and let your emotions fly! If
-            you are new to this App then click on the Register link!
+           {`You are invited to a journey of discovery of your emotions, bathing in colours and music. 
+           Register or Login to enter an immersive sensory experience. `}
           </p>
         </div>
         <div className="login-form">

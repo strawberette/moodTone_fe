@@ -87,14 +87,11 @@ const EmotionsPage = (props) => {
           <h2>moodTone</h2>
           <p>
             <span>
-            Here you can find out about the different colours we chose for this
-            new App! Warm colors like red, yellow and orange evoke higher
-            arousal Routes, such as love, passion, happiness, and anger. Cool
-            colors, like blue, green and purple are linked to calmness, sadness
-            and indifference. Colors can trigger these arousal states and
-            Routes. Much like music does! So come and explore our Unique
-            musiSphere and find the right music to suit your mood. Your new
-            favourite track is one click away...
+              {`This is a place where music, moods and colours meet, to provide you with a unique immersive sensory experience.
+                In this space you can savour synesthesia, a perceptual phenomenon in which stimulation of one sense brings an involuntary stimulation of another sense,
+                like accidentally seeing colours while listening to music.
+                To enter this perceptual world, we have provided you with the Musisphere, that will lead you through this dance of the senses,
+                and will let you navigate through your emotions, in music and colours!`}
             </span>
           </p>
         </div>
