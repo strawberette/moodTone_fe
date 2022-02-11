@@ -18,13 +18,7 @@ function EmotionModalSad() {
       />
       <h2>SAD</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Sadness is a state of unhappiness and pain. It ranges in intensity and it is often associated with a sense of loss. This feeling is often associated with cool, desaturated colours, particularly the colour grey. The colour grey is, in fact, considered to be the transition between two non-colours (black and white), and to promote feelings of detachment and neutrality. This state and colour are often associated with slow paced music in minor tonality.`}
       </p>
     </div>
   );

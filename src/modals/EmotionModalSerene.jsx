@@ -18,13 +18,7 @@ function EmotionModalSerene() {
       />
       <h2>SERENE</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Serenity is a state of mind that reflects peace and acceptance. It is associated with an untroubled way of leaving, which embraces calm. It is often associated with the colour green, that is a colour that stimulates hope and relaxation. It has been argued that this association may be the result of the sense of serenity one feels when immersed in nature, surrounded by green. This state and colour are often associated with slow paced music in major tonality.`}
       </p>
     </div>
   );

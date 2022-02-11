@@ -16,15 +16,9 @@ function EmotionModalPeaceful() {
           cursor: "pointer",
         }}
       />
-      <h2>Peaceful</h2>
+      <h2>PEACEFUL</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Peacefulness is a state of harmony, in which you are spiritually and mentally at peace. It is a feeling of bliss and happiness that provides you with the strength and the resilience to overcome stress. It is often associated with the colour white, which is a symbol of purity, innocence, and balance and inspires a sense of light and freshness. Peaceful states and white colour are often associated with slow paced music in major tonality.`}
       </p>
     </div>
   );
