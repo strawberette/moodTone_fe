@@ -349,7 +349,7 @@ body {
 /* ------------------------------------ PROFILE STYLING------------------------------- */
 
 .profile{
-  font-family: "LeagueSpartan-Bold";
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
 
   display: flex;
   flex-direction: row;
@@ -367,7 +367,7 @@ body {
 }
 
 .moodPlayer{
-  font-family: "LeagueSpartan-Bold";
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
 
   display: flex;
   flex-direction: column;
@@ -393,7 +393,7 @@ body {
 }
 
 .profileContainer{
-  font-family: "LeagueSpartan-Bold";
+  font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
   display:flex; 
   flex-direction: row; 
   justify-self: space-between;  
