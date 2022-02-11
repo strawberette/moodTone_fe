@@ -69,6 +69,7 @@ function Login({ user, setUser }) {
               <label htmlFor="user">Email:</label>
               <br />
               <input
+                className="form-input"
                 type="text"
                 name="user"
                 value={userName}
@@ -82,6 +83,7 @@ function Login({ user, setUser }) {
               <label htmlFor="password">Password:</label>
               <br />
               <input
+                className="form-input"
                 type="password"
                 name="password"
                 placeholder="password"

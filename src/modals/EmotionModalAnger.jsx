@@ -18,7 +18,7 @@ function EmotionModalAnger() {
       />
       <h2>ANGRY</h2>
       <p>
-        {`Anger is a state of disturbance, displeasure, annoyance or hostility. It can arise from a feeling of threat, any other interruption of a peaceful state or a sense of injustice. It is often associated with the colour red, which is a colour that can stimulate strong emotions, energy and aggression. Anger and the colour red are often semantically associated by the saying “Seeing red”, and physiologically associated: when we experience anger the blood floods to our face which turns red. `}
+        {`Anger is a state of disturbance, displeasure, annoyance or hostility. It can arise from a feeling of threat, any other interruption of a peaceful state or a sense of injustice. It is often associated with the colour red, which is a colour that can stimulate strong emotions, energy and aggression. Anger and the colour red are often semantically associated by the saying “Seeing red”, and physiologically associated: when we experience anger the blood floods to our face which turns red. This state and colour are often associated with  fast paced music in minor tonality. `}
       </p>
     </div>
   );

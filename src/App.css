@@ -491,12 +491,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-.logowrapper {
-  position: absolute;
-  bottom: -130px;
-  left: -70px;
-  transform: scale(0.2);
+.register-container {
+  background-image: url(./utility/bluesmoke.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
 .welcome-info {
   border-radius: 10px 0px 0px 10px;
   background-color: rgba(246, 224, 235, 0.4);
@@ -515,7 +521,7 @@ body {
 }
 .welcome-info h1 {
   font-size: 2rem;
-  font-family: "LeagueSpartan-Bold";
+  font-family: "LeagueSpartan-Bold", "Quicksand", sans-serif;
 }
 .rainbowlogo {
   width: 200px;
@@ -524,10 +530,18 @@ body {
 }
 
 .lovebody {
-  transform: scale(0.2);
-  position: absolute;
-  top: -350px;
-  right: -550px;
+  display: flex;
+  transform: scale(0.3);
+  position: fixed;
+  top: -300px;
+  right: -400px;
+}
+.calmbody {
+  display: flex;
+  transform: scale(0.25);
+  position: fixed;
+  top: -500px;
+  left: 700px;
 }
 
 .login-form {
@@ -560,11 +574,24 @@ body {
   flex-direction: row;
 }
 
-input {
+.form-input {
   border: solid #a09ea9;
   border-radius: 3px;
 }
 
+.btn-reg-sub {
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  border: solid #99eeff;
+  background-color: #33ddff;
+  width: 80px;
+  position: relative;
+  left: -15px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
 .submit-button {
   display: flex;
   justify-content: center;
@@ -592,6 +619,19 @@ input {
   cursor: pointer;
   opacity: 0.8;
 }
+.switch2-btn {
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  border: solid #e8b0cd;
+  background-color: #de91b9;
+  width: 80px;
+  position: relative;
+  right: -15px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
 
 .submit-button:hover {
   opacity: 1;
@@ -607,6 +647,123 @@ input {
 .switch-btn:active {
   background-color: #33ddff;
   box-shadow: 2px 2px 2px 2px #99eeff;
+  transform: translateY(2px);
+}
+.btn-reg-sub:hover {
+  opacity: 1;
+}
+.btn-reg-sub:active {
+  background-color: #33ddff;
+  box-shadow: 2px 2px 2px 2px #99eeff;
+  transform: translateY(2px);
+}
+
+/* ======================REGISTER SUCCESS PAGE======================================== */
+.register-route {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success {
+  position: relative;
+  flex-direction: column;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  margin-top: -100px;
+}
+.success p {
+  font-size: 2rem;
+  font-family: "LeagueSpartan-Bold", "Quicksand", sans-serif;
+}
+
+.fullhappy {
+  position: relative;
+  bottom: 300px;
+  margin-bottom: -500px;
+  transform: scale(0.5);
+}
+.takemeback {
+  opacity: 0.7;
+  border: #005f73;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+}
+.takemeback:hover {
+  background-color: #bfbec5;
+  opacity: 1;
+  cursor: pointer;
+}
+.takemeback:active {
+  background-color: #d4d4d9;
+  box-shadow: 2px 2px 2px 2px #a09ea9;
+  transform: translateY(2px);
+}
+
+/* ==================== USER ALREADY REGISTERED===================  */
+.already-registered {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.already-reg {
+  position: relative;
+  flex-direction: column;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  margin-top: -100px;
+  top: -1500px;
+}
+.fullserene {
+  position: relative;
+  top: -800px;
+  transform: scale(0.2);
+}
+.already-reg p {
+  font-size: 2rem;
+  font-family: "LeagueSpartan-Bold", "Quicksand", sans-serif;
+}
+.leavesite {
+  opacity: 0.7;
+  border: #005f73;
+  background-color: #cbe1d1;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+}
+.leavesite:hover {
+  background-color: #a4cbaf;
+  opacity: 1;
+  cursor: pointer;
+}
+.leavesite:active {
+  background-color: #8abc98;
+  box-shadow: 2px 2px 2px 2px #e5f0e8;
+  transform: translateY(2px);
+}
+.tryagain {
+  opacity: 0.7;
+  border: #005f73;
+  background-color: #cbe1d1;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+}
+.tryagain:hover {
+  background-color: #a4cbaf;
+  opacity: 1;
+  cursor: pointer;
+}
+.tryagain:active {
+  background-color: #8abc98;
+  box-shadow: 2px 2px 2px 2px #e5f0e8;
   transform: translateY(2px);
 }
 
@@ -708,6 +865,11 @@ input {
 }
 .entermusic:hover {
   opacity: 1;
+}
+.entermusic:active {
+  background-color: #d1619b;
+  box-shadow: 2px 2px 2px 2px #4f1734;
+  transform: translateY(5px);
 }
 
 /* ------------------------------------/modal css/-------------------------------------------- */
