@@ -397,6 +397,7 @@ body {
   display:flex; 
   flex-direction: row; 
   justify-self: space-between;  
+  box-sizing: border-box;
   width: 1500px; 
   padding-left: 100px;
 
