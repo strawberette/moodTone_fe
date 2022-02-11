@@ -18,7 +18,9 @@ body {
   width: 100vw;
   overflow: hidden;
 }
-
+input {
+  color: rgba(0, 0, 0, 0.8);
+}
 /* -----------------------------------LANDING PAGE STYLE---------------------------------------  */
 .wrapper {
   height: 100vh;
