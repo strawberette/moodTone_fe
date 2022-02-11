@@ -18,13 +18,8 @@ function EmotionModalHappy() {
       />
       <h2>HAPPY</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Happiness is a state that reflects emotional well-being. It can be triggered by a specific event (e.g. being happy for an event that occurred in your life) or can be a broader state of mind (e.g. just being happy!). It is often accompanied by a specific facial expression, the smile! :) It is often associated with the colour yellow. It has been argued that this association might be related with the positive emotions one experiences when surrounded by sunshine. This state and colour are often associated with fast paced music in major tonality.
+`}
       </p>
     </div>
   );

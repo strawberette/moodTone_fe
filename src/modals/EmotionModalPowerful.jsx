@@ -18,13 +18,7 @@ function EmotionModalPowerful() {
       />
       <h2>POWERFUL</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Personal power is an internal state that move you to consider your needs, and to act in their favour, and in your best interest. It empowers you to maintain control of your life, it makes you aware of your intellectual, emotional, and physiological resources and provides you with ways to regulate them, and with responses to guide your actions and behaviour. It is often associated to the colour black, with elicit a sense of strength, self-confidence, importance, formality and authority. There is also an association of this state and this colour with fast paced music in minor tonality.`}
       </p>
     </div>
   );

@@ -18,13 +18,7 @@ function EmotionModalSpiritual() {
       />
       <h2>SPIRITUAL</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea a,
-        eligendi cupiditate odio quam dolorum? Laudantium iste consequatur
-        consequuntur vel earum pariatur culpa nemo, eum blanditiis odio mollitia
-        eius! Nostrum corrupti placeat facilis nobis voluptas beatae molestiae,
-        iure pariatur velit accusantium quia fugiat magni voluptatem tenetur
-        ipsa consequatur eaque eos nam quae amet expedita quam. Fugiat officiis
-        voluptatibus odit. Sunt veniam tempore rem deleniti, voluptate nobis
+        {`Spirituality is a state that elicits concern for, or an interest in the things of the spirit and the soul. It might be associated with religious experiences, prompted by nature and art, or exists on its own, as a reflective state of the mind. Spirituality is often associated with the colour purple, which is connected with a sense of mystery and unknown, with wisdom, with the supernatural and the divine. This state and colour are often associated with medium paced music in minor tonality.`}
       </p>
     </div>
   );
