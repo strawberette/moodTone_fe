@@ -313,6 +313,8 @@ body {
   justify-content: space-between ;
   box-sizing: border-box;
 
+  padding-left: 100px;
+
   text-align: center;
   width: 1000px;
 }
