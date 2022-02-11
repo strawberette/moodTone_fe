@@ -350,14 +350,11 @@ body {
 
 .profile{
   font-family: "LeagueSpartan-Bold","Quicksand",sans-serif;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between ;
   box-sizing: border-box;
-
   padding-left: 100px;
-
   text-align: center;
   width: 1000px;
 }
@@ -398,8 +395,10 @@ body {
   flex-direction: row; 
   justify-self: space-between;  
   box-sizing: border-box;
-  width: 1500px; 
   padding-left: 100px;
+  text-align: center;
+  width: 1500px; 
+  
 
 }
 
